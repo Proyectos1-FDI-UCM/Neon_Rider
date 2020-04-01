@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Vector2 checkpoint;
     public bool gameIsPaused;
+    public int deadVal = 0;
     Vector2 ori;
 
     // En el método Awake comprueba si hay otro GameManger

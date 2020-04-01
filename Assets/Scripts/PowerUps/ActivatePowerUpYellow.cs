@@ -17,7 +17,7 @@ public class ActivatePowerUpYellow : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {       
-        if(pum != null)
+        if(pum != null && other.GetComponent<Rigidbody2D>() != null)
         {
             pum.ActivatePowerUp("PowerUpYellow");
             Debug.Log("Amarillito entró");

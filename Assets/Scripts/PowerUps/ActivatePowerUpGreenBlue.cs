@@ -1,19 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 
 // <summary>
 // Componente utilizado para activar power-up's del jugador
 
 
-public class ActivatePowerUpGreenBlue : MonoBehaviour 
+public class ActivatePowerUpGreenBlue : MonoBehaviour
 {
     [SerializeField] GameObject player = null;
     PowerUpManager pum;
+    float delay = 0.1f;
 
     // Variable de los PowerUps Verde y Azul
     Ralentizador ralentizador;
 
     void Start()
     {
+        // Se crea un delay mínimo para que no se active al reiniciar 
+        // escena si se destuyen por checkpoint
+        delay += Time.time;
+
+        Debug.Log(Time.time);
         //Inicializa el PowerUpManager
         if (player != null)
             pum = player.GetComponent<PowerUpManager>();
@@ -29,7 +36,7 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
 
     void OnDestroy()
     {
-        if (pum != null)
+        if (pum != null && Time.time > delay)
         {
 
             //Si se destruye con la espada activa el azul
@@ -42,8 +49,8 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
             {
                 pum.ActivatePowerUp("PowerUpGreen");
             }
-            
+
         }
-        
+
     }
 }

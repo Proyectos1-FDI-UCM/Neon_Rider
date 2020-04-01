@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 
-// 
 public class Enemy_Death : MonoBehaviour
 {
     public int hitsToDeath; //golpes que aguanta el enemigo
-    int hits = 0; //golpes que has dado al enemigo
+    [SerializeField] int deadVal = 0;
     Transform child;
     EnemyVision enemy;
     Drone drone;
 
     private void Start()
     {
+        // Si se reanuda desde un checkpoint posicionado después del enemigo,
+        // éste es destruido
+        if (GameManager.instance.deadVal >= deadVal)
+        {
+            Destroy(this.gameObject);
+        }
+
         enemy = GetComponent<EnemyVision>();
         drone = GetComponent<Drone>();
 
@@ -21,9 +27,9 @@ public class Enemy_Death : MonoBehaviour
     // Metodo llamado desde el componente Sword_Attack
     public void OnAttack()
     {
-        hits++;
+        hitsToDeath--;
 
-        if (enemy != null && hits == hitsToDeath)
+        if (enemy != null && hitsToDeath == 0)
         {
             // Separamos al hijo del padre
             // Llamamos a Animation de "EnemyDeathAnim"
@@ -36,7 +42,7 @@ public class Enemy_Death : MonoBehaviour
         }
         else
         {
-            if (hits == hitsToDeath)
+            if (hitsToDeath == 0)
             {
                 // Destruimos el objeto
                 Destroy(this.gameObject);
