@@ -37,11 +37,9 @@ public class PowerUpManager : MonoBehaviour
 
     float width, originalWidth, time;
     bool activo = false;
-    Sprite sprite;
 
     void Awake()
     {
-        sprite = image.sprite;
         width = image.rectTransform.sizeDelta.x;
         originalWidth = width;
         // Cogemos los scripts de los Powerups
@@ -58,32 +56,32 @@ public class PowerUpManager : MonoBehaviour
         if (red.enabled && !activo)
         {
             width = originalWidth;
-            image.enabled = true;
-            sprite = redIndicator;
+            image.sprite = redIndicator;
+            image.enabled = true;            
             activo = true;
             time = Time.time + duration;
         }
         else if (blue.enabled && !activo)
         {
             width = originalWidth;
+            image.sprite = blueIndicator;
             image.enabled = true;
-            sprite = blueIndicator;
             activo = true;
             time = Time.time + duration;
         }
         else if (green.enabled && !activo)
         {
             width = originalWidth;
+            image.sprite = greenIndicator;
             image.enabled = true;
-            sprite = greenIndicator;
             activo = true;
             time = Time.time + duration;
         }
         else if (yellow.enabled && !activo)
         {
             width = originalWidth;
-            image.enabled = true;
-            sprite = yellowIndicator;
+            image.sprite = yellowIndicator;
+            image.enabled = true;           
             activo = true;
             time = Time.time + duration;
             Debug.Log("hola");
@@ -91,8 +89,8 @@ public class PowerUpManager : MonoBehaviour
         else if (purple.enabled && !activo)
         {
             width = originalWidth;
+            image.sprite = purpleIndicator;
             image.enabled = true;
-            sprite = purpleIndicator;
             activo = true;
             time = Time.time + duration;
         }
