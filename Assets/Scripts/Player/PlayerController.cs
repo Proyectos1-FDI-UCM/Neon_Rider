@@ -9,11 +9,24 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
 
+    int attackIndicator;
+    AnimatorStateInfo animState;
+    CircleCollider2D attackCollider;
+    Sprite playerSpr;
+    bool attackBool, blockBool;
+    Bloqueo parry;
+    AudioSource swing;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        Cursor.visible = false;
+        anim = GetComponent<Animator>();
+        attackCollider = GetComponent<CircleCollider2D>();
+        parry = GetComponent<Bloqueo>();
+        swing = GetComponent<AudioSource>();
     }
 
     void Update()

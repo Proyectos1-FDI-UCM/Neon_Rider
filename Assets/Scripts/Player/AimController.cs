@@ -36,42 +36,47 @@ public class AimController : MonoBehaviour
             attackCollider.enabled = false;
         }
 
-        Vector2 mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        // Si se mueve el joystick en el eje horizontal:
-        if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused) 
+        Vector2 mov;
+
+        // Mientras no estén activas las animaciones de ataque o bloqueo, el 
+        // jugador apunta en la dirección en la que se mueve
+        if (!attackBool && !blockBool)
         {
-            anim.SetFloat("PosY", 0);
-            if (mov.x >= 0) // Mirar Derecha
+            mov = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            // Si se mueve el joystick en el eje horizontal:
+            if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
-                anim.SetFloat("PosX", 1);
-                attackIndicator = 1;
+                anim.SetFloat("PosY", 0);
+                if (mov.x >= 0) // Mirar Derecha
+                {
+                    anim.SetFloat("PosX", 1);
+                    attackIndicator = 1;
+                }
+                else // Mirar Izquierda
+                {
+                    anim.SetFloat("PosX", -1);
+                    attackIndicator = 2;
+                }
             }
-            else // Mirar Izquierda
+
+            else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
-                anim.SetFloat("PosX", -1);
-                attackIndicator = 2;
-            }
-        }           
-        
-        else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
-        {
-            anim.SetFloat("PosX", 0);
-            if (mov.y >= 0) // Mirar Arriba
-            {          
-                anim.SetFloat("PosY", 1);
-                attackIndicator = 3;
-        
-            }
-            else // Mirar Abajo
-            {
-                anim.SetFloat("PosY", -1);
-                attackIndicator = 4;
-                //Debug.Log(indicadorAtaque);
-       
+                anim.SetFloat("PosX", 0);
+                if (mov.y >= 0) // Mirar Arriba
+                {
+                    anim.SetFloat("PosY", 1);
+                    attackIndicator = 3;
+
+                }
+                else // Mirar Abajo
+                {
+                    anim.SetFloat("PosY", -1);
+                    attackIndicator = 4;
+                    //Debug.Log(indicadorAtaque);
+
+                }
             }
         }
-
-        
 
         if (Input.GetKeyDown("joystick button 5") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
         {
@@ -81,6 +86,42 @@ public class AimController : MonoBehaviour
 
         else if (Input.GetKeyDown("joystick button 4") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
         {
+
+            mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            // Si se mueve el joystick en el eje horizontal:
+            if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
+            {
+                anim.SetFloat("PosY", 0);
+                if (mov.x >= 0) // Mirar Derecha
+                {
+                    anim.SetFloat("PosX", 1);
+                    attackIndicator = 1;
+                }
+                else // Mirar Izquierda
+                {
+                    anim.SetFloat("PosX", -1);
+                    attackIndicator = 2;
+                }
+            }
+
+            else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
+            {
+                anim.SetFloat("PosX", 0);
+                if (mov.y >= 0) // Mirar Arriba
+                {
+                    anim.SetFloat("PosY", 1);
+                    attackIndicator = 3;
+
+                }
+                else // Mirar Abajo
+                {
+                    anim.SetFloat("PosY", -1);
+                    attackIndicator = 4;
+                    //Debug.Log(indicadorAtaque);
+
+                }
+            }
+
             GetComponent<Sword_Attack>().enabled = false;
             anim.SetTrigger("Block");
             switch (attackIndicator)
@@ -104,6 +145,41 @@ public class AimController : MonoBehaviour
 
     static void Attack(int attackIndicator, ref Animator anim, ref CircleCollider2D attackCollider)
     {
+        Vector2 mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        // Si se mueve el joystick en el eje horizontal:
+        if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
+        {
+            anim.SetFloat("PosY", 0);
+            if (mov.x >= 0) // Mirar Derecha
+            {
+                anim.SetFloat("PosX", 1);
+                attackIndicator = 1;
+            }
+            else // Mirar Izquierda
+            {
+                anim.SetFloat("PosX", -1);
+                attackIndicator = 2;
+            }
+        }
+
+        else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
+        {
+            anim.SetFloat("PosX", 0);
+            if (mov.y >= 0) // Mirar Arriba
+            {
+                anim.SetFloat("PosY", 1);
+                attackIndicator = 3;
+
+            }
+            else // Mirar Abajo
+            {
+                anim.SetFloat("PosY", -1);
+                attackIndicator = 4;
+                //Debug.Log(indicadorAtaque);
+
+            }
+        }
+
         anim.SetTrigger("Attack");
         FindObjectOfType<AudioManager>().Play("Swing");
         switch (attackIndicator)

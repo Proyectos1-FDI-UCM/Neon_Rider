@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a746e6482e4a50444900c3ff75aad9b2
   - enabled: 1
-    path: Assets/Scenes/Juntarcosa.unity
-    guid: 1c866335470ba5f479a988366bd83c80
+    path: Assets/Scenes/juntarcosa.unity
+    guid: c6547fe8fdcd45544a8cbfda47f77455
   m_configObjects: {}

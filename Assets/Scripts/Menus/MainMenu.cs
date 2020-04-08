@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject optionsFirstButton, optionsUI;
+
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -17,6 +20,8 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
-        Debug.Log("El rap de las opciones.mp3");
+        optionsUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
     }
 }
