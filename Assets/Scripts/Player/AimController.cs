@@ -10,7 +10,6 @@ public class AimController : MonoBehaviour
     Sprite playerSpr;
     bool attackBool, blockBool;
     Bloqueo parry;
-    AudioSource swing;
 
     private void Awake()
     {
@@ -18,7 +17,6 @@ public class AimController : MonoBehaviour
         anim = GetComponent<Animator>();
         attackCollider = GetComponent<CircleCollider2D>();
         parry = GetComponent<Bloqueo>();
-        swing = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -78,7 +76,7 @@ public class AimController : MonoBehaviour
         if (Input.GetKeyDown("joystick button 5") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
         {
             GetComponent<Sword_Attack>().enabled = true;
-            Attack(attackIndicator, ref anim, ref attackCollider, swing);
+            Attack(attackIndicator, ref anim, ref attackCollider);
         }
 
         else if (Input.GetKeyDown("joystick button 4") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
@@ -104,10 +102,10 @@ public class AimController : MonoBehaviour
         }
     }
 
-    static void Attack(int attackIndicator, ref Animator anim, ref CircleCollider2D attackCollider, AudioSource swing)
+    static void Attack(int attackIndicator, ref Animator anim, ref CircleCollider2D attackCollider)
     {
-        swing.Play();
         anim.SetTrigger("Attack");
+        FindObjectOfType<AudioManager>().Play("Swing");
         switch (attackIndicator)
         {
             case 1:

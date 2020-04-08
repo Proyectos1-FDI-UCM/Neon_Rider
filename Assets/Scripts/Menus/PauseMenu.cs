@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject pauseMenuUI;
+    public GameObject pauseMenuUI, optionsMenuUI;
 
-    public GameObject pauseFirstButton;
+    public GameObject pauseFirstButton, optionsFirstButton;
     
     void Update()
     {
         if (Input.GetKeyDown("joystick button 7"))
         {
             if (GameManager.instance.gameIsPaused)
+            {
                 Resume();
+                if (optionsMenuUI.activeSelf)
+                    optionsMenuUI.SetActive(false);
+            }
             else
                 Pause();
         }    
@@ -38,7 +42,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Options()
     {
-        Debug.Log("El rap de las opciones.mp3");
+        pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
     }
 
     public void Exit()
