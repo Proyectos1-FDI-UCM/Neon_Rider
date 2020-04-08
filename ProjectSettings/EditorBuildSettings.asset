@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a746e6482e4a50444900c3ff75aad9b2
-  - enabled: 1
-    path: Assets/Scenes/juntarcosa.unity
+  - enabled: 0
+    path: Assets/Scenes/Juntarcosa.unity
     guid: c6547fe8fdcd45544a8cbfda47f77455
+  - enabled: 1
+    path: Assets/Scenes/Prueba.unity
+    guid: a6d5008ad6f375d44a37a2f144e03fec
   m_configObjects: {}
