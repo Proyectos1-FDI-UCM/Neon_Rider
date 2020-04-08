@@ -2,8 +2,7 @@
 
 public class Drone : MonoBehaviour
 {
-    [SerializeField]
-    public Transform player;
+    private Transform player;
     [SerializeField]
     public GameObject explosion;
     float speed = 5;
@@ -16,6 +15,7 @@ public class Drone : MonoBehaviour
     
     void Start()
     {
+        player = GameManager.instance.GetPlayer().transform;
         vision = GetComponent<EnemyVision>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -34,7 +34,7 @@ public class Drone : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if(!onRange && vision.Spotted())
+        else if(!onRange && vision.Spotted(player))
         {
             direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
             direction.Normalize();

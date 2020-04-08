@@ -7,9 +7,10 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] GameObject bullet = null;
     [SerializeField] float cadencia = 2, firstFire = 0.5f;
     EnemyVision vision;
-
+    Transform player;
     private void Start()
     {
+        player = GameManager.instance.GetPlayer().transform;
         vision = GetComponent<EnemyVision>();
     }
 
@@ -19,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
         // "bullet" en la posición del enemigo y aumenta el valor de "firstFire" mediante
         // la variable "cadencia"
         if (transform != null)
-            if (Time.time > firstFire && vision.Spotted())
+            if (Time.time > firstFire && vision.Spotted(player))
             {
                 Instantiate(bullet, transform.position, Quaternion.identity, transform);
                 firstFire = cadencia + Time.time;

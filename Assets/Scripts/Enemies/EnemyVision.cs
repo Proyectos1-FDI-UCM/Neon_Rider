@@ -6,14 +6,13 @@
 
 public class EnemyVision : MonoBehaviour
 {
-    public Transform player; 
     [SerializeField] int range = 5;
     [SerializeField] int playerLayer = 8, wallsLayer = 9;
     Vector2 direccion;
     RaycastHit2D hit;
     float distance;
     
-    public bool Spotted()
+    public bool Spotted(Transform player)
     {
         bool spot;
         if (player != null)

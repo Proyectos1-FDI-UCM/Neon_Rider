@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ActivatePowerUpGreenBlue : MonoBehaviour
 {
-    [SerializeField] GameObject player = null;
+    GameObject player;
     PowerUpManager pum;
     float delay = 0.1f;
 
@@ -16,11 +16,13 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
 
     void Start()
     {
+        player = GameManager.instance.GetPlayer();
+        
         // Se crea un delay mínimo para que no se active al reiniciar 
         // escena si se destuyen por checkpoint
         delay += Time.time;
 
-        Debug.Log(Time.time);
+       
         //Inicializa el PowerUpManager
         if (player != null)
             pum = player.GetComponent<PowerUpManager>();

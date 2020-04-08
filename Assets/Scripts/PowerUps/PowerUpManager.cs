@@ -170,7 +170,8 @@ public class PowerUpManager : MonoBehaviour
                 lastPowerUpName = powerUpName;
 
                 // Activa el indicador del Powerup
-                image.enabled = true;
+                if(image != null)
+                    image.enabled = true;
 
                 // Añade a timeDuratión la duración del Powerup
                 if (powerUpName == "PowerUpBlue")

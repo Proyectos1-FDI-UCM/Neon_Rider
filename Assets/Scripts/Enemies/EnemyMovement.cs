@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] Transform player = null;
+    Transform player;
     [SerializeField] float speed = 0.5f;
     [SerializeField] float firstMove = 0, changeDir = 2.5f;
     bool clockwise;
@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         vision = GetComponent<EnemyVision>();
         clockwise = false;
+        player = GameManager.instance.GetPlayer().transform;
     }
 
     void Update()
@@ -32,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
             // Cuando "Time.time" alcanza el nuevo valor de "firstMove" da un valor aleatorio a "selecDir" entre 0 y 1,
             // que determinarán si el enemigo girará en el sentido de las agujas del reloj o en sentido contrario mediante 
             // el booleano "clockwise". Aumenta el valor de "firstMove" mediante la variable "changeDir" 
-            if (Time.time > firstMove && vision.Spotted())
+            if (Time.time > firstMove && vision.Spotted(player))
             {
                 int selecDir = Random.Range(0, 2);
 
@@ -44,7 +45,7 @@ public class EnemyMovement : MonoBehaviour
                 firstMove = changeDir + Time.time;
             }
 
-            if (vision.Spotted())
+            if (vision.Spotted(player))
             {
 
                 // "direction" será dado por "clockwise"

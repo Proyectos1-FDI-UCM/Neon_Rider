@@ -10,12 +10,23 @@ public class GameManager : MonoBehaviour
     public bool gameIsPaused;
     public int deadVal = 0;
     Vector2 ori;
+    private GameObject player;
+
+    private void OnLevelWasLoaded(int level)
+    {
+        //Busca al jugador al cargar la escena de nuevo
+        player = GameObject.Find("Player");
+
+    }
 
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
     void Awake()
-    {    
+    {
+        //Busca el jugador por primera vez
+        player = GameObject.Find("Player");
+
         if (instance == null)
         {
             instance = this;
@@ -28,6 +39,8 @@ public class GameManager : MonoBehaviour
         
     }
 
+    
+
     //reinicia la escena cuando muere (lo llama desde el script Death)
     public void Dead(PowerUpManager power)
     {
@@ -35,5 +48,10 @@ public class GameManager : MonoBehaviour
         //no es necesario con el load scene, pero por si sirve con los checkpoints.
         power.Reset();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public GameObject GetPlayer()
+    {
+        return player;
     }
 }

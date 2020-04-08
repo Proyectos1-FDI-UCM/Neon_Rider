@@ -10,17 +10,17 @@ using UnityEngine;
 
 public class PrestEnemyMovement : MonoBehaviour
 {
-    [SerializeField] Transform player = null;
+    private Transform player;
     [SerializeField] float speed = 0.5f;
-    [SerializeField] float firstMove = 0, changeDir = 2.5f;
-    bool clockwise;
+   
+    
     Vector2 direction;
     Rigidbody2D rb;
 
     void Start()
     {
+        player = GameManager.instance.GetPlayer().transform;
         rb = GetComponent<Rigidbody2D>();
-        clockwise = false;
     }
 
     void Update()
@@ -28,7 +28,6 @@ public class PrestEnemyMovement : MonoBehaviour
         if (player != null)
         {
             direction = new Vector2(transform.position.x - player.position.x, transform.position.y - player.position.y);
-
         }      
     }
 

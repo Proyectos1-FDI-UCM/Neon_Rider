@@ -2,18 +2,22 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] Transform tr = null;
+    private Transform player = null;
     [SerializeField] float delay = 0.25f;
 
+    private void Start()
+    {
+        player = GameManager.instance.GetPlayer().transform;
+    }
     void FixedUpdate()
     {
-        if (tr != null)
+        if (player != null)
         {
             // Coge la posición del jugador
-            Vector3 playerPos = new Vector3(tr.position.x, tr.position.y, -10);
+            Vector3 playerPos = new Vector3(player.position.x, player.position.y, -10);
 
             // Si el jugador está activo (vivo), la cámara le sigue en un intervalo de tiempo dado por delay
-            if (tr.gameObject.activeSelf)
+            if (player.gameObject.activeSelf)
                 transform.position = Vector3.Lerp(transform.position, playerPos, delay);
         }
     }

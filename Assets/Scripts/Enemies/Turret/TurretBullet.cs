@@ -13,7 +13,7 @@ public class TurretBullet : MonoBehaviour
     void Start()
     {
 
-        player = GetComponentInParent<EnemyVision>().player;  
+        player = GameManager.instance.GetPlayer().transform;
 
         if (player != null)
         {

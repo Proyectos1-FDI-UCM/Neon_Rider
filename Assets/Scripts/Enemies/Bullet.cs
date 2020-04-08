@@ -12,8 +12,7 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb;
     void Start()
     {
-
-        player = GetComponentInParent<EnemyVision>().player;  
+        player = GameManager.instance.GetPlayer().transform;
 
         if (player != null)
         {

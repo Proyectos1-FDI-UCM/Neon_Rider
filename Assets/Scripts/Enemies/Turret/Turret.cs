@@ -9,8 +9,8 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     [SerializeField] float speed = 1f, move = 0f, changePos = 2.5f;
-    [SerializeField] Transform player = null;
-    [SerializeField] Transform[] children;
+    Transform player;
+    [SerializeField] Transform[] children = null;
 
 
 
@@ -24,6 +24,7 @@ public class Turret : MonoBehaviour
 
     void Awake()
     {
+        player = GameManager.instance.GetPlayer().transform;
         vision = GetComponent<EnemyVision>();
         attack = GetComponent<EnemyAttack>();
         death = GetComponent<Enemy_Death>();
@@ -57,7 +58,7 @@ public class Turret : MonoBehaviour
                 {
                     death.enabled = false;
                     move -= Time.deltaTime;
-                    if (vision.Spotted())
+                    if (vision.Spotted(player))
                         attack.enabled = true;
                     else
                         attack.enabled = false;

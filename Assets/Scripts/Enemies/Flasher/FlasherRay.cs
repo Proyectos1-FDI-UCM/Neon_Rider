@@ -7,18 +7,17 @@ public class FlasherRay : MonoBehaviour
 {
     [SerializeField] float speed = 0f;          //Velocidad dedisparo
     [SerializeField] float duration = 0f;       //Tiempo que dura el rayo en pantalla
-    private float timeDuration;     
+    private float timeDuration;                 
 
     Transform player;
 
     Rigidbody2D rb;
-    bool crash = false;
     Vector3 flasher;
-    AudioSource laser;
+    
 
     void Awake()
     {
-        player = GetComponentInParent<EnemyVision>().player;    //Almacena el transform del player
+        player = GameManager.instance.GetPlayer().transform;    //Almacena el transform del player
 
         timeDuration = duration + Time.time;        //Inicializacion contador tiempo
 

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class FlasherMovement : MonoBehaviour
 {
-    [SerializeField] Transform player = null;
+    private Transform player;
+    private void Start()
+    {
+        player = GameManager.instance.GetPlayer().transform;
+    }
     void Update()
     {
         if (player!=null)       //Si tiene un player asociado

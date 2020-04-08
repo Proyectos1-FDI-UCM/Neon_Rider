@@ -8,10 +8,12 @@ public class PowerUpYellow : MonoBehaviour
     //la activa cuando el power up esta enbled y lo desactiva si no.
     private void OnEnable()
     {
+        if(image != null)
         image.enabled = true;
     }
     private void OnDisable()
     {
+        if(image!= null)
         image.enabled = false;
     }
 }
