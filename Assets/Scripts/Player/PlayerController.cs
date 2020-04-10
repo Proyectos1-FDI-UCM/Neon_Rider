@@ -19,20 +19,10 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
         Cursor.visible = false;
-        anim = GetComponent<Animator>();
-        attackCollider = GetComponent<CircleCollider2D>();
-        parry = GetComponent<Bloqueo>();
-        swing = GetComponent<AudioSource>();
-
-        
-        //Pasamos referencia al GameManager
-       // GameManager.instance.SetPlayer(this.gameObject);
-    
     }
 
     private void OnEnable()
@@ -40,9 +30,6 @@ public class PlayerController : MonoBehaviour
         //Pasamos referencia al GameManager
         GameManager.instance.SetPlayer(this.gameObject);
     }
-   
-
-
 
     void Update()
     {
