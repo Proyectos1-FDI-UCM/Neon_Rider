@@ -14,7 +14,7 @@ public class EnemyVision : MonoBehaviour
     
     public bool Spotted(Transform player)
     {
-        bool spot;
+        bool spot = false;
         if (player != null)
         {
             // Pasa el valor de las capas a binario y las junta en la variable "maskLayer"

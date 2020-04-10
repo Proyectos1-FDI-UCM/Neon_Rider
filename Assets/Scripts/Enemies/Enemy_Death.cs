@@ -21,7 +21,7 @@ public class Enemy_Death : MonoBehaviour
         drone = GetComponent<Drone>();
 
         // Si no es el ralentizador cogemos al hijo
-        if (enemy != null || drone != null)
+        if (enemy != null && drone == null)
             child = transform.GetChild(0);
     }
     // Metodo llamado desde el componente Sword_Attack

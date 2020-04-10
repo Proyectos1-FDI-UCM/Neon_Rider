@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7960207174067063292}
   - component: {fileID: 6085939467918607030}
   - component: {fileID: 2804638035351054647}
+  - component: {fileID: -5375571214527473085}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -94,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5e5de1fa6eb0e4385b4dc7105e2af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  explosion: {fileID: 0}
+  explosion: {fileID: 3304653938115755152, guid: 31b5e804bdca818429d3c8c7257229e1,
+    type: 3}
 --- !u!114 &7960207174067063292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1c0ca69062c4590a6b6e8b04039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   range: 12
   playerLayer: 8
   wallsLayer: 9
@@ -149,3 +149,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &-5375571214527473085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609661333107831081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df338e91385c1e45a7eb413c9dde073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsToDeath: 1
+  deadVal: 5

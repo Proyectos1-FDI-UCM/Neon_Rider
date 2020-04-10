@@ -10,8 +10,8 @@ public class EnemyAttack : MonoBehaviour
     Transform player;
     private void Start()
     {
-        player = GameManager.instance.GetPlayer().transform;
         vision = GetComponent<EnemyVision>();
+        player = GameManager.instance.GetPlayer().transform;
     }
 
     void Update()

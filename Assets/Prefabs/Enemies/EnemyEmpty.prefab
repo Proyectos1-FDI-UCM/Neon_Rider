@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsToDeath: 1
+  deadVal: 1
 --- !u!114 &1433733964988671852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3033c2a6f4f151a44b4f10db4ed38596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 0.5
   firstMove: 0
   changeDir: 2.5
@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1c0ca69062c4590a6b6e8b04039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   range: 12
   playerLayer: 8
   wallsLayer: 9

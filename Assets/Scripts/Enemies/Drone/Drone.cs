@@ -15,13 +15,17 @@ public class Drone : MonoBehaviour
     
     void Start()
     {
-        player = GameManager.instance.GetPlayer().transform;
+        if (GameManager.instance.GetPlayer() != null)
+            player = GameManager.instance.GetPlayer().transform;
+        else
+            player = null;
         vision = GetComponent<EnemyVision>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+   
         if (onRange) // La variable onRange controla si el dron tiene que preparase para explotar o no
         {
             direction = Vector2.zero;
@@ -34,21 +38,24 @@ public class Drone : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if(!onRange && vision.Spotted(player))
+        else if (!onRange && vision.Spotted(player))
         {
             direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
             direction.Normalize();
         }
+    
+   
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = direction * speed;
+            rb.velocity = direction * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) // Al detectar colisión del jugador cambia onRange a true
     {
         obj = collision.gameObject.GetComponent<PlayerController>();
+
         if(obj != null)
         {
             onRange = true;

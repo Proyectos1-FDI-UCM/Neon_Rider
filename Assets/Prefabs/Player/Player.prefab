@@ -394,11 +394,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 10
   image: {fileID: 0}
-  redIndicator: {fileID: 0}
-  blueIndicator: {fileID: 0}
-  greenIndicator: {fileID: 0}
-  purpleIndicator: {fileID: 0}
-  yellowIndicator: {fileID: 0}
+  redIndicator: {fileID: 21300000, guid: 4c6ab3edc8eca50438856d845b1a096a, type: 3}
+  blueIndicator: {fileID: 21300000, guid: 573c1016a6541d347a125d924aa81875, type: 3}
+  greenIndicator: {fileID: 21300000, guid: ce39e5ab207d3e542b8d31aaafb4d1fa, type: 3}
+  purpleIndicator: {fileID: 21300000, guid: 829a1bb3bb6805244b34ace5e3fe34d5, type: 3}
+  yellowIndicator: {fileID: 21300000, guid: bb6d8a65c72e4e74e851c29c906917b2, type: 3}
 --- !u!114 &1882214181353476961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purpleBulletback: {fileID: 1988812110686703352, guid: 75cb596e2b9aea144a8b010f0dc05e49,
     type: 3}
-  purpleRb: {fileID: 0}
+  purpleRb: {fileID: 3783132923408467343, guid: 75cb596e2b9aea144a8b010f0dc05e49,
+    type: 3}
 --- !u!1 &6598205414774279092
 GameObject:
   m_ObjectHideFlags: 0
