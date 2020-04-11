@@ -37,10 +37,6 @@ public class PrestBullet : MonoBehaviour
             death.OnAttack();
         }
             Destroy(this.gameObject);
-            if (parry != null && parry.enabled == true) // Para los casos de parry
-            {
-                Debug.Log("Parryada");
-            }
         }     
     }
 }

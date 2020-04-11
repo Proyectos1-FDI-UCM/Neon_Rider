@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3848394700192775972}
   - component: {fileID: 3926953097407371557}
   - component: {fileID: 3530271966697932738}
-  - component: {fileID: 2028792920264849324}
+  - component: {fileID: 31582097289832436}
   m_Layer: 10
   m_Name: PrestBullet
   m_TagString: Untagged
@@ -118,7 +118,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &2028792920264849324
+--- !u!114 &31582097289832436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

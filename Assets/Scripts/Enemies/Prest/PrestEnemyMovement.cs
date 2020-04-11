@@ -12,13 +12,13 @@ public class PrestEnemyMovement : MonoBehaviour
 {
     private Transform player;
     [SerializeField] float speed = 0.5f;
-   
-    
+    EnemyVision vision;
     Vector2 direction;
     Rigidbody2D rb;
 
     void Start()
     {
+        vision = GetComponent<EnemyVision>();
         player = GameManager.instance.GetPlayer().transform;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -34,7 +34,11 @@ public class PrestEnemyMovement : MonoBehaviour
     // Movimiento del enemigo con dirección "direction" y velocidad "speed"
     void FixedUpdate()
     {
-        rb.velocity = direction * speed;
+        if (vision.Spotted(player))
+            rb.velocity = direction * speed;
+        else 
+            rb.velocity = new Vector2(0, 0);
+
     }
 
     // Al salir el jugador del campo de visión, se queda quieto 

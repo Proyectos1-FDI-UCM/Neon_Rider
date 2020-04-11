@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1721649819528958961}
   - component: {fileID: 3892778952843581450}
   - component: {fileID: 1433733964988671852}
+  - component: {fileID: 5446956336699577847}
   - component: {fileID: 9006589356827859280}
   - component: {fileID: 564970691943462952}
   m_Layer: 0
@@ -97,11 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsToDeath: 1
-<<<<<<< Updated upstream
-  deadVal: 1
-=======
-  deadVal: 0
->>>>>>> Stashed changes
 --- !u!114 &1433733964988671852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +113,20 @@ MonoBehaviour:
   bullet: {fileID: 4209019407658046984, guid: 92d6c4aaa1a387a48920a309a4ee2d50, type: 3}
   cadencia: 2
   firstFire: 0.5
+--- !u!114 &5446956336699577847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721649819528958972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ff44db644d0284787de56c8b22da37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reset: 3
+  numBlocks: 3
 --- !u!114 &9006589356827859280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3033c2a6f4f151a44b4f10db4ed38596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   speed: 0.5
   firstMove: 0
   changeDir: 2.5
@@ -144,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1c0ca69062c4590a6b6e8b04039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   range: 12
   playerLayer: 8
   wallsLayer: 9
