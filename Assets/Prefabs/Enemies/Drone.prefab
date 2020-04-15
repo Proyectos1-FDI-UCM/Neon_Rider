@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 3304653938115755152, guid: 31b5e804bdca818429d3c8c7257229e1,
     type: 3}
+  speed: 10
+  time: 0.6
 --- !u!114 &7960207174067063292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1c0ca69062c4590a6b6e8b04039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 12
+  range: 16
   playerLayer: 8
   wallsLayer: 9
 --- !u!50 &6085939467918607030

@@ -3,7 +3,7 @@
 public class Explosion : MonoBehaviour
 {
     // Este script solo tiene como propósito destruir las explosiones de los drones después de un tiempo
-    float time = 1;
+    float time = 0.5f;
 
     void Update()
     {

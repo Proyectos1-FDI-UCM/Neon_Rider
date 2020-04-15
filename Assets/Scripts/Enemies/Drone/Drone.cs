@@ -5,10 +5,12 @@ public class Drone : MonoBehaviour
     private Transform player;
     [SerializeField]
     public GameObject explosion;
-    float speed = 5;
+    [SerializeField]
+    float speed = 10f;
     bool onRange = false;
     PlayerController obj;
-    float time = 3;
+    [SerializeField]
+    float time = 0.6f;
     Vector2 direction;
     Rigidbody2D rb;
     EnemyVision vision;
