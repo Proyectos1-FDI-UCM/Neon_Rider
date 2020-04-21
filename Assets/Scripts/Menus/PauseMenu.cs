@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
-    public GameObject pauseMenuUI, optionsMenuUI;
+    GameObject pauseMenuUI, optionsMenuUI; // Referencias al menú de pausa y de opciones
 
-    public GameObject pauseFirstButton, optionsFirstButton;
+    [SerializeField]
+    GameObject pauseFirstButton, optionsFirstButton; // Botones que se seleccionan al abrir el menú correspondiente
     
     void Update()
     {
-        if (Input.GetKeyDown("joystick button 7"))
+        if (Input.GetKeyDown("joystick button 7")) // Al pulsar el botón de pausa para o continúa el juego y abre o cierra el menú de pausa según corresponda 
         {
             if (GameManager.instance.gameIsPaused)
             {
@@ -24,14 +25,14 @@ public class PauseMenu : MonoBehaviour
         }    
     }
 
-    public void Resume()
+    public void Resume() // Continúa el juego y cierra el menú
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         GameManager.instance.gameIsPaused = false;
     }
 
-    public void Pause()
+    public void Pause() // Para el juego y abre el menú
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
@@ -40,7 +41,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
     }
 
-    public void Options()
+    public void Options() // Abre el menú de opciones
     {
         pauseMenuUI.SetActive(false);
         optionsMenuUI.SetActive(true);
@@ -48,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
     }
 
-    public void Exit()
+    public void Exit() // Sale al menú principal
     {
         Time.timeScale = 1;
         GameManager.instance.gameIsPaused = false;

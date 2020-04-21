@@ -5,22 +5,28 @@ using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject optionsFirstButton, optionsUI;
+    [SerializeField]
+    GameObject optionsFirstButton, optionsUI; // Referencian el menú de opciones y el botón seleccionado al abrirlo
 
-    public void Play()
+    private void Start() // Inicia la música del menú
     {
+        AudioManager.instance.Play(AudioManager.ESounds.Menu);        
+    }
+
+    public void Play() // Para la música del menú y carga la primera escena
+    {
+        AudioManager.instance.Stop(AudioManager.ESounds.Menu);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void Quit()
+    public void Quit() // Cierra el juego
     {
         Application.Quit();
-        Debug.Log("Caiste en el viejo truco de usar application.quit en el editor");
     }
 
-    public void Options()
+    public void Options() // Abre el menú de opciones
     {
-        optionsUI.SetActive(true);
+        optionsUI.SetActive(true);        
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
     }

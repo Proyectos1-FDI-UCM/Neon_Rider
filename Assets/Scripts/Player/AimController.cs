@@ -181,7 +181,7 @@ public class AimController : MonoBehaviour
         }
 
         anim.SetTrigger("Attack");
-        FindObjectOfType<AudioManager>().Play("Swing");
+        AudioManager.instance.Play(AudioManager.ESounds.Swing);
         switch (attackIndicator)
         {
             case 1:
