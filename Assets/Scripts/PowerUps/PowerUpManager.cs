@@ -67,7 +67,7 @@ public class PowerUpManager : MonoBehaviour
             image.sprite = blueIndicator;
             image.enabled = true;
             activo = true;
-            time = Time.time + duration;
+            //time = Time.time + duration;
         }
         else if (green.enabled && !activo)
         {
@@ -131,8 +131,14 @@ public class PowerUpManager : MonoBehaviour
             }
             else
             {
-                width = originalWidth * ((time - Time.time) / duration);
-            }
+                if (blue.enabled)
+                {
+                    width = (originalWidth * ((time - Time.time) / (duration / 3)));
+                    Debug.Log("Me cago en tus muertos");
+                }
+                else
+                    width = originalWidth * ((time - Time.time) / duration);
+            }               
         }
         //estos 4 ifs dependiendo del power up ponen un sprite distinto  a la barra, activan la imagen y ponen su tamaño al máximo.
         //el contador evita que entre más de una vez seguidas al mismo if, porque entondes la barra estaria todo el rato a tope.        
@@ -160,6 +166,7 @@ public class PowerUpManager : MonoBehaviour
                     Debug.Log("Desactivo");
                     currentPowerUp.enabled = false;
                     image.enabled = false;
+                    activo = false;
                 }
 
                 // Activa el power-up indicado
@@ -167,7 +174,7 @@ public class PowerUpManager : MonoBehaviour
                 Debug.Log("Componente power-up " + powerUpName + " activado.");
 
                 currentPowerUp = powerUp;
-                lastPowerUpName = powerUpName;
+                //lastPowerUpName = powerUpName;
 
                 // Activa el indicador del Powerup
                 if(image != null)
@@ -175,12 +182,23 @@ public class PowerUpManager : MonoBehaviour
 
                 // Añade a timeDuratión la duración del Powerup
                 if (powerUpName == "PowerUpBlue")
-                    time = duration / 2 + Time.time;
+                {
+                    time = duration / 3 + Time.time;
+                    Debug.Log("Azuuuuuuuuuul1");
+                }
                 else
                     time = duration + Time.time;
             }
             else
-                time = duration + Time.time;
+            {
+                if (powerUpName=="PowerUpBlue")
+                {
+                    time = duration/3 + Time.time;
+                    Debug.Log("Azuuuuuuuuuul2");
+                }                    
+                else 
+                    time = duration + Time.time;
+            }                
         }
     }
 
@@ -196,12 +214,12 @@ public class PowerUpManager : MonoBehaviour
         }
         else
         {
-            if (currentPowerUp != null)
-                // Desactiva el power-up activo
-                currentPowerUp.enabled = false;
-
+            if (currentPowerUp != null)     // Desactiva el power-up activo
+            {
+                currentPowerUp.enabled = false;              
+            }
+            activo = false;
             currentPowerUp = null;
-
             Debug.Log("Componente power-up " + powerUpName + " Desactivado.");
         }
     }
