@@ -24,7 +24,6 @@ public class Turret : MonoBehaviour
 
     void Awake()
     {
-        player = GameManager.instance.GetPlayer().transform;
         vision = GetComponent<EnemyVision>();
         attack = GetComponent<EnemyAttack>();
         death = GetComponent<Enemy_Death>();
@@ -32,9 +31,8 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-
+        player = GameManager.instance.GetPlayer().transform;
         transform.DetachChildren();
-
         rnd = Random.Range(0, children.Length);
 
     }
