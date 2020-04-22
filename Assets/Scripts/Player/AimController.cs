@@ -181,7 +181,7 @@ public class AimController : MonoBehaviour
         }
 
         anim.SetTrigger("Attack");
-        AudioManager.instance.Play(AudioManager.ESounds.Swing);
+        AudioManager.instance.Play(AudioManager.ESounds.Swing); // Hace que suene el sonido asociado al ataque
         switch (attackIndicator)
         {
             case 1:
