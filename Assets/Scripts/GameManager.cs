@@ -52,4 +52,5 @@ public class GameManager : MonoBehaviour
         player = playerRef;
         Debug.LogWarning("Player TOMADO: " + player);
     }
+
 }

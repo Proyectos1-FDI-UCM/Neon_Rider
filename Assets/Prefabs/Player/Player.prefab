@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
-  image: {fileID: 0}
+  image: {fileID: 7974623221217705978, guid: a421606678541544f933990ed62d4476, type: 3}
   redIndicator: {fileID: 21300000, guid: 4c6ab3edc8eca50438856d845b1a096a, type: 3}
   blueIndicator: {fileID: 21300000, guid: 573c1016a6541d347a125d924aa81875, type: 3}
   greenIndicator: {fileID: 21300000, guid: ce39e5ab207d3e542b8d31aaafb4d1fa, type: 3}
