@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public bool gameIsPaused;
     public int deadVal = 0;
     Vector2 ori;
-    private GameObject player;
+ 
 
 
 
@@ -27,11 +27,11 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }
-        
+        }       
     }
 
-    
+
+
 
     //reinicia la escena cuando muere (lo llama desde el script Death)
     public void Dead(PowerUpManager power)
@@ -42,15 +42,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public GameObject GetPlayer()
-    {
-        return player;
-    }
+ 
 
-    public void SetPlayer(GameObject playerRef)
-    {
-        player = playerRef;
-        Debug.LogWarning("Player TOMADO: " + player);
-    }
 
 }

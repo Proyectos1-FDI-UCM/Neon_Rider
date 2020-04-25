@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     Vector2 direccion;
     Animator anim;
     Rigidbody2D rb;
-
+    /*
     int attackIndicator;
     AnimatorStateInfo animState;
     CircleCollider2D attackCollider;
@@ -16,19 +16,13 @@ public class PlayerController : MonoBehaviour
     bool attackBool, blockBool;
     Bloqueo parry;
     AudioSource swing;
-
+    */
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
         Cursor.visible = false;
-    }
-
-    private void OnEnable()
-    {
-        //Pasamos referencia al GameManager
-        GameManager.instance.SetPlayer(this.gameObject);
     }
 
     void Update()
