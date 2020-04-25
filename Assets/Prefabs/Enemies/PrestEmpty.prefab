@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df1f8de34e65b34ea231321727b8f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
   speed: 0.5
 --- !u!114 &-6912082365614788069
 MonoBehaviour:
@@ -126,6 +127,7 @@ MonoBehaviour:
   bullet: {fileID: 3642364580423928804, guid: cfdfe93023bdce646a52fee5a4245831, type: 3}
   cadencia: 3
   firstFire: 0.25
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
 --- !u!114 &-8729573648145152937
 MonoBehaviour:
   m_ObjectHideFlags: 0

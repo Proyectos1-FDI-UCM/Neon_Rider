@@ -7,11 +7,10 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] GameObject bullet = null;
     [SerializeField] float cadencia = 2, firstFire = 0.5f;
     EnemyVision vision;
-    Transform player;
+    [SerializeField] Transform player;
     private void Start()
     {
         vision = GetComponent<EnemyVision>();
-        player = GameManager.instance.GetPlayer().transform;
     }
 
     void Update()

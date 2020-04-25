@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class PrestEnemyMovement : MonoBehaviour
 {
-    private Transform player;
+    [SerializeField] Transform player;
     [SerializeField] float speed = 0.5f;
     EnemyVision vision;
     Vector2 direction;
@@ -19,7 +19,6 @@ public class PrestEnemyMovement : MonoBehaviour
     void Start()
     {
         vision = GetComponent<EnemyVision>();
-        player = GameManager.instance.GetPlayer().transform;
         rb = GetComponent<Rigidbody2D>();
     }
 

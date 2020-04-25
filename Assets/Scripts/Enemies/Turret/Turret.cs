@@ -9,18 +9,12 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     [SerializeField] float speed = 1f, move = 0f, changePos = 2.5f;
-    Transform player;
+    [SerializeField] Transform player;
     [SerializeField] Transform[] children = null;
-
-
-
     int rnd;
     EnemyAttack attack;
     EnemyVision vision;
     Enemy_Death death;
-
-
-
 
     void Awake()
     {
@@ -31,16 +25,13 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        player = GameManager.instance.GetPlayer().transform;
         transform.DetachChildren();
         rnd = Random.Range(0, children.Length);
-
     }
 
 
     void Update()
     {
-
         transform.position = Vector2.MoveTowards(transform.position, children[rnd].position, speed * Time.deltaTime);
 
         if (player != null)

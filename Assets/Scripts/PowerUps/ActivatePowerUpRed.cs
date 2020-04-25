@@ -14,11 +14,14 @@ public class ActivatePowerUpRed : MonoBehaviour
     int cont = 0;
     float timeReset;
     int antcont = -1;
-
+    private void Awake()
+    {
+        pum = GetComponent<PowerUpManager>();
+    }
     void Start() 
     {
         //Inicializa el PowerUpManager   
-        pum = GetComponent<PowerUpManager>();
+        
         //Proteccion contra no inicializacion de PowerUpManager
         if (pum == null)
         {

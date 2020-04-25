@@ -6,15 +6,12 @@ public class TurretBullet : MonoBehaviour
 {
     [SerializeField] float speed = 20f;
 
-    Transform player;
+    [SerializeField] Transform player;
     Bloqueo parry;
 
     Rigidbody2D rb;
     void Start()
     {
-
-        player = GameManager.instance.GetPlayer().transform;
-
         if (player != null)
         {
             transform.parent = null;
