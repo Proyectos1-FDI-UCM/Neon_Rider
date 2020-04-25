@@ -2,13 +2,8 @@
 
 public class CameraFollow : MonoBehaviour
 {
-<<<<<<< HEAD
-    private Transform player = null;
-    [SerializeField] float delay = 1;
-=======
     [SerializeField] GameObject player;
-    [SerializeField] float delay = 0.25f;
->>>>>>> origin
+    [SerializeField] float delay = 1;
 
     void FixedUpdate()
     {

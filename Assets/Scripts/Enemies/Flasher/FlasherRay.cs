@@ -9,7 +9,7 @@ public class FlasherRay : MonoBehaviour
     [SerializeField] float duration = 0f;       //Tiempo que dura el rayo en pantalla
     private float timeDuration;                 
 
-    [SerializeField] Transform player;
+    Transform player;
 
     Rigidbody2D rb;
     Vector3 flasher;
@@ -17,6 +17,8 @@ public class FlasherRay : MonoBehaviour
 
     void Start()
     {
+        player = GetComponentInParent<EnemyAttack>().player;    //Almacena el transform del player
+
         if (player != null)
         {
             flasher = transform.position;       
