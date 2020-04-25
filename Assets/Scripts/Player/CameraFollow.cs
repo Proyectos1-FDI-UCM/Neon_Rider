@@ -3,7 +3,7 @@
 public class CameraFollow : MonoBehaviour
 {
     private Transform player = null;
-    [SerializeField] float delay = 0.25f;
+    [SerializeField] float delay = 1;
 
     private void Start()
     {

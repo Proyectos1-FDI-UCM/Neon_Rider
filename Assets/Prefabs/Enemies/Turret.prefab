@@ -144,8 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1c0ca69062c4590a6b6e8b04039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  range: 15
+  range: 18
   playerLayer: 8
   wallsLayer: 9
 --- !u!114 &4578583529460326534
@@ -192,7 +191,6 @@ MonoBehaviour:
   speed: 1
   move: 0
   changePos: 2.5
-  player: {fileID: 0}
   children: []
 --- !u!1 &1609255531819434237
 GameObject:
