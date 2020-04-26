@@ -144,8 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1c0ca69062c4590a6b6e8b04039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+<<<<<<< HEAD
+  range: 18
+=======
   range: 15
+>>>>>>> origin
   playerLayer: 8
   wallsLayer: 9
 --- !u!114 &4578583529460326534
@@ -163,6 +166,7 @@ MonoBehaviour:
   bullet: {fileID: 4209019407658046984, guid: 1dfe2eba237d12f459a0c76dd7e22e32, type: 3}
   cadencia: 2
   firstFire: 0.5
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
 --- !u!114 &5640894872948844694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +196,10 @@ MonoBehaviour:
   speed: 1
   move: 0
   changePos: 2.5
-  player: {fileID: 0}
+<<<<<<< HEAD
+=======
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
+>>>>>>> origin
   children: []
 --- !u!1 &1609255531819434237
 GameObject:

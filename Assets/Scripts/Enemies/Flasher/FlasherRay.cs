@@ -17,7 +17,7 @@ public class FlasherRay : MonoBehaviour
 
     void Start()
     {
-        player = GameManager.instance.GetPlayer().transform;    //Almacena el transform del player
+        player = GetComponentInParent<EnemyAttack>().player;    //Almacena el transform del player
 
         if (player != null)
         {

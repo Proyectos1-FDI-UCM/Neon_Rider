@@ -19,8 +19,7 @@ public class PrestBullet : MonoBehaviour
         {
             transform.parent = null;
             rb = GetComponent<Rigidbody2D>();
-            rb.velocity = (player.position - transform.position).normalized * speed;
-            
+            rb.velocity = (player.position - transform.position).normalized * speed;          
         }
     }
 
@@ -29,14 +28,10 @@ public class PrestBullet : MonoBehaviour
     {
         death = collision.gameObject.GetComponent<Enemy_Death>();
         parry = collision.gameObject.GetComponent<Bloqueo>();
-        if (parry==null)
+        if (parry==null && death != null)
         {
-            Debug.Log("TOCO PARED o MATO");
-        if (death != null )
-        {
-            death.OnAttack();
+            death.OnAttack();         
         }
-            Destroy(this.gameObject);
-        }     
+        Destroy(this.gameObject);
     }
 }

@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {x: 0, y: 0}
+  gameIsPaused: 0
+  deadVal: 0
+  player: {fileID: 1882214181353476974, guid: 75af44364c887f344844d0027ad2f244, type: 3}

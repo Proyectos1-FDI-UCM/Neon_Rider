@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] GameObject bullet = null;
     [SerializeField] float cadencia = 2, firstFire = 0.5f;
     EnemyVision vision;
+
     Transform player;
     EnemyVision enemy;
     Drone drone;
@@ -16,7 +17,6 @@ public class EnemyAttack : MonoBehaviour
     float fire = 0;
     AnimatorStateInfo estadoAnimacion;
     Animator animator;
-
 
     private void Start()
     {
@@ -30,7 +30,6 @@ public class EnemyAttack : MonoBehaviour
             arm = child.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
         }            
         vision = GetComponent<EnemyVision>();
-        player = GameManager.instance.GetPlayer().transform;
     }
 
     void Update()

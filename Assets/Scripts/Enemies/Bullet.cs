@@ -12,9 +12,8 @@ public class Bullet : MonoBehaviour
     Enemy_Death death;
     Rigidbody2D rb;
     void Start()
-    {    
-        player = GameManager.instance.GetPlayer().transform;
-
+    {
+        player = GetComponentInParent<EnemyAttack>().player;
         if (player != null)
         {
             transform.parent = null;
@@ -32,4 +31,6 @@ public class Bullet : MonoBehaviour
         }
         Destroy(this.gameObject);
     }
+
+
 }
