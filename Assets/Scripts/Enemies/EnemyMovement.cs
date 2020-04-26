@@ -17,9 +17,18 @@ public class EnemyMovement : MonoBehaviour
     Vector2 direction;
     Rigidbody2D rb;
     EnemyVision vision;
+    Animator anim;
+    Transform child;
+    EnemyVision enemy;
+    Drone drone;
 
     void Start()
     {
+        enemy = GetComponent<EnemyVision>();
+        drone = GetComponent<Drone>();
+        if (enemy != null && drone == null)
+            child = transform.GetChild(0);
+        anim = child.GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         vision = GetComponent<EnemyVision>();
         clockwise = false;
@@ -56,7 +65,8 @@ public class EnemyMovement : MonoBehaviour
             }
             else
                 direction = Vector2.zero;
-        }      
+        }
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
 
     // Movimiento del enemigo con dirección "direction" y velocidad "speed"

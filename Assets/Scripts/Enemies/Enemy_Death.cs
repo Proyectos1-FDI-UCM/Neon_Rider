@@ -8,6 +8,7 @@ public class Enemy_Death : MonoBehaviour
     EnemyVision enemy;
     Drone drone;
 
+
     private void Start()
     {
         // Si se reanuda desde un checkpoint posicionado después del enemigo,
