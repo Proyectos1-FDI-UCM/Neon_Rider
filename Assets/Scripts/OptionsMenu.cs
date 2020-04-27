@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -10,24 +11,39 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField]
     GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
 
+    [SerializeField]
+    GameObject mainVolSlider = null, SFXVolSlider = null, musicVolSlider = null, fulscreenToggle = null;
+
+    private void Start()
+    {
+        mainVolSlider.GetComponent<Slider>().value = GameManager.instance.mainVolSlider;
+        SFXVolSlider.GetComponent<Slider>().value = GameManager.instance.SFXVolSlider;
+        musicVolSlider.GetComponent<Slider>().value = GameManager.instance.musicVolSlider;
+        fulscreenToggle.GetComponent<Toggle>().isOn = GameManager.instance.fullScreenToggle;
+    }
+
     public void SetMasterVolume(float volume) // Slider del volumen general
     {
         master.SetFloat("masterVolume", Mathf.Log10 (volume) * 20);
+        GameManager.instance.MainSliderState(volume);
     }
 
     public void SetMusicVolume(float volume) // Slider del volumen de la música
     {
         master.SetFloat("musicVolume", Mathf.Log10(volume) * 20);
+        GameManager.instance.MusicSliderState(volume);
     }
 
     public void SetSFXVolume (float volume) // Slider del volumen de los efectos
     {
         master.SetFloat("sfxVolume", Mathf.Log10(volume) * 20);
+        GameManager.instance.SFXSliderState(volume);
     }
 
     public void SetFullScreen(bool isFullscreen) // Controla si el juego debe estar a pantalla completa o no
     {
         Screen.fullScreen = isFullscreen;
+        GameManager.instance.FullscreenToggleState(isFullscreen);
     }
 
     public void Back() // Es llamado al salir del menú de opciones
