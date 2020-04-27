@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] float speed = 20f;
 
     Transform player;
-    Bloqueo parry;
+    
     Enemy_Death death;
     Rigidbody2D rb;
     void Start()
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         death = collision.gameObject.GetComponent<Enemy_Death>();
-        parry = collision.gameObject.GetComponent<Bloqueo>();
+        
         if (death != null)
         {
             death.OnAttack();

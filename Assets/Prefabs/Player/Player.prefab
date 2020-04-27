@@ -363,7 +363,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882214181353476974}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03e36551521590347962db9417ea7e67, type: 3}
   m_Name: 
@@ -513,10 +513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63eb6a8c29a4cf1458f93c0a8fbc8ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purpleBulletback: {fileID: 1988812110686703352, guid: 75cb596e2b9aea144a8b010f0dc05e49,
-    type: 3}
-  purpleRb: {fileID: 3783132923408467343, guid: 75cb596e2b9aea144a8b010f0dc05e49,
-    type: 3}
 --- !u!1 &6598205414774279092
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,17 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FlasherMovement : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] Transform player = null;
+    new Renderer renderer;
+    AnimatorStateInfo estadoAnimacion;
+    Transform child;
+    Animator animator;
+    EnemyVision enemy;
+    bool ya = true;
+
+    private void Start()
+    { 
+        enemy = GetComponent<EnemyVision>();
+        if (enemy != null)
+        { 
+            child = transform.GetChild(0);
+            renderer = GetComponentInChildren<Renderer>();
+            animator = child.GetComponent<Animator>();
+        }
+    }
     void Update()
     {
         if (player!=null)       //Si tiene un player asociado
         {
             Vector3 diference = player.position - transform.position;       //Vector que guarda la dirreccion de la linea que une flasher-player
-            float rotationz = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;        //Calculamos el angulo
-            transform.rotation = Quaternion.Euler(0f, 0f, rotationz+180);                   //Rota el flasher hacia el jugador
+            float rotationz = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;        //Calculamos el angulo            
         }
+        
+        if (renderer.isVisible && ya)
+        {
+            animator.SetBool("Jump", true);
+            Invoke("Apagar", 1);
+        }
+    }
+
+    void Apagar()
+    {
+        animator.SetBool("Jump", false);
+        ya = false;
     }
 }

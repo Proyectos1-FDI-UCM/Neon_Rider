@@ -7,6 +7,8 @@ public class Enemy_Death : MonoBehaviour
     Transform child;
     EnemyVision enemy;
     Drone drone;
+    Turret turret;
+
 
     private void Start()
     {
@@ -19,9 +21,9 @@ public class Enemy_Death : MonoBehaviour
 
         enemy = GetComponent<EnemyVision>();
         drone = GetComponent<Drone>();
-
+        turret = GetComponent<Turret>();
         // Si no es el ralentizador cogemos al hijo
-        if (enemy != null && drone == null)
+        if (enemy != null && drone == null && turret == null)
             child = transform.GetChild(0);
     }
     // Metodo llamado desde el componente Sword_Attack
