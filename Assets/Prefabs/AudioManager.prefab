@@ -56,9 +56,3 @@ MonoBehaviour:
       type: 2}
     loop: 1
     source: {fileID: 0}
-  - name: afblsfbsl
-    clip: {fileID: 8300000, guid: e5b6931a8f14135489802d6b40380411, type: 3}
-    mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
-      type: 2}
-    loop: 0
-    source: {fileID: 0}
