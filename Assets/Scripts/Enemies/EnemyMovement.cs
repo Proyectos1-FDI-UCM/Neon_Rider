@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] Transform player = null;
     [SerializeField] float speed = 0.5f;
     [SerializeField] float firstMove = 0, changeDir = 2.5f;
     bool clockwise;

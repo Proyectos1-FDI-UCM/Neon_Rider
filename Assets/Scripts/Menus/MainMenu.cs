@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject optionsFirstButton, optionsUI; // Referencian el menú de opciones y el botón seleccionado al abrirlo
+    GameObject optionsFirstButton = null, optionsUI = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
 
     private void Start() // Inicia la música del menú
     {

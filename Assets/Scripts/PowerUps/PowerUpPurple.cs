@@ -10,9 +10,9 @@ public class PowerUpPurple : MonoBehaviour
     Rigidbody2D rbBullet;
     GameObject bullet;
     //[SerializeField] float speed = 0;
-    [SerializeField] GameObject purpleBulletback = null;
+    //[SerializeField] GameObject purpleBulletback = null;
     Transform purpleBulletTrans;
-    [SerializeField]  Rigidbody2D purpleRb = null;
+    //[SerializeField]  Rigidbody2D purpleRb = null;
     Vector2 auxVel=new Vector2(2,0);
     GameObject chid;
     bool activo;
