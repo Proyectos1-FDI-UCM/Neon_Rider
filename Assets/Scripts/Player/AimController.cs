@@ -27,9 +27,11 @@ public class AimController : MonoBehaviour
         attackBool = animState.IsName("Player_Attack");
         blockBool = animState.IsName("Player_Block");
         playerSpr = GetComponent<SpriteRenderer>().sprite;
-        if (playerSpr.name == "Attack_Right" || playerSpr.name == "Attack_Left" || playerSpr.name == "Attack_Down" || playerSpr.name == "Attack_Up" || blockBool)
+        //63 left, 15 down, 34 up, 70 right
+        if (playerSpr.name == "Player_70" || playerSpr.name == "Player_63" || playerSpr.name == "Player_15" || playerSpr.name == "Player_34" || blockBool)
         {
             attackCollider.enabled = true;
+            
         }
         else
         {
@@ -145,6 +147,7 @@ public class AimController : MonoBehaviour
 
     static void Attack(int attackIndicator, ref Animator anim, ref CircleCollider2D attackCollider)
     {
+        //attackCollider.enabled = true;
         Vector2 mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         // Si se mueve el joystick en el eje horizontal:
         if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
