@@ -8,10 +8,11 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    [SerializeField] float speed = 1f, move = 0f, changePos = 2.5f;
+    [SerializeField] float speed = 1f, moveIni = 0f, changePos = 2.5f, cadence = 0.5f;
     [SerializeField] Transform player = null;
     [SerializeField] Transform[] children = null;
     int nextPos;
+    float cadenceAux = 0;
     bool comeback = false;
     TurretAttack attack;
     EnemyVision vision;
@@ -39,18 +40,28 @@ public class Turret : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, children[nextPos].position) < 0.2f)
             {
-                if (move <= 0)
+                if (moveIni <= 0)
                 {
-                    move = changePos;
+                    moveIni = changePos;
                     GetNextPos();
+                    cadenceAux = cadence;
                 }
                 else
                 {
                     death.enabled = false;
-                    move -= Time.deltaTime;
+                    moveIni -= Time.deltaTime;
+                  
 
                     if (vision.Spotted(player))
-                        attack.TurAttack(player);
+                    {
+                        if (cadenceAux <= 0){
+                            attack.TurAttack(player);
+                            cadenceAux = cadence;
+                        }
+                        else{
+                            cadenceAux -= Time.deltaTime;
+                        }
+                    }
                 }
             }
             else

@@ -9,20 +9,17 @@ public class TurretBullet : MonoBehaviour
   
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerController>() != null)
-        {
+        if (collision.gameObject.GetComponent<TurretBullet>() == null){
             Destroy(this.gameObject);
         }
     
     }
 
-    public void SetDir(Transform player)
+    public void SetDir(Vector2 dir)
     {
-        if (player != null)
-        {
-            transform.parent = null;
-            rb = GetComponent<Rigidbody2D>();
-            rb.velocity = (player.position - transform.position).normalized * speed;
-        }
+        transform.parent = null;
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = dir.normalized * speed;
     }
+
 }

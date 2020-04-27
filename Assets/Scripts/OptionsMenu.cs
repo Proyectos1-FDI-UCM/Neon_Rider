@@ -12,7 +12,7 @@ public class OptionsMenu : MonoBehaviour
     GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
 
     [SerializeField]
-    GameObject mainVolSlider, SFXVolSlider, musicVolSlider, fulscreenToggle;
+    GameObject mainVolSlider = null, SFXVolSlider = null, musicVolSlider = null, fulscreenToggle = null;
 
     private void Start()
     {
