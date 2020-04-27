@@ -57,7 +57,7 @@ public class PowerUpManager : MonoBehaviour
         {
             width = originalWidth;
             image.sprite = redIndicator;
-            image.enabled = true;            
+            image.enabled = true;
             activo = true;
             time = Time.time + duration;
         }
@@ -81,7 +81,7 @@ public class PowerUpManager : MonoBehaviour
         {
             width = originalWidth;
             image.sprite = yellowIndicator;
-            image.enabled = true;           
+            image.enabled = true;
             activo = true;
             time = Time.time + duration;
             Debug.Log("hola");
@@ -138,7 +138,7 @@ public class PowerUpManager : MonoBehaviour
                 }
                 else
                     width = originalWidth * ((time - Time.time) / duration);
-            }               
+            }
         }
         //estos 4 ifs dependiendo del power up ponen un sprite distinto  a la barra, activan la imagen y ponen su tamaño al máximo.
         //el contador evita que entre más de una vez seguidas al mismo if, porque entondes la barra estaria todo el rato a tope.        
@@ -177,7 +177,7 @@ public class PowerUpManager : MonoBehaviour
                 //lastPowerUpName = powerUpName;
 
                 // Activa el indicador del Powerup
-                if(image != null)
+                if (image != null)
                     image.enabled = true;
 
                 // Añade a timeDuratión la duración del Powerup
@@ -191,14 +191,14 @@ public class PowerUpManager : MonoBehaviour
             }
             else
             {
-                if (powerUpName=="PowerUpBlue")
+                if (powerUpName == "PowerUpBlue")
                 {
-                    time = duration/3 + Time.time;
+                    time = duration / 3 + Time.time;
                     Debug.Log("Azuuuuuuuuuul2");
-                }                    
-                else 
+                }
+                else
                     time = duration + Time.time;
-            }                
+            }
         }
     }
 
@@ -216,7 +216,7 @@ public class PowerUpManager : MonoBehaviour
         {
             if (currentPowerUp != null)     // Desactiva el power-up activo
             {
-                currentPowerUp.enabled = false;              
+                currentPowerUp.enabled = false;
             }
             activo = false;
             currentPowerUp = null;
