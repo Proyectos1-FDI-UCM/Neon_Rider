@@ -42,7 +42,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
- 
-
-
+    public void ChangeScene()
+    {
+        checkpoint = new Vector2(0, 0);
+        deadVal = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
