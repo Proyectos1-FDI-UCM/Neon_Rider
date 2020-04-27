@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ActivatePowerUpGreenBlue : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject player = null;
     PowerUpManager pum;
     float delay = 0.1f;
 

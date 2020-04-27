@@ -2,8 +2,8 @@
 
 public class Drone : MonoBehaviour
 {
-    [SerializeField] Transform playerT;
-    [SerializeField] GameObject explosion;
+    [SerializeField] Transform playerT = null;
+    [SerializeField] GameObject explosion = null;
     [SerializeField] float speed = 10f;
     bool onRange = false;
     PlayerController obj;

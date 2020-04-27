@@ -8,7 +8,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] float cadencia = 2, firstFire = 0.5f;
     EnemyVision vision;
 
-    Transform player;
+    public Transform player;
     EnemyVision enemy;
     Drone drone;
     Transform child;

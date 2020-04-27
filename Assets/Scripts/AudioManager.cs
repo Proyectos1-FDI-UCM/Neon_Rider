@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField]
-    Sound[] sounds; // Array que contiene todos los sonidos del juego
+    Sound[] sounds = null; // Array que contiene todos los sonidos del juego
 
     public static AudioManager instance; 
 
