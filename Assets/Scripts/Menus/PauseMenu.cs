@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject pauseMenuUI, optionsMenuUI; // Referencias al menú de pausa y de opciones
+    GameObject pauseMenuUI = null, optionsMenuUI = null; // Referencias al menú de pausa y de opciones
 
     [SerializeField]
-    GameObject pauseFirstButton, optionsFirstButton; // Botones que se seleccionan al abrir el menú correspondiente
+    GameObject pauseFirstButton = null, optionsFirstButton = null; // Botones que se seleccionan al abrir el menú correspondiente
     
     void Update()
     {

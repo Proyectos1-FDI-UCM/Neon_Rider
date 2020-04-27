@@ -8,13 +8,12 @@ public class Bullet : MonoBehaviour
     [SerializeField] float speed = 20f;
 
     Transform player;
-    Bloqueo parry;
+    
     Enemy_Death death;
     Rigidbody2D rb;
     void Start()
-    {    
-        player = GameManager.instance.GetPlayer().transform;
-
+    {
+        player = GetComponentInParent<EnemyAttack>().player;
         if (player != null)
         {
             transform.parent = null;
@@ -25,11 +24,13 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         death = collision.gameObject.GetComponent<Enemy_Death>();
-        parry = collision.gameObject.GetComponent<Bloqueo>();
+        
         if (death != null)
         {
             death.OnAttack();
         }
         Destroy(this.gameObject);
     }
+
+
 }

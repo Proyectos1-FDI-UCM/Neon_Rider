@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b89bcda135e2f744a8c96f1823107e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemy: {fileID: 1211186608349598426, guid: f67a9d7cec06d994e8093ad33ebb8979, type: 3}
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
   secondFire: 0.5
   firstFire: 1.75
 --- !u!1001 &3642364579911954678

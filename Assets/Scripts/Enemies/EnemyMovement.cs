@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    Transform player;
+    [SerializeField] Transform player = null;
     [SerializeField] float speed = 0.5f;
     [SerializeField] float firstMove = 0, changeDir = 2.5f;
     bool clockwise;
@@ -32,7 +32,6 @@ public class EnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         vision = GetComponent<EnemyVision>();
         clockwise = false;
-        player = GameManager.instance.GetPlayer().transform;
     }
 
     void Update()

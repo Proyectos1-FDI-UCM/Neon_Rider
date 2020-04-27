@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 public class OptionsMenu : MonoBehaviour
 {
     [SerializeField]
-    AudioMixer master; // Utilizamos el mixer para controlar el volumen
+    AudioMixer master = null; // Utilizamos el mixer para controlar el volumen
     
     [SerializeField]
-    GameObject pauseMenuUI, optionsMenuUI, pauseFirstButton, mainFirstButton; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
+    GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
 
     public void SetMasterVolume(float volume) // Slider del volumen general
     {

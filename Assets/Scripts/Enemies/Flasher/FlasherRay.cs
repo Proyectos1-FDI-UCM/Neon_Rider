@@ -6,8 +6,8 @@ using UnityEngine;
 public class FlasherRay : MonoBehaviour
 {
     [SerializeField] float speed = 0f;          //Velocidad dedisparo
-    [SerializeField] float duration = 0f;       //Tiempo que dura el rayo en pantalla
-    private float timeDuration;                 
+    //[SerializeField] float duration = 0f;       //Tiempo que dura el rayo en pantalla
+    //private float timeDuration;                 
 
     Transform player;
 
@@ -17,7 +17,7 @@ public class FlasherRay : MonoBehaviour
 
     void Start()
     {
-        player = GameManager.instance.GetPlayer().transform;    //Almacena el transform del player
+        player = GetComponentInParent<EnemyAttack>().player;    //Almacena el transform del player
 
         if (player != null)
         {

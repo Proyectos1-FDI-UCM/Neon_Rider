@@ -100,6 +100,7 @@ MonoBehaviour:
   bullet: {fileID: 4000162200283304618, guid: ca4d26d00aba9b144a60ce0eca72412a, type: 3}
   cadencia: 3
   firstFire: 2
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
 --- !u!114 &7891853340560020534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09dc1600b6acdf44bb6efdb402ccbc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
 --- !u!1 &5797608750458448585
 GameObject:
   m_ObjectHideFlags: 0

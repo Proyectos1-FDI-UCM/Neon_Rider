@@ -2,25 +2,18 @@
 
 public class Drone : MonoBehaviour
 {
-    private Transform player;
-    [SerializeField]
-    public GameObject explosion;
-    [SerializeField]
-    float speed = 10f;
+    [SerializeField] Transform playerT = null;
+    [SerializeField] GameObject explosion = null;
+    [SerializeField] float speed = 10f;
     bool onRange = false;
     PlayerController obj;
-    [SerializeField]
-    float time = 0.6f;
+    [SerializeField] float time = 0.6f;
     Vector2 direction;
     Rigidbody2D rb;
     EnemyVision vision;
     
     void Start()
     {
-        if (GameManager.instance.GetPlayer() != null)
-            player = GameManager.instance.GetPlayer().transform;
-        else
-            player = null;
         vision = GetComponent<EnemyVision>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -40,9 +33,9 @@ public class Drone : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if (!onRange && vision.Spotted(player))
+        else if (!onRange && vision.Spotted(playerT))
         {
-            direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
+            direction = new Vector2(playerT.position.x - transform.position.x, playerT.position.y - transform.position.y);
             direction.Normalize();
         }
     
@@ -64,4 +57,6 @@ public class Drone : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeAll; // Congela la posición para que no se pueda empujarlo antes de que explote
         }
     }
+
+   
 }

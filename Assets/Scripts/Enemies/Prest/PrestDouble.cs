@@ -13,7 +13,7 @@ public class PrestDouble : MonoBehaviour
     {
         enemyMov = GetComponentInParent<PrestEnemyMovement>();
         enemyMov.enabled = false;
-        player = GameManager.instance.GetPlayer().transform;
+        player = GetComponentInParent<EnemyAttack>().player;
 
         // Cogemos las balas por separado
         firstBullet = transform.GetChild(0).gameObject;
