@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: ed548cc63e873f5469eecd7657016468
+guid: ba070faf58c3e3f46a10fae16271b171
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1667785599210293322
-    second: MATONIdle_0
+      213: 7708832165941565797
+    second: Maton_Walking_0
   - first:
-      213: -7572615338617727940
-    second: MATONIdle_1
-  - first:
-      213: 846939572986567769
-    second: MATONIdle_2
+      213: 4331204368215492133
+    second: Maton_Walking_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -95,7 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MATONIdle_0
+      name: Maton_Walking_0
       rect:
         serializedVersion: 2
         x: 0
@@ -109,35 +106,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86155ccfb4dcb7b42967920d28c20e6e
-      internalID: 1667785599210293322
+      spriteID: e6286280b5b6f3e4fb1ede9ae22fe2c0
+      internalID: 7708832165941565797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MATONIdle_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21c6c60e301fb0346a01ab8c0cac4ceb
-      internalID: -7572615338617727940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MATONIdle_2
+      name: Maton_Walking_1
       rect:
         serializedVersion: 2
         x: 0
@@ -151,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99596971b29463d469a6266f689f3cf8
-      internalID: 846939572986567769
+      spriteID: 81cb6246cd6b0ae46857c30c85f8f7e6
+      internalID: 4331204368215492133
       vertices: []
       indices: 
       edges: []
