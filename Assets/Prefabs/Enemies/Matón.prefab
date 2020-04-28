@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4209019407658046984, guid: 92d6c4aaa1a387a48920a309a4ee2d50, type: 3}
-  cadencia: 2
+  cadencia: 1
   firstFire: 0
   player: {fileID: 0}
 --- !u!114 &6747011512644733875
