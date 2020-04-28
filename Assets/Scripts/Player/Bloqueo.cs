@@ -60,7 +60,7 @@ public class Bloqueo : MonoBehaviour
             }
             if (collision.GetComponent<PrestBullet>() != null && purple.enabled == false)
             {
-
+                AudioManager.instance.Play(AudioManager.ESounds.Bloqueo3);
                 Destroy(collision.gameObject);
                 Debug.Log("BALA DESTRUIDA");
 
