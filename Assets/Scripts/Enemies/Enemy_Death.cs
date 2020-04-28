@@ -38,6 +38,7 @@ public class Enemy_Death : MonoBehaviour
             if (child.GetComponent<Animator>() != null)
             {
                 child.GetComponent<Animator>().SetBool("Death", true);
+                child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;
                 child.SetParent(null);
             }
             Destroy(this.gameObject);
