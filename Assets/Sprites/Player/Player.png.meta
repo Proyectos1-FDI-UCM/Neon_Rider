@@ -413,7 +413,7 @@ TextureImporter:
       name: Player_5
       rect:
         serializedVersion: 2
-        x: 1281
+        x: 1280
         y: 2048
         width: 256
         height: 256
@@ -561,7 +561,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 1793
+        y: 1792
         width: 256
         height: 256
       alignment: 9
@@ -582,7 +582,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1794
+        y: 1792
         width: 256
         height: 256
       alignment: 9
@@ -603,7 +603,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1280
-        y: 1793
+        y: 1792
         width: 256
         height: 256
       alignment: 9
@@ -645,7 +645,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1792
-        y: 1793
+        y: 1792
         width: 256
         height: 256
       alignment: 9
@@ -750,7 +750,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 1537
+        y: 1536
         width: 256
         height: 256
       alignment: 9
@@ -813,7 +813,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 1537
+        y: 1536
         width: 256
         height: 256
       alignment: 9
@@ -1569,7 +1569,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1536
-        y: 514
+        y: 512
         width: 256
         height: 256
       alignment: 9
@@ -1590,7 +1590,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1792
-        y: 513
+        y: 512
         width: 256
         height: 256
       alignment: 9
@@ -1611,7 +1611,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2048
-        y: 513
+        y: 512
         width: 256
         height: 256
       alignment: 9
@@ -1674,7 +1674,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 258
+        y: 256
         width: 256
         height: 256
       alignment: 9
@@ -1715,7 +1715,7 @@ TextureImporter:
       name: Player_67
       rect:
         serializedVersion: 2
-        x: 1026
+        x: 1024
         y: 256
         width: 256
         height: 256

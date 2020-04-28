@@ -3,7 +3,8 @@ using UnityEngine.Audio;
 
 public class AimController : MonoBehaviour
 {
-    Animator anim;
+    Animator[] anim;
+    SpriteRenderer[] neon;
     int attackIndicator;
     AnimatorStateInfo animState;
     CircleCollider2D attackCollider;
@@ -14,7 +15,10 @@ public class AimController : MonoBehaviour
     private void Awake()
     {
         Cursor.visible = false;
-        anim = GetComponent<Animator>();
+        //anim[0] player //anim[1] sword
+        anim = GetComponentsInChildren<Animator>();
+        neon = GetComponentsInChildren<SpriteRenderer>();
+        //neon[1].color = Color.red;
         attackCollider = GetComponent<CircleCollider2D>();
         parry = GetComponent<Bloqueo>();
     }
@@ -22,7 +26,7 @@ public class AimController : MonoBehaviour
     void Update()
     {
         //Cogemos el estado de la animacion en cada frame
-        animState = anim.GetCurrentAnimatorStateInfo(0);
+        animState = anim[0].GetCurrentAnimatorStateInfo(0);
         //Hacemos que el booleano se active solo cuando se activa la animación
         attackBool = animState.IsName("Player_Attack");
         blockBool = animState.IsName("Player_Block");
@@ -31,7 +35,7 @@ public class AimController : MonoBehaviour
         if (playerSpr.name == "Player_70" || playerSpr.name == "Player_63" || playerSpr.name == "Player_15" || playerSpr.name == "Player_34" || blockBool)
         {
             attackCollider.enabled = true;
-            
+
         }
         else
         {
@@ -48,31 +52,37 @@ public class AimController : MonoBehaviour
             // Si se mueve el joystick en el eje horizontal:
             if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
-                anim.SetFloat("PosY", 0);
+                anim[0].SetFloat("PosY", 0);
+                anim[1].SetFloat("PosY", 0);
                 if (mov.x >= 0) // Mirar Derecha
                 {
-                    anim.SetFloat("PosX", 1);
+                    anim[0].SetFloat("PosX", 1);
+                    anim[1].SetFloat("PosX", 1);
                     attackIndicator = 1;
                 }
                 else // Mirar Izquierda
                 {
-                    anim.SetFloat("PosX", -1);
+                    anim[0].SetFloat("PosX", -1);
+                    anim[1].SetFloat("PosX", -1);
                     attackIndicator = 2;
                 }
             }
 
             else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
-                anim.SetFloat("PosX", 0);
+                anim[0].SetFloat("PosX", 0);
+                anim[1].SetFloat("PosX", 0);
                 if (mov.y >= 0) // Mirar Arriba
                 {
-                    anim.SetFloat("PosY", 1);
+                    anim[0].SetFloat("PosY", 1);
+                    anim[1].SetFloat("PosY", 1);
                     attackIndicator = 3;
 
                 }
                 else // Mirar Abajo
                 {
-                    anim.SetFloat("PosY", -1);
+                    anim[0].SetFloat("PosY", -1);
+                    anim[1].SetFloat("PosY", -1);
                     attackIndicator = 4;
                     //Debug.Log(indicadorAtaque);
 
@@ -83,7 +93,7 @@ public class AimController : MonoBehaviour
         if (Input.GetKeyDown("joystick button 5") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
         {
             GetComponent<Sword_Attack>().enabled = true;
-            Attack(attackIndicator, ref anim, ref attackCollider);
+            Attack(attackIndicator, ref attackCollider, anim);
         }
 
         else if (Input.GetKeyDown("joystick button 4") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
@@ -93,31 +103,37 @@ public class AimController : MonoBehaviour
             // Si se mueve el joystick en el eje horizontal:
             if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
-                anim.SetFloat("PosY", 0);
+                anim[0].SetFloat("PosY", 0);
+                anim[1].SetFloat("PosY", 0);
                 if (mov.x >= 0) // Mirar Derecha
                 {
-                    anim.SetFloat("PosX", 1);
+                    anim[0].SetFloat("PosX", 1);
+                    anim[1].SetFloat("PosX", 1);
                     attackIndicator = 1;
                 }
                 else // Mirar Izquierda
                 {
-                    anim.SetFloat("PosX", -1);
+                    anim[0].SetFloat("PosX", -1);
+                    anim[1].SetFloat("PosX", -1);
                     attackIndicator = 2;
                 }
             }
 
             else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
-                anim.SetFloat("PosX", 0);
+                anim[0].SetFloat("PosX", 0);
+                anim[1].SetFloat("PosX", 0);
                 if (mov.y >= 0) // Mirar Arriba
                 {
-                    anim.SetFloat("PosY", 1);
+                    anim[0].SetFloat("PosY", 1);
+                    anim[1].SetFloat("PosX", 1);
                     attackIndicator = 3;
 
                 }
                 else // Mirar Abajo
                 {
-                    anim.SetFloat("PosY", -1);
+                    anim[0].SetFloat("PosY", -1);
+                    anim[1].SetFloat("PosX", -1);
                     attackIndicator = 4;
                     //Debug.Log(indicadorAtaque);
 
@@ -125,7 +141,8 @@ public class AimController : MonoBehaviour
             }
 
             GetComponent<Sword_Attack>().enabled = false;
-            anim.SetTrigger("Block");
+            anim[0].SetTrigger("Block");
+            anim[1].SetTrigger("Block");
             switch (attackIndicator)
             {
                 case 1:  //Block Right
@@ -149,45 +166,52 @@ public class AimController : MonoBehaviour
         }
     }
 
-    static void Attack(int attackIndicator, ref Animator anim, ref CircleCollider2D attackCollider)
+    static void Attack(int attackIndicator, ref CircleCollider2D attackCollider, Animator[] anim)
     {
         //attackCollider.enabled = true;
         Vector2 mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         // Si se mueve el joystick en el eje horizontal:
         if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
         {
-            anim.SetFloat("PosY", 0);
+            anim[0].SetFloat("PosY", 0);
+            anim[1].SetFloat("PosY", 0);
             if (mov.x >= 0) // Mirar Derecha
             {
-                anim.SetFloat("PosX", 1);
+                anim[0].SetFloat("PosX", 1);
+                anim[1].SetFloat("PosY", 1);
                 attackIndicator = 1;
             }
             else // Mirar Izquierda
             {
-                anim.SetFloat("PosX", -1);
+                anim[0].SetFloat("PosX", -1);
+                anim[1].SetFloat("PosY", -1);
                 attackIndicator = 2;
             }
         }
 
         else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
         {
-            anim.SetFloat("PosX", 0);
+            anim[0].SetFloat("PosX", 0);
+            anim[1].SetFloat("PosY", 0);
             if (mov.y >= 0) // Mirar Arriba
             {
-                anim.SetFloat("PosY", 1);
+                anim[0].SetFloat("PosY", 1);
+                anim[1].SetFloat("PosY", 1);
                 attackIndicator = 3;
 
             }
             else // Mirar Abajo
             {
-                anim.SetFloat("PosY", -1);
+                anim[0].SetFloat("PosY", -1);
+                anim[1].SetFloat("PosY", -1);
                 attackIndicator = 4;
                 //Debug.Log(indicadorAtaque);
 
             }
         }
 
-        anim.SetTrigger("Attack");
+        anim[0].SetTrigger("Attack");
+        anim[1].SetTrigger("Attack");
         AudioManager.instance.Play(AudioManager.ESounds.Swing); // Hace que suene el sonido asociado al ataque
         switch (attackIndicator)
         {

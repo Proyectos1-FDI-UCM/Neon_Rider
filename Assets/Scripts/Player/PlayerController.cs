@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 15;
     Vector2 direccion;
-    Animator anim;
+    Animator[] anim;
     Rigidbody2D rb;
     /*
     int attackIndicator;
@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim[0] player //anim[1] sword
+        anim = GetComponentsInChildren<Animator>();
 
         Cursor.visible = false;
     }
@@ -29,7 +30,8 @@ public class PlayerController : MonoBehaviour
     {
         direccion = Input.GetAxis("Horizontal") * Vector2.right + Input.GetAxis("Vertical") * Vector2.up;
         direccion.Normalize();
-        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
 
     private void FixedUpdate()
