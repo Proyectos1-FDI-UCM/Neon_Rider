@@ -53,6 +53,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         GameManager.instance.gameIsPaused = false;
+        AudioManager.instance.Stop(AudioManager.ESounds.LevelMusic);
+        AudioManager.instance.Play(AudioManager.ESounds.Menu);
         SceneManager.LoadScene(0);
     }
 }

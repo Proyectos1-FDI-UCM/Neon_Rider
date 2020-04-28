@@ -62,3 +62,33 @@ MonoBehaviour:
       type: 2}
     loop: 0
     source: {fileID: 0}
+  - name: Bloqueo1
+    clip: {fileID: 8300000, guid: b94fad878e0d1dc4fb4572fb64d0bfbf, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Bloqueo2
+    clip: {fileID: 8300000, guid: 12620740c7059fa439cf9827e40c68ee, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Bloqueo3
+    clip: {fileID: 8300000, guid: 74ad4c670dc41e74886291ae99e94b68, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: FlasherRay
+    clip: {fileID: 8300000, guid: 932b260c86307664ca3353d623973418, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelMusic
+    clip: {fileID: 8300000, guid: 08066e467a4474b4e9b5c5cbc7e8122a, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    loop: 1
+    source: {fileID: 0}
