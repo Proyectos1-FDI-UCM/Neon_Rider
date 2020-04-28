@@ -25,7 +25,7 @@ public class Enemy_Death : MonoBehaviour
         drone = GetComponent<Drone>();
         turret = GetComponent<Turret>();
         // Si no es el ralentizador cogemos al hijo
-        if (prest != null && enemy != null && drone == null && turret == null)
+        if (enemy != null && drone == null && turret == null)
             child = transform.GetChild(0);
     }
     // Metodo llamado desde el componente Sword_Attack
