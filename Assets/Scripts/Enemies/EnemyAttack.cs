@@ -63,12 +63,12 @@ public class EnemyAttack : MonoBehaviour
             float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;            
             if (player.position.x > transform.position.x)
             {
-                transform.localScale = new Vector2(-1f, 1f);
+                transform.localScale = new Vector3(-1f, 1f, 1);
                 rotator.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
             }               
             else
             {
-                transform.localScale = new Vector2(1f, 1f);
+                transform.localScale = new Vector3(1f, 1f, 1);
                 rotator.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ - 180);
             }
                          
