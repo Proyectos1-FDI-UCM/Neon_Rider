@@ -144,7 +144,7 @@ public class PowerUpManager : MonoBehaviour
                 if (blue.enabled)
                 {
                     width = (originalWidth * ((time - Time.time) / (duration / 3)));
-                    Debug.Log("Me cago en tus muertos");
+                    Debug.Log("Hola Guille");
                 }
                 else
                     width = originalWidth * ((time - Time.time) / duration);

@@ -51,6 +51,7 @@ public class AimController : MonoBehaviour
             if (GameManager.instance.mando)
             {
                 mov = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+                Debug.Log(mov);
             }
             else
             {
