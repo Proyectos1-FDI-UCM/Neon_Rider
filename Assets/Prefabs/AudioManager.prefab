@@ -92,3 +92,9 @@ MonoBehaviour:
       type: 2}
     loop: 1
     source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 5a8a675aecb536543a8ff905dc028078, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    loop: 0
+    source: {fileID: 0}
