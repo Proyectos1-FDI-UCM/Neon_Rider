@@ -55,7 +55,7 @@ public class EnemyAttack : MonoBehaviour
         // "bullet" en la posición del enemigo y aumenta el valor de "firstFire" mediante
         // la variable "cadencia"
 
-        if (transform != null)
+        if (transform != null && player!=null)
         {
             // Diferencia entre los 2 vectores - player y DoubleBullet
             Vector3 difference = player.position - transform.position;
