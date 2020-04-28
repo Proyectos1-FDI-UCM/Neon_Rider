@@ -126,14 +126,14 @@ public class AimController : MonoBehaviour
                 if (mov.y >= 0) // Mirar Arriba
                 {
                     anim[0].SetFloat("PosY", 1);
-                    anim[1].SetFloat("PosX", 1);
+                    anim[1].SetFloat("PosY", 1);
                     attackIndicator = 3;
 
                 }
                 else // Mirar Abajo
                 {
                     anim[0].SetFloat("PosY", -1);
-                    anim[1].SetFloat("PosX", -1);
+                    anim[1].SetFloat("PosY", -1);
                     attackIndicator = 4;
                     //Debug.Log(indicadorAtaque);
 
@@ -178,13 +178,13 @@ public class AimController : MonoBehaviour
             if (mov.x >= 0) // Mirar Derecha
             {
                 anim[0].SetFloat("PosX", 1);
-                anim[1].SetFloat("PosY", 1);
+                anim[1].SetFloat("PosX", 1);
                 attackIndicator = 1;
             }
             else // Mirar Izquierda
             {
                 anim[0].SetFloat("PosX", -1);
-                anim[1].SetFloat("PosY", -1);
+                anim[1].SetFloat("PosX", -1);
                 attackIndicator = 2;
             }
         }
@@ -192,7 +192,7 @@ public class AimController : MonoBehaviour
         else if (mov != Vector2.zero && !GameManager.instance.gameIsPaused)
         {
             anim[0].SetFloat("PosX", 0);
-            anim[1].SetFloat("PosY", 0);
+            anim[1].SetFloat("PosX", 0);
             if (mov.y >= 0) // Mirar Arriba
             {
                 anim[0].SetFloat("PosY", 1);
