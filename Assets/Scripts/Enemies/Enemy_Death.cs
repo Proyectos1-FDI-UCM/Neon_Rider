@@ -8,6 +8,7 @@ public class Enemy_Death : MonoBehaviour
     EnemyVision enemy;
     Drone drone;
     Turret turret;
+    PrestEnemyAttack prest;
 
 
     private void Start()
@@ -19,11 +20,12 @@ public class Enemy_Death : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        prest = GetComponent<PrestEnemyAttack>();
         enemy = GetComponent<EnemyVision>();
         drone = GetComponent<Drone>();
         turret = GetComponent<Turret>();
         // Si no es el ralentizador cogemos al hijo
-        if (enemy != null && drone == null && turret == null)
+        if (prest != null && enemy != null && drone == null && turret == null)
             child = transform.GetChild(0);
     }
     // Metodo llamado desde el componente Sword_Attack
@@ -38,7 +40,8 @@ public class Enemy_Death : MonoBehaviour
             if (child.GetComponent<Animator>() != null)
             {
                 child.GetComponent<Animator>().SetBool("Death", true);
-                child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;
+                if (prest == null)
+                    child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;
                 child.SetParent(null);
             }
             Destroy(this.gameObject);

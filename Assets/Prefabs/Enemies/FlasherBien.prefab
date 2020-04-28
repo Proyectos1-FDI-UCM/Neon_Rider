@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4000162200283304618, guid: ca4d26d00aba9b144a60ce0eca72412a, type: 3}
-  cadencia: 3
-  firstFire: 3
+  cadencia: 2
+  firstFire: 0
   player: {fileID: 0}
 --- !u!114 &2654224321490732187
 MonoBehaviour:
