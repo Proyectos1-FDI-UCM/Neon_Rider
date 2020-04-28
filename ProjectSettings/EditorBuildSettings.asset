@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a746e6482e4a50444900c3ff75aad9b2
   - enabled: 1
-    path: Assets/Scenes/Juntarcosa.unity
-    guid: c6547fe8fdcd45544a8cbfda47f77455
+    path: Assets/Scenes/Sergio A Tilemap.unity
+    guid: 327ac65d03327ea4ab9ef414d6d61c95
+  - enabled: 1
+    path: Assets/Scenes/Tilemap Nivel 2.unity
+    guid: 04255a9c88267e84b8c550047243db8a
   m_configObjects: {}

@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public bool gameIsPaused;
     public int deadVal = 0;
     Vector2 ori;
- 
+    public bool fullScreenToggle = true;
+    public float mainVolSlider = 0.2f,
+                 SFXVolSlider = 0.2f,
+                 musicVolSlider = 0.2f; 
 
 
 
@@ -31,7 +34,28 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void FullscreenToggleState(bool isFullscreen)
+    {
+        if (isFullscreen)
+            fullScreenToggle = true;
+        else
+            fullScreenToggle = false;
+    }
 
+    public void MainSliderState (float volume)
+    {
+        mainVolSlider = volume;
+    }
+
+    public void MusicSliderState(float volume)
+    {
+        musicVolSlider = volume;
+    }
+
+    public void SFXSliderState(float volume)
+    {
+        SFXVolSlider = volume;
+    }
 
     //reinicia la escena cuando muere (lo llama desde el script Death)
     public void Dead(PowerUpManager power)
@@ -42,7 +66,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
- 
-
-
+    public void ChangeScene()
+    {
+        checkpoint = new Vector2(0, 0);
+        deadVal = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
