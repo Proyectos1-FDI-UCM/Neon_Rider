@@ -58,4 +58,8 @@ public class OptionsMenu : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(mainFirstButton);
        optionsMenuUI.SetActive(false);
     }
+    public void ControlToggle(bool mando)
+    {
+        GameManager.instance.ControlToggle(mando);
+    }
 }

@@ -48,7 +48,23 @@ public class AimController : MonoBehaviour
         // jugador apunta en la dirección en la que se mueve
         if (!attackBool && !blockBool)
         {
-            mov = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            if (GameManager.instance.mando)
+            {
+                mov = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            }
+            else
+            {
+                Vector2 direccionx, direcciony;
+                if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
+                else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
+                else direcciony = new Vector2(0, 0);
+
+                if (Input.GetKey("d")) direccionx = new Vector2(1, 0);
+                else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
+                else direccionx = new Vector2(0, 0);
+
+                mov = direccionx + direcciony;
+            }
             // Si se mueve el joystick en el eje horizontal:
             if (Mathf.Abs(mov.x) >= Mathf.Abs(mov.y) && mov != Vector2.zero && !GameManager.instance.gameIsPaused)
             {
@@ -90,13 +106,13 @@ public class AimController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("joystick button 5") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
+        if ((Input.GetKeyDown("joystick button 5") || Input.GetMouseButtonDown(0)) && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
         {
             GetComponent<Sword_Attack>().enabled = true;
             Attack(attackIndicator, ref attackCollider, anim);
         }
 
-        else if (Input.GetKeyDown("joystick button 4") && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
+        else if ((Input.GetKeyDown("joystick button 4") || Input.GetMouseButtonDown(1)) && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
         {
 
             mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
