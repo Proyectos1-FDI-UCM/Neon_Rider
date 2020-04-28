@@ -58,5 +58,12 @@ public class ActivatePowerUpRed : MonoBehaviour
     public void AddToCont()
     {
         cont++;
+        if (cont == 1)
+            AudioManager.instance.Play(AudioManager.ESounds.Bloqueo1);
+        else if (cont == 2)
+            AudioManager.instance.Play(AudioManager.ESounds.Bloqueo2);
+        else if (cont == 3)
+            AudioManager.instance.Play(AudioManager.ESounds.Bloqueo3);
+
     }
 }

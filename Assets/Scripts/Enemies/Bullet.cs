@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         player = GetComponentInParent<EnemyAttack>().player;
+        AudioManager.instance.Play(AudioManager.ESounds.MatonShot);
         if (player != null)
         {
             transform.parent = null;
