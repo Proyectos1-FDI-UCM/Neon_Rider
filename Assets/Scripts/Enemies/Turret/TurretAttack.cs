@@ -19,13 +19,13 @@ public class TurretAttack : MonoBehaviour
                         //dir.x++;
                         break;
                     case 2:
-                        dir.x++;
+                        dir.x+= 2;
                         break;
                     case 3:
                         dir.y--;
                         break;
                     case 4:
-                        dir.y++;
+                        dir.y+= 2;
                         break;
                 }
                 Instantiate(bulletPrefab, transform);

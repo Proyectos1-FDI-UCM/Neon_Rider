@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1211186608349598421}
   - component: {fileID: 3544215787455322414}
   - component: {fileID: -5819054599879597020}
-  - component: {fileID: -6912082365614788069}
+  - component: {fileID: 8952591718571152545}
   - component: {fileID: -8729573648145152937}
   m_Layer: 11
   m_Name: PrestEmpty
@@ -105,14 +105,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211186608349598424}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df1f8de34e65b34ea231321727b8f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
-  speed: 0.5
---- !u!114 &-6912082365614788069
+  player: {fileID: 0}
+  speed: 0.25
+--- !u!114 &8952591718571152545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,13 +121,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211186608349598424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3956ac1b40d17604ca83067cc87c6388, type: 3}
+  m_Script: {fileID: 11500000, guid: d47e1fba9e30c964696ee063c8b0f176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3642364580423928804, guid: cfdfe93023bdce646a52fee5a4245831, type: 3}
   cadencia: 3
   firstFire: 0.25
-  player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
+  player: {fileID: 0}
 --- !u!114 &-8729573648145152937
 MonoBehaviour:
   m_ObjectHideFlags: 0

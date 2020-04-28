@@ -27,30 +27,29 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        transform.DetachChildren();
-        nextPos = 1;
+        transform.DetachChildren(); //Quitamos GO hijos innecesarios
+        nextPos = 1; //Primera posicion 
     }
 
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, children[nextPos].position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, children[nextPos].position, speed * Time.deltaTime); //Movimiento hacia el punto designado
 
         if (player != null)
         {
-            if (Vector2.Distance(transform.position, children[nextPos].position) < 0.2f)
+            if (Vector2.Distance(transform.position, children[nextPos].position) < 0.2f) //Si está en posición
             {
-                if (moveIni <= 0)
+                if (moveIni <= 0) //Fase de cambio de posición
                 {
                     moveIni = changePos;
                     GetNextPos();
                     cadenceAux = cadence;
                 }
-                else
+                else //Fase de ataque
                 {
                     death.enabled = false;
                     moveIni -= Time.deltaTime;
-                  
 
                     if (vision.Spotted(player))
                     {
@@ -64,7 +63,7 @@ public class Turret : MonoBehaviour
                     }
                 }
             }
-            else
+            else //Si se está moviendo
             {
                 death.enabled = true;
                 attack.enabled = false;
