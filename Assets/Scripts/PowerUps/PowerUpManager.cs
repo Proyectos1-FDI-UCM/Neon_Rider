@@ -35,6 +35,8 @@ public class PowerUpManager : MonoBehaviour
 
     ActivatePowerUpPurple activPowPurple;
 
+    SpriteRenderer [] neonSword;
+
     float width, originalWidth, time;
     bool activo = false;
 
@@ -49,20 +51,24 @@ public class PowerUpManager : MonoBehaviour
         purple = GetComponent<PowerUpPurple>();
         yellow = GetComponent<PowerUpYellow>();
         activPowPurple = GetComponent<ActivatePowerUpPurple>();
+        // Cogemos el sprite de la espada para poder cambiarlo de color luego
+        neonSword = GetComponentsInChildren<SpriteRenderer>();
     }
 
     void Update()
     {
         if (red.enabled && !activo)
         {
+            neonSword[1].color = Color.red;
             width = originalWidth;
-            image.sprite = redIndicator;
+            image.sprite = redIndicator;    
             image.enabled = true;
             activo = true;
             time = Time.time + duration;
         }
         else if (blue.enabled && !activo)
         {
+            neonSword[1].color = Color.blue;
             width = originalWidth;
             image.sprite = blueIndicator;
             image.enabled = true;
@@ -71,6 +77,7 @@ public class PowerUpManager : MonoBehaviour
         }
         else if (green.enabled && !activo)
         {
+            neonSword[1].color = Color.green;
             width = originalWidth;
             image.sprite = greenIndicator;
             image.enabled = true;
@@ -79,6 +86,7 @@ public class PowerUpManager : MonoBehaviour
         }
         else if (yellow.enabled && !activo)
         {
+            neonSword[1].color = Color.yellow;
             width = originalWidth;
             image.sprite = yellowIndicator;
             image.enabled = true;
@@ -88,6 +96,7 @@ public class PowerUpManager : MonoBehaviour
         }
         else if (purple.enabled && !activo)
         {
+            neonSword[1].color = new Color(177,0,255,255);
             width = originalWidth;
             image.sprite = purpleIndicator;
             image.enabled = true;
@@ -97,6 +106,7 @@ public class PowerUpManager : MonoBehaviour
         //si el tamaño de la barra es 0 desactiva la imagen de la barra y pone cont a 0 
         if (width <= 0)
         {
+            neonSword[1].color = Color.black;
             activo = false;
             image.enabled = false;
             if (red.enabled)
