@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public bool gameIsPaused;
     public int deadVal = 0;
     Vector2 ori;
-    public bool fullScreenToggle = true;
+    public bool fullScreenToggle = true, mando=true;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f; 
@@ -40,6 +40,13 @@ public class GameManager : MonoBehaviour
             fullScreenToggle = true;
         else
             fullScreenToggle = false;
+    }
+    public void ControlToggle(bool mando)
+    {
+        if (mando)
+            mando = true;
+        else
+            mando = false;
     }
 
     public void MainSliderState (float volume)

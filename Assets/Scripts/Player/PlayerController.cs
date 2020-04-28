@@ -28,8 +28,25 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        direccion = Input.GetAxis("Horizontal") * Vector2.right + Input.GetAxis("Vertical") * Vector2.up;
-        direccion.Normalize();
+        Vector2 direccionx;
+        Vector2 direcciony;
+        if (GameManager.instance.mando)
+        {
+            direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            direccion.Normalize();
+        }
+        else
+        {
+            if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
+            else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
+            else direcciony = new Vector2(0, 0);
+
+            if (Input.GetKey("d")) direccionx = new Vector2(1, 0);
+            else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
+            else direccionx = new Vector2(0, 0);
+
+            direccion = direccionx + direcciony;
+        }
         anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
@@ -38,6 +55,4 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = direccion * speed;
     }
-
-
 }

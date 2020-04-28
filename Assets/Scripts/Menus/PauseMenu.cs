@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown("joystick button 7")) // Al pulsar el botón de pausa para o continúa el juego y abre o cierra el menú de pausa según corresponda 
+        if (Input.GetKeyDown("joystick button 7")||Input.GetKey(KeyCode.Escape)) // Al pulsar el botón de pausa para o continúa el juego y abre o cierra el menú de pausa según corresponda 
         {
             if (GameManager.instance.gameIsPaused)
             {
