@@ -128,17 +128,21 @@ public class AimController : MonoBehaviour
             anim.SetTrigger("Block");
             switch (attackIndicator)
             {
-                case 1:
-                    attackCollider.offset = new Vector2(0.3f, 0);
+                case 1:  //Block Right
+                    attackCollider.offset = new Vector2(0.18f, 0);
+                    attackCollider.radius = 0.35f;
                     break;
-                case 2:
-                    attackCollider.offset = new Vector2(-0.3f, 0);
+                case 2:   //Block Left
+                    attackCollider.offset = new Vector2(-0.19f, 0);
+                    attackCollider.radius = 0.33f;
                     break;
-                case 3:
-                    attackCollider.offset = new Vector2(0, 0.2f);
+                case 3:   //Block Up
+                    attackCollider.offset = new Vector2(0, 0.15f);
+                    attackCollider.radius = 0.3f;
                     break;
-                case 4:
-                    attackCollider.offset = new Vector2(0, -0.2f);
+                case 4:   //Block Down
+                    attackCollider.offset = new Vector2(0.04f, -0.125f);
+                    attackCollider.radius = 0.3f;
                     break;
             }
             parry.enabled = true;
@@ -187,17 +191,21 @@ public class AimController : MonoBehaviour
         AudioManager.instance.Play(AudioManager.ESounds.Swing); // Hace que suene el sonido asociado al ataque
         switch (attackIndicator)
         {
-            case 1:
-                attackCollider.offset = new Vector2(0.3f, 0);
+            case 1:   //Right Attack
+                attackCollider.offset = new Vector2(0.3f, 0.12f);
+                attackCollider.radius = 0.4f;
                 break;
-            case 2:
-                attackCollider.offset = new Vector2(-0.3f, 0);
+            case 2:   //Left Attack
+                attackCollider.offset = new Vector2(-0.3f, 0.12f);
+                attackCollider.radius = 0.4f;
                 break;
-            case 3:
-                attackCollider.offset = new Vector2(0, 0.2f);
+            case 3:   //Up Attack
+                attackCollider.offset = new Vector2(-0.07f, 0.22f);
+                attackCollider.radius = 0.42f;
                 break;
-            case 4:
-                attackCollider.offset = new Vector2(0, -0.2f);
+            case 4:   //Down Attack
+                attackCollider.offset = new Vector2(0, -0.3f);
+                attackCollider.radius = 0.42f;
                 break;
         }
     }
