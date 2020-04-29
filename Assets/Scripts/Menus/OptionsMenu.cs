@@ -19,7 +19,7 @@ public class OptionsMenu : MonoBehaviour
         mainVolSlider.GetComponent<Slider>().value = GameManager.instance.mainVolSlider;
         SFXVolSlider.GetComponent<Slider>().value = GameManager.instance.SFXVolSlider;
         musicVolSlider.GetComponent<Slider>().value = GameManager.instance.musicVolSlider;
-        fulscreenToggle.GetComponent<Toggle>().isOn = GameManager.instance.fullScreenToggle;
+        fulscreenToggle.GetComponent<Toggle>().isOn = Screen.fullScreen;
         controlToggle.GetComponent<Toggle>().isOn = GameManager.instance.mando;
     }
 
