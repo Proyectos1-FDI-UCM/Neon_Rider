@@ -6,6 +6,7 @@ public class PowerUpPurple : MonoBehaviour
     //Bullet redBulletComponent;
     PrestBullet purpleBulletComponent;
     Bullet redBulletComponent;
+    TurretBullet turretBulletComponent;
     Bloqueo parry;
     Rigidbody2D rbBullet;
     GameObject bullet;
@@ -27,6 +28,7 @@ public class PowerUpPurple : MonoBehaviour
         purpleBulletTrans = collision.gameObject.GetComponent<Transform>();
         purpleBulletComponent = collision.gameObject.GetComponent<PrestBullet>();
         redBulletComponent = collision.gameObject.GetComponent<Bullet>();
+        turretBulletComponent = collision.gameObject.GetComponent<TurretBullet>();
         bullet = collision.gameObject;
         rbBullet = collision.gameObject.GetComponent<Rigidbody2D>();
         if (rbBullet != null)
@@ -37,7 +39,7 @@ public class PowerUpPurple : MonoBehaviour
 
         if (activo)
         {
-            if ((purpleBulletComponent != null|| redBulletComponent != null) && parry.enabled )
+            if ((purpleBulletComponent != null|| redBulletComponent != null || turretBulletComponent != null) && parry.enabled )
             {
                 rbBullet.velocity = -rbBullet.velocity;
                 bullet.layer = 13;
