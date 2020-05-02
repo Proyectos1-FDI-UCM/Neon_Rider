@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
         }       
     }
 
-
     public void FullscreenToggleState(bool isFullscreen)
     {
         if (isFullscreen)
@@ -63,15 +62,6 @@ public class GameManager : MonoBehaviour
     public void SFXSliderState(float volume)
     {
         SFXVolSlider = volume;
-    }
-
-    //reinicia la escena cuando muere (lo llama desde el script Death)
-    public void Dead(PowerUpManager power)
-    {
-        //reinicia los power ups desde el power up manager.
-        //no es necesario con el load scene, pero por si sirve con los checkpoints.
-        power.Reset();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ChangeScene()
