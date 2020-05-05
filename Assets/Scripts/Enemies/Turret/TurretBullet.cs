@@ -12,7 +12,10 @@ public class TurretBullet : MonoBehaviour
         if (collision.gameObject.GetComponent<TurretBullet>() == null){
             Destroy(this.gameObject);
         }
-    
+       
+        Death death = collision.gameObject.GetComponent<Death>();
+        if (death != null)
+            death.Dead();
     }
 
     public void SetDir(Vector2 dir)
