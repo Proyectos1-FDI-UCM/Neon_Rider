@@ -15,9 +15,9 @@ public class Death : MonoBehaviour
     {
         active = false;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {       
-        if ((collision.gameObject.GetComponent<TurretBullet>() != null || collision.gameObject.GetComponent<Bullet>() != null || collision.gameObject.GetComponent<PrestBullet>() != null || collision.gameObject.GetComponent<Explosion>() || collision.gameObject.GetComponent<Pinchos>() != null || collision.gameObject.GetComponent<Activada>() != null) && active)
+    public void Dead()
+    {
+        if (active)
         {
             Instantiate(muerto, transform.position, Quaternion.identity);
             Destroy(this.gameObject);

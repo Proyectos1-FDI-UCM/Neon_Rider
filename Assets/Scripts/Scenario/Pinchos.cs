@@ -38,6 +38,10 @@ public class Pinchos : MonoBehaviour
         {
            dead.OnAttack();
         }
+
+        Death death = collision.gameObject.GetComponent<Death>();
+        if (death != null)
+            death.Dead();
     }
 
 }

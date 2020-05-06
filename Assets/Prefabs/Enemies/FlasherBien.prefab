@@ -261,7 +261,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4000162200283304618, guid: ca4d26d00aba9b144a60ce0eca72412a, type: 3}
   cadencia: 2
-  firstFire: 0
   player: {fileID: 0}
 --- !u!114 &2654224321490732187
 MonoBehaviour:
@@ -345,7 +344,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8789801279261498689}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -375,7 +374,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4247094508879866470, guid: af0298dffc81a494e8f21fa404723371,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

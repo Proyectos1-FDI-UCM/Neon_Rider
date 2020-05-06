@@ -52,5 +52,8 @@ public class Activada : MonoBehaviour
         {
             dead.OnAttack();
         }
+        Death death = collision.gameObject.GetComponent<Death>();
+        if (death != null)
+            death.Dead();
     }
 }
