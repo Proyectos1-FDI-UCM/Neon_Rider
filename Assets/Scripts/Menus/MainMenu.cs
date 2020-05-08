@@ -17,7 +17,8 @@ public class MainMenu : MonoBehaviour
     {
         AudioManager.instance.Stop(AudioManager.ESounds.Menu);
         AudioManager.instance.Play(AudioManager.ESounds.LevelMusic);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Cursor.visible = false;
+        SceneManager.LoadScene(GameManager.instance.actualScene);
     }
 
     public void Quit() // Cierra el juego
