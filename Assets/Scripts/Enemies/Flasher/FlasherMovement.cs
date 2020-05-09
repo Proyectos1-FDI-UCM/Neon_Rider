@@ -4,11 +4,11 @@ public class FlasherMovement : MonoBehaviour
 {
     [SerializeField] Transform player = null;
     new Renderer renderer;
-    AnimatorStateInfo estadoAnimacion;
+    //AnimatorStateInfo estadoAnimacion; SIN USO
     Transform child;
     Animator animator;
     EnemyVision enemy;
-    bool ya = true;
+    bool ya = true; 
 
     private void Start()
     { 
@@ -22,10 +22,10 @@ public class FlasherMovement : MonoBehaviour
     }
     void Update()
     {
-        if (player!=null)       //Si tiene un player asociado
+        if (player!=null)
         {
-            Vector3 diference = player.position - transform.position;       //Vector que guarda la dirreccion de la linea que une flasher-player
-            float rotationz = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;        //Calculamos el angulo            
+            Vector3 diference = player.position - transform.position; // Guarda la dirreccion de la linea que une flasher-player
+            float rotationz = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg; // Calculamos el ángulo            
         }
         
         if (renderer.isVisible && ya)

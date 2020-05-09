@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-
+// Clase auxiliar de listas, modificada para aceptar Transform
 public class TransformList 
 {
-    // Start is called before the first frame update
-    // clase privada para los nodos
+    // Clase privada para los nodos
     private class Node
     {
         public Transform dato;   // información del nodo (podría ser de cualquier tipo)

@@ -13,7 +13,7 @@ public class Explosion : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) //En caso de tocar al jugador, éste muere
     {
         Death dead = collision.gameObject.GetComponent<Death>();
         if (dead != null)

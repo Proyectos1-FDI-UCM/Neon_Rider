@@ -2,7 +2,7 @@
 
 // Asociado al enemigo. Toma la capa en la que éste y el jugador se encuentran, pasa su valor a binario y los utiliza, mediante 
 // Physics2D.Raycast y la dirección del jugador previamente tomada para determinar si el jugador está en el rango de visión del 
-// enemigo. Si es el caso, se activa el ataque y el movimiento
+// enemigo. Si es el caso, se activa el ataque y el movimiento.
 
 public class EnemyVision : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class EnemyVision : MonoBehaviour
     RaycastHit2D hit;
     float distance;
     
-    public bool Spotted(Transform player)
+    public bool Spotted(Transform player) // Método invocable que comprueba si el jugador está en rango
     {
         bool spot = false;
         if (player != null)

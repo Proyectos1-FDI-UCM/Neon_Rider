@@ -1,6 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+// En base a las posiciones recibidas del editor (gameObject vacíos hijos de la torreta), va posicionándose entre ellas, con una pausa entre medias
+// en la que busca y dispara al jugador en caso de encontrarlo
+// Además, mientras se mueve es invulnerable
+
+
 
 [RequireComponent(typeof(EnemyVision))]
 [RequireComponent(typeof(TurretAttack))]
@@ -71,7 +75,7 @@ public class Turret : MonoBehaviour
         }
     }
 
-    void GetNextPos()
+    void GetNextPos() // Cálculo de la siguiente posición de la torreta
     {
         if (comeback)
         {

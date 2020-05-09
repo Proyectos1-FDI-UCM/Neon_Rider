@@ -4,6 +4,8 @@
 // Physics2D.Raycast y la dirección del jugador previamente tomada para determinar si el jugador está en el rango de visión del 
 // enemigo. Si es el caso, se activa el ataque y el movimiento
 
+//IDENTICO A VISIÓN?
+
 public class PrestEnemyVision : MonoBehaviour
 {
     public Transform player;

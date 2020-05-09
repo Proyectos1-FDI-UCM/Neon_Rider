@@ -28,14 +28,15 @@ public class PrestBullet : MonoBehaviour
     {
         death = collision.gameObject.GetComponent<Enemy_Death>();
         parry = collision.gameObject.GetComponent<Bloqueo>();
-        if (parry==null && death != null)
-        {
+
+        if (parry==null && death != null){
             death.OnAttack();         
         }
-        Destroy(this.gameObject);
 
-        Death dead = collision.gameObject.GetComponent<Death>();
+        Death dead = collision.gameObject.GetComponent<Death>(); 
         if (dead != null)
             dead.Dead();
+
+        Destroy(this.gameObject);
     }
 }

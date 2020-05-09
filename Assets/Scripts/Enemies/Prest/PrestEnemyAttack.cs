@@ -20,7 +20,7 @@ public class PrestEnemyAttack : MonoBehaviour
         // "bullet" en la posición del enemigo y aumenta el valor de "firstFire" mediante
         // la variable "cadencia"
         if (transform != null)
-            if (Time.time > firstFire && vision.Spotted(player))
+            if (Time.time > firstFire && vision.Spotted(player)) //TIME.TIME ------------------------------> TIME.DELTATIME
             {
                 Instantiate(bullet, transform.position, Quaternion.identity, transform);
                 firstFire = cadencia + Time.time;
