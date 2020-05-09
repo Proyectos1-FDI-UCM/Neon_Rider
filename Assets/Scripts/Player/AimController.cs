@@ -14,7 +14,6 @@ public class AimController : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.visible = false;
         //anim[0] player //anim[1] sword
         anim = GetComponentsInChildren<Animator>();
         neon = GetComponentsInChildren<SpriteRenderer>();

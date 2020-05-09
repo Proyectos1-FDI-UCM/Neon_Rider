@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance; 
 
-    public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3}; // Enum usado para acceder al array sounds
+    public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3, FlasherRay, LevelMusic, Hit}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
             s.source.clip = s.clip; 
             s.source.outputAudioMixerGroup = s.mixer; 
             s.source.loop = s.loop;
+            s.source.volume = s.volume;
         }
     }
 

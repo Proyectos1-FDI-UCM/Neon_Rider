@@ -33,5 +33,9 @@ public class PrestBullet : MonoBehaviour
             death.OnAttack();         
         }
         Destroy(this.gameObject);
+
+        Death dead = collision.gameObject.GetComponent<Death>();
+        if (dead != null)
+            dead.Dead();
     }
 }

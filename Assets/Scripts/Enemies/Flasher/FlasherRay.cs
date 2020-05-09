@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FlasherRay : MonoBehaviour
@@ -18,7 +16,7 @@ public class FlasherRay : MonoBehaviour
     void Start()
     {
         player = GetComponentInParent<EnemyAttack>().player;    //Almacena el transform del player
-
+        AudioManager.instance.Play(AudioManager.ESounds.FlasherRay);
         if (player != null)
         {
             flasher = transform.position;       

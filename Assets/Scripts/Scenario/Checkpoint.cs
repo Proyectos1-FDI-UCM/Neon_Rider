@@ -2,7 +2,7 @@
 
 public class Checkpoint : MonoBehaviour
 {
-    [SerializeField] int deadVal = 0;
+    public int deadVal = 0;
 
     void OnTriggerEnter2D(Collider2D collision)
     {

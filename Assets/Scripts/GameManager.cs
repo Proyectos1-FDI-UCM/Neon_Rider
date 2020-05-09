@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
     public Vector2 checkpoint;
     public bool gameIsPaused;
     public int deadVal = 0;
-    Vector2 ori;
-    public bool fullScreenToggle = true, mando=true;
+    public int actualScene = 1;
+    //Vector2 ori;
+    public bool fullScreenToggle = true, mando = true;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f; 
@@ -32,7 +33,6 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }       
     }
-
 
     public void FullscreenToggleState(bool isFullscreen)
     {
@@ -64,19 +64,11 @@ public class GameManager : MonoBehaviour
         SFXVolSlider = volume;
     }
 
-    //reinicia la escena cuando muere (lo llama desde el script Death)
-    public void Dead(PowerUpManager power)
-    {
-        //reinicia los power ups desde el power up manager.
-        //no es necesario con el load scene, pero por si sirve con los checkpoints.
-        power.Reset();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void ChangeScene()
     {
         checkpoint = new Vector2(0, 0);
         deadVal = 0;
+        actualScene++;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

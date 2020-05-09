@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2126750944836410849}
   - component: {fileID: -3662877247048597249}
   - component: {fileID: 4217465518738076342}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Ralen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 1916327118693554903}
   - component: {fileID: 7306170218513087992}
   - component: {fileID: 4839386743951546953}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: RalenSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

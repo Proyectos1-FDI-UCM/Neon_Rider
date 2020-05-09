@@ -32,7 +32,7 @@ public class Enemy_Death : MonoBehaviour
     public void OnAttack()
     {
         hitsToDeath--;
-
+        AudioManager.instance.Play(AudioManager.ESounds.Hit);
         if (enemy != null && hitsToDeath == 0)
         {
             // Separamos al hijo del padre

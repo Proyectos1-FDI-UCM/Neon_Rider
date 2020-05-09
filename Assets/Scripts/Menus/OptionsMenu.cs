@@ -12,14 +12,15 @@ public class OptionsMenu : MonoBehaviour
     GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
 
     [SerializeField]
-    GameObject mainVolSlider = null, SFXVolSlider = null, musicVolSlider = null, fulscreenToggle = null;
+    GameObject mainVolSlider, SFXVolSlider, musicVolSlider, fulscreenToggle, controlToggle;
 
     private void Start()
     {
         mainVolSlider.GetComponent<Slider>().value = GameManager.instance.mainVolSlider;
         SFXVolSlider.GetComponent<Slider>().value = GameManager.instance.SFXVolSlider;
         musicVolSlider.GetComponent<Slider>().value = GameManager.instance.musicVolSlider;
-        fulscreenToggle.GetComponent<Toggle>().isOn = GameManager.instance.fullScreenToggle;
+        fulscreenToggle.GetComponent<Toggle>().isOn = Screen.fullScreen;
+        controlToggle.GetComponent<Toggle>().isOn = GameManager.instance.mando;
     }
 
     public void SetMasterVolume(float volume) // Slider del volumen general

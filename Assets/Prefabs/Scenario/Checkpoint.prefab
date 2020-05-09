@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 277200410623580693}
   - component: {fileID: 277200410623580692}
   - component: {fileID: 277200410623580695}
+  - component: {fileID: 5318592403661391857}
+  - component: {fileID: 4160589556020046129}
   - component: {fileID: 277200410623580694}
   m_Layer: 15
   m_Name: Checkpoint
@@ -106,6 +108,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5318592403661391857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277200410623580689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac606e2950f969d4996cd03bbce944e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  sentences:
+  - 
+  - 
+  - 
+--- !u!114 &4160589556020046129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277200410623580689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b6f510fef5b48478382d3b479c88b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+  diaMan: {fileID: 0}
 --- !u!114 &277200410623580694
 MonoBehaviour:
   m_ObjectHideFlags: 0

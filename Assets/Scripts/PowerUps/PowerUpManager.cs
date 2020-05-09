@@ -17,8 +17,6 @@ public class PowerUpManager : MonoBehaviour
 {
 
     MonoBehaviour currentPowerUp;
-    string lastPowerUpName;
-    float timeDuration = -1;
     [SerializeField] float duration = 5f;
     PowerUpRed red;
     PowerUpBlue blue;
@@ -57,58 +55,35 @@ public class PowerUpManager : MonoBehaviour
 
     void Update()
     {
-        if (red.enabled && !activo)
+        if (!activo)
         {
-            neonSword[1].color = Color.red;
-            width = originalWidth;
-            image.sprite = redIndicator;    
-            image.enabled = true;
-            activo = true;
-            time = Time.time + duration;
-        }
-        else if (blue.enabled && !activo)
-        {
-            neonSword[1].color = Color.blue;
-            width = originalWidth;
-            image.sprite = blueIndicator;
-            image.enabled = true;
-            activo = true;
-            //time = Time.time + duration;
-        }
-        else if (green.enabled && !activo)
-        {
-            neonSword[1].color = Color.green;
-            width = originalWidth;
-            image.sprite = greenIndicator;
-            image.enabled = true;
-            activo = true;
-            time = Time.time + duration;
-        }
-        else if (yellow.enabled && !activo)
-        {
-            neonSword[1].color = Color.yellow;
-            width = originalWidth;
-            image.sprite = yellowIndicator;
-            image.enabled = true;
-            activo = true;
-            time = Time.time + duration;
-            Debug.Log("hola");
-        }
-        else if (purple.enabled && !activo)
-        {
-            neonSword[1].color = new Color(177,0,255,255);
-            width = originalWidth;
-            image.sprite = purpleIndicator;
-            image.enabled = true;
-            activo = true;
-            time = Time.time + duration;
+            if (red.enabled)
+            {
+                ActivateIndicator(Color.red, redIndicator);
+            }
+            else if (blue.enabled)
+            {
+                ActivateIndicator(Color.blue, blueIndicator);
+            }
+            else if (green.enabled)
+            {
+                ActivateIndicator(Color.green, greenIndicator);
+            }
+            else if (yellow.enabled)
+            {
+                ActivateIndicator(Color.yellow, yellowIndicator);
+            }
+            else if (purple.enabled)
+            {
+                ActivateIndicator(new Color(177, 0, 255, 255), purpleIndicator);
+            }
         }
         //si el tamaño de la barra es 0 desactiva la imagen de la barra y pone cont a 0 
         if (width <= 0)
         {
             neonSword[1].color = Color.black;
             activo = false;
-            image.enabled = false;
+            
             if (red.enabled)
             {
                 DeactivatePowerUp("PowerUpRed");
@@ -144,7 +119,6 @@ public class PowerUpManager : MonoBehaviour
                 if (blue.enabled)
                 {
                     width = (originalWidth * ((time - Time.time) / (duration / 3)));
-                    Debug.Log("Me cago en tus muertos");
                 }
                 else
                     width = originalWidth * ((time - Time.time) / duration);
@@ -163,7 +137,6 @@ public class PowerUpManager : MonoBehaviour
         if (powerUp == null)
         {
             Debug.Log("Componente power-up " + powerUpName + " no encontrado. Se ignora.");
-
         }
         else
         {
@@ -184,31 +157,18 @@ public class PowerUpManager : MonoBehaviour
                 Debug.Log("Componente power-up " + powerUpName + " activado.");
 
                 currentPowerUp = powerUp;
-                //lastPowerUpName = powerUpName;
 
                 // Activa el indicador del Powerup
                 if (image != null)
                     image.enabled = true;
-
-                // Añade a timeDuratión la duración del Powerup
-                if (powerUpName == "PowerUpBlue")
-                {
-                    time = duration / 3 + Time.time;
-                    Debug.Log("Azuuuuuuuuuul1");
-                }
-                else
-                    time = duration + Time.time;
+            }
+            // Añade a timeDuratión la duración del Powerup
+            if (powerUpName == "PowerUpBlue")
+            {
+                time = duration / 3 + Time.time;
             }
             else
-            {
-                if (powerUpName == "PowerUpBlue")
-                {
-                    time = duration / 3 + Time.time;
-                    Debug.Log("Azuuuuuuuuuul2");
-                }
-                else
-                    time = duration + Time.time;
-            }
+                time = duration + Time.time;
         }
     }
 
@@ -230,13 +190,17 @@ public class PowerUpManager : MonoBehaviour
             }
             activo = false;
             currentPowerUp = null;
+            image.enabled = false;
             Debug.Log("Componente power-up " + powerUpName + " Desactivado.");
         }
     }
 
-    //lo llama desdel powerup manager para apagar lo PU activos.
-    public void Reset()
+    void ActivateIndicator(Color color, Sprite indicator)
     {
-        timeDuration = Time.time;
+        neonSword[1].color = color;
+        width = originalWidth;
+        image.sprite = indicator;
+        image.enabled = true;
+        activo = true;
     }
 }

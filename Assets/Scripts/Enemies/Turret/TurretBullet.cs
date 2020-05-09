@@ -10,10 +10,12 @@ public class TurretBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<TurretBullet>() == null){
-            AudioManager.instance.Play(AudioManager.ESounds.Bloqueo3);
             Destroy(this.gameObject);
         }
-    
+       
+        Death death = collision.gameObject.GetComponent<Death>();
+        if (death != null)
+            death.Dead();
     }
 
     public void SetDir(Vector2 dir)
