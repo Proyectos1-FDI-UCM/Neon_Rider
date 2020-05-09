@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
         else
             fullScreenToggle = false;
     }
-
     public void ControlToggle(bool isMando)
     {
         if (isMando)

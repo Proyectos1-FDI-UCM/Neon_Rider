@@ -1,109 +1,109 @@
 fileFormatVersion: 2
-guid: 1ce3b4f2db30aa94bada332ac80bd61b
+guid: b321bef711e2b5e4296597fb3f3f30cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1396085729119318929
-    second: Ralentizador_0
+      213: 7577399557985054406
+    second: RalenFinal5_0
   - first:
-      213: -1381764441477458760
-    second: Ralentizador_1
+      213: -6910856751170916368
+    second: RalenFinal5_1
   - first:
-      213: -6045713861608658206
-    second: Ralentizador_2
+      213: 8013102389394888542
+    second: RalenFinal5_2
   - first:
-      213: -4659777312386019958
-    second: Ralentizador_3
+      213: -5410093177853029624
+    second: RalenFinal5_3
   - first:
-      213: 5583816125131396301
-    second: Ralentizador_4
+      213: -316445316126682816
+    second: RalenFinal5_4
   - first:
-      213: 3245834737244987570
-    second: Ralentizador_5
+      213: 8371681936894882953
+    second: RalenFinal5_5
   - first:
-      213: 2353329394660961053
-    second: Ralentizador_6
+      213: 7054088270171237807
+    second: RalenFinal5_6
   - first:
-      213: 3103420725765410291
-    second: Ralentizador_7
+      213: -2216699905969309258
+    second: RalenFinal5_7
   - first:
-      213: 4668623367770026665
-    second: Ralentizador_8
+      213: -318765862354963815
+    second: RalenFinal5_8
   - first:
-      213: 1110107473866818817
-    second: Ralentizador_9
+      213: 1370835712876378138
+    second: RalenFinal5_9
   - first:
-      213: 1056103510140414747
-    second: Ralentizador_10
+      213: -4844976421223288884
+    second: RalenFinal5_10
   - first:
-      213: -3631899271679435205
-    second: Ralentizador_11
+      213: 1896826445486666544
+    second: RalenFinal5_11
   - first:
-      213: -3163696987568737962
-    second: Ralentizador_12
+      213: -2907274303575893865
+    second: RalenFinal5_12
   - first:
-      213: -1718000777807164949
-    second: Ralentizador_13
+      213: 6945959075685941372
+    second: RalenFinal5_13
   - first:
-      213: -2572141227576282224
-    second: Ralentizador_14
+      213: -5346594744470085695
+    second: RalenFinal5_14
   - first:
-      213: -7343307966842375080
-    second: Ralentizador_15
+      213: -3431985741382389805
+    second: RalenFinal5_15
   - first:
-      213: 3004218763484815307
-    second: Ralentizador_16
+      213: 656580750076697359
+    second: RalenFinal5_16
   - first:
-      213: 7382255585509155698
-    second: Ralentizador_17
+      213: 2475551443487346332
+    second: RalenFinal5_17
   - first:
-      213: 124827547932088866
-    second: Ralentizador_18
+      213: -2610293596129623067
+    second: RalenFinal5_18
   - first:
-      213: 1917241414756786240
-    second: Ralentizador_19
+      213: -5779010947446096942
+    second: RalenFinal5_19
   - first:
-      213: -4810523245040459836
-    second: Ralentizador_20
+      213: -7572153725248612399
+    second: RalenFinal5_20
   - first:
-      213: -2226498496606155320
-    second: Ralentizador_21
+      213: -1059635995861253166
+    second: RalenFinal5_21
   - first:
-      213: 6998360755175121812
-    second: Ralentizador_22
+      213: -2371139529971544724
+    second: RalenFinal5_22
   - first:
-      213: -2601206094430182542
-    second: Ralentizador_23
+      213: 8554859439742426453
+    second: RalenFinal5_23
   - first:
-      213: 5158179579355352350
-    second: Ralentizador_24
+      213: 2581603846531937111
+    second: RalenFinal5_24
   - first:
-      213: -193542460142995802
-    second: Ralentizador_25
+      213: 8056734345131403482
+    second: RalenFinal5_25
   - first:
-      213: 5348822271983302764
-    second: Ralentizador_26
+      213: 7898153351310711010
+    second: RalenFinal5_26
   - first:
-      213: -6467405743109218585
-    second: Ralentizador_27
+      213: 1818284552088285327
+    second: RalenFinal5_27
   - first:
-      213: 1547376038593250863
-    second: Ralentizador_28
+      213: 50806821084591853
+    second: RalenFinal5_28
   - first:
-      213: -35016976044161495
-    second: Ralentizador_29
+      213: -7482071461582542390
+    second: RalenFinal5_29
   - first:
-      213: 6453187471409223418
-    second: Ralentizador_30
+      213: -3469639599037558840
+    second: RalenFinal5_30
   - first:
-      213: 6209958933710254878
-    second: Ralentizador_31
+      213: -3496407446899551187
+    second: RalenFinal5_31
   - first:
-      213: 3358413951372317216
-    second: Ralentizador_32
+      213: 5326690026386018374
+    second: RalenFinal5_32
   - first:
-      213: 834202118252980394
-    second: Ralentizador_33
+      213: 3171238402591285374
+    second: RalenFinal5_33
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -165,7 +165,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -177,7 +177,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -188,7 +188,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ralentizador_0
+      name: RalenFinal5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe6a75927df56d444a744053c153c3c4
-      internalID: 1396085729119318929
+      spriteID: 60c9fc6551c2cf34689e08671e287f4f
+      internalID: 7577399557985054406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_1
+      name: RalenFinal5_1
       rect:
         serializedVersion: 2
         x: 128
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96515fa72c358be43a787dbff38fd132
-      internalID: -1381764441477458760
+      spriteID: fdc917b8b9fd11a4e95327c0bb3f74e5
+      internalID: -6910856751170916368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_2
+      name: RalenFinal5_2
       rect:
         serializedVersion: 2
         x: 256
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 573ee1106d8903b46bb08f79624d45a5
-      internalID: -6045713861608658206
+      spriteID: 19ca2f902dc36af40ad84511a38dba8b
+      internalID: 8013102389394888542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_3
+      name: RalenFinal5_3
       rect:
         serializedVersion: 2
         x: 384
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b67ba73c80da6040be1e5a37c329509
-      internalID: -4659777312386019958
+      spriteID: bc5fdc255cddbcc40853e52832b00af1
+      internalID: -5410093177853029624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_4
+      name: RalenFinal5_4
       rect:
         serializedVersion: 2
         x: 512
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 911effbc4cdbd2d41a3f8804b0bb64be
-      internalID: 5583816125131396301
+      spriteID: 1984090e20955b54a854df008638b7e0
+      internalID: -316445316126682816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_5
+      name: RalenFinal5_5
       rect:
         serializedVersion: 2
         x: 640
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73776997fb76779489e5a74dfa93273e
-      internalID: 3245834737244987570
+      spriteID: c0499148992832049b30d00510bdf413
+      internalID: 8371681936894882953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_6
+      name: RalenFinal5_6
       rect:
         serializedVersion: 2
         x: 0
@@ -328,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b2bb28ed1dcf354eb1052feeca85c4f
-      internalID: 2353329394660961053
+      spriteID: 50bfd9e6e19df304da4bc7f70382aa8e
+      internalID: 7054088270171237807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_7
+      name: RalenFinal5_7
       rect:
         serializedVersion: 2
         x: 128
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 265b4a9e2510b04439e81a812d87dfa3
-      internalID: 3103420725765410291
+      spriteID: 6883bfca7f15d6e4894eb0797a6a06b8
+      internalID: -2216699905969309258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_8
+      name: RalenFinal5_8
       rect:
         serializedVersion: 2
         x: 256
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb4c2ebe1ee4f02489c671717eea2e4b
-      internalID: 4668623367770026665
+      spriteID: 6e59f60d3fd06194c8f01943e652e2d4
+      internalID: -318765862354963815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_9
+      name: RalenFinal5_9
       rect:
         serializedVersion: 2
         x: 384
@@ -391,14 +391,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4b0cdbf3bac18147983cb1794f62f7c
-      internalID: 1110107473866818817
+      spriteID: 306e31a344871f44aaed0cf58543241f
+      internalID: 1370835712876378138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_10
+      name: RalenFinal5_10
       rect:
         serializedVersion: 2
         x: 512
@@ -412,14 +412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d02779ac96306b49ad01b366d781e30
-      internalID: 1056103510140414747
+      spriteID: 5b29c89777e4de042b6293fea2894334
+      internalID: -4844976421223288884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_11
+      name: RalenFinal5_11
       rect:
         serializedVersion: 2
         x: 640
@@ -433,14 +433,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad8589baf842f36478877b17cb3ec4d3
-      internalID: -3631899271679435205
+      spriteID: dfffcbd3e7486f24eafb616adce24762
+      internalID: 1896826445486666544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_12
+      name: RalenFinal5_12
       rect:
         serializedVersion: 2
         x: 0
@@ -454,14 +454,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91f047a307e123c4696af853fc818d2b
-      internalID: -3163696987568737962
+      spriteID: 1cb9daca49378724fb9600995f5ea4a4
+      internalID: -2907274303575893865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_13
+      name: RalenFinal5_13
       rect:
         serializedVersion: 2
         x: 128
@@ -475,14 +475,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7451ff2e2f0d0274d9bb0f054b979884
-      internalID: -1718000777807164949
+      spriteID: f64098e46c7d9dd47a93365dc2dfd6be
+      internalID: 6945959075685941372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_14
+      name: RalenFinal5_14
       rect:
         serializedVersion: 2
         x: 256
@@ -496,14 +496,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb6accc31146f734e957b44e828b7aa2
-      internalID: -2572141227576282224
+      spriteID: 4078c3c8e22c853459c78390e92b9bfa
+      internalID: -5346594744470085695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_15
+      name: RalenFinal5_15
       rect:
         serializedVersion: 2
         x: 384
@@ -517,14 +517,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fb218c6ef47d5841b2f3b09c641762f
-      internalID: -7343307966842375080
+      spriteID: 9822d4db4c96e164c99dd1de1da38986
+      internalID: -3431985741382389805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_16
+      name: RalenFinal5_16
       rect:
         serializedVersion: 2
         x: 512
@@ -538,14 +538,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf8459294ad817f4f812231d1b9530d1
-      internalID: 3004218763484815307
+      spriteID: a476493597e49ab4993bd50dd884900f
+      internalID: 656580750076697359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_17
+      name: RalenFinal5_17
       rect:
         serializedVersion: 2
         x: 640
@@ -559,14 +559,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6245b6c5acb685b4aa6b541367145dff
-      internalID: 7382255585509155698
+      spriteID: c2ca601d857cded47b2afaf6f5035ab3
+      internalID: 2475551443487346332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_18
+      name: RalenFinal5_18
       rect:
         serializedVersion: 2
         x: 0
@@ -580,14 +580,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb417747fc959434fb1b723826efa1ae
-      internalID: 124827547932088866
+      spriteID: ec73ddb8dedeeb846aabdbc513686c7b
+      internalID: -2610293596129623067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_19
+      name: RalenFinal5_19
       rect:
         serializedVersion: 2
         x: 128
@@ -601,14 +601,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e44d884b4036dd479b9ffcc2a7f61ca
-      internalID: 1917241414756786240
+      spriteID: 61b1e826fa468854aab8c10bcbd1f99a
+      internalID: -5779010947446096942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_20
+      name: RalenFinal5_20
       rect:
         serializedVersion: 2
         x: 256
@@ -622,14 +622,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3da96e00728fd54392c42c1f80b3164
-      internalID: -4810523245040459836
+      spriteID: 01020826a33099e4db6c19fa2d0c045c
+      internalID: -7572153725248612399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_21
+      name: RalenFinal5_21
       rect:
         serializedVersion: 2
         x: 384
@@ -643,14 +643,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 599047bf7a1b338448f6060e2bf75b7d
-      internalID: -2226498496606155320
+      spriteID: 3844eb0a36c212c4daec4a136f488b06
+      internalID: -1059635995861253166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_22
+      name: RalenFinal5_22
       rect:
         serializedVersion: 2
         x: 512
@@ -664,14 +664,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22fe2870a1d945d43a47caefc90917a4
-      internalID: 6998360755175121812
+      spriteID: 3745b38a47d074a429ee82f5dea0a38e
+      internalID: -2371139529971544724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_23
+      name: RalenFinal5_23
       rect:
         serializedVersion: 2
         x: 640
@@ -685,14 +685,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74d860b631fe5574fadfd036ce69c795
-      internalID: -2601206094430182542
+      spriteID: f933e077f13308042a5061333f2e1723
+      internalID: 8554859439742426453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_24
+      name: RalenFinal5_24
       rect:
         serializedVersion: 2
         x: 0
@@ -706,14 +706,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f2ae274cd1f7ce44aa1d0f8e00aaba7
-      internalID: 5158179579355352350
+      spriteID: d8eb5055ed2052c44bb4a6a513bb16ce
+      internalID: 2581603846531937111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_25
+      name: RalenFinal5_25
       rect:
         serializedVersion: 2
         x: 128
@@ -727,14 +727,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4f5e4bb14f160048bf62c838da73e60
-      internalID: -193542460142995802
+      spriteID: 6211e6ae88e668645a757d46b9e054b6
+      internalID: 8056734345131403482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_26
+      name: RalenFinal5_26
       rect:
         serializedVersion: 2
         x: 256
@@ -748,14 +748,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1027db0d00d63984b8a048885423a148
-      internalID: 5348822271983302764
+      spriteID: 4d8bc3ffbf1f78c4780af34a23f74202
+      internalID: 7898153351310711010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_27
+      name: RalenFinal5_27
       rect:
         serializedVersion: 2
         x: 384
@@ -769,14 +769,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd276ecf6b3b2e541884f8e5d2708abe
-      internalID: -6467405743109218585
+      spriteID: dce55dfd2e9d42441a6a246d40b68adc
+      internalID: 1818284552088285327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_28
+      name: RalenFinal5_28
       rect:
         serializedVersion: 2
         x: 512
@@ -790,14 +790,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de8ea4ddf8d0a0f468136cedff09c9f3
-      internalID: 1547376038593250863
+      spriteID: d5d820ee4c3226447acb20f0e2e214d9
+      internalID: 50806821084591853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_29
+      name: RalenFinal5_29
       rect:
         serializedVersion: 2
         x: 640
@@ -811,14 +811,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb9bedbdb2a5c7e4788fe8397c2c263b
-      internalID: -35016976044161495
+      spriteID: 32a7182980b2a214f968faaf41f61d1c
+      internalID: -7482071461582542390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_30
+      name: RalenFinal5_30
       rect:
         serializedVersion: 2
         x: 0
@@ -832,14 +832,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ddb4f4361090a44daccafb13dd512e7
-      internalID: 6453187471409223418
+      spriteID: 10a037a8c1c0f5a4880b0ab53335b30d
+      internalID: -3469639599037558840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_31
+      name: RalenFinal5_31
       rect:
         serializedVersion: 2
         x: 128
@@ -853,14 +853,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a87a0e05778c66c4dbe05c3f8fd183a9
-      internalID: 6209958933710254878
+      spriteID: 19f5d855a2da5ba4cab61ca14d9e4146
+      internalID: -3496407446899551187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_32
+      name: RalenFinal5_32
       rect:
         serializedVersion: 2
         x: 256
@@ -874,14 +874,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 600e96a585241284fb9566f81b195836
-      internalID: 3358413951372317216
+      spriteID: b251fa076f4845f43afbfe75825013e3
+      internalID: 5326690026386018374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralentizador_33
+      name: RalenFinal5_33
       rect:
         serializedVersion: 2
         x: 384
@@ -895,8 +895,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5b0c4cc73ec7741bcf5db0973f7f1c
-      internalID: 834202118252980394
+      spriteID: 08bff43909db42c4b8fe1688d48b4682
+      internalID: 3171238402591285374
       vertices: []
       indices: 
       edges: []
