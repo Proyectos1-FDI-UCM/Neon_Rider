@@ -4,12 +4,14 @@
 
 public class TurretAttack : MonoBehaviour
 {
-    int numBullets = 5;
+    int numBullets = 5; // Número de balas esperadas, puede ser menor
     [SerializeField] GameObject bulletPrefab = null;
-    public void TurAttack(Transform player){
-        Vector2 dir = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y), dirAux = dir;
+    public void TurAttack(Transform player) // Método invocable de disparo
+    {
+        Vector2 dir = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y), dirAux = dir; // Línea recta hacia el jugador
+        
         if (bulletPrefab != null)
-            for(int i = 0; i < numBullets; i++){
+            for(int i = 0; i < numBullets; i++){ // Alteración de esa línea recta para dar efecto de dispersión
                 switch (i)
                 {
                     case 0:
@@ -28,6 +30,7 @@ public class TurretAttack : MonoBehaviour
                         dir.y+= 2;
                         break;
                 }
+
                 Instantiate(bulletPrefab, transform);
                 GetComponentInChildren<TurretBullet>().SetDir(dir);
                 dir = dirAux;

@@ -22,15 +22,14 @@ public class EnemyAttack : MonoBehaviour
         flasher = GetComponent<FlasherMovement>();
         movement = GetComponent<EnemyMovement>();
         drone = GetComponent<Drone>();
-        
-        if (drone == null)
-        {
+        vision = GetComponent<EnemyVision>();
+
+        if (drone == null){
             child = transform.GetChild(0);
             animator = child.GetComponent<Animator>();
             animatorArm = child.GetChild(0).GetComponentInChildren<Animator>();
             rotator = child.GetChild(0);
         }            
-        vision = GetComponent<EnemyVision>();
     }
 
     void Update()
@@ -52,18 +51,15 @@ public class EnemyAttack : MonoBehaviour
             Vector3 difference = player.position - transform.position;
             // Devuelve el ángulo cuya tangente es y/x y lo aplica a la rotación del objeto
             float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;            
-            if (player.position.x > transform.position.x)
-            {
+            if (player.position.x > transform.position.x){
                 transform.localScale = new Vector3(-1f, 1f, 1);
                 rotator.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
             }               
-            else
-            {
+            else{
                 transform.localScale = new Vector3(1f, 1f, 1);
                 rotator.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ - 180);
             }
-            if (fire > cadencia )
-            {
+            if (fire > cadencia ){
                 Instantiate(bullet, child.GetChild(0).GetChild(0).GetChild(0).position, Quaternion.identity, transform);
                 fire = 0;
             }
@@ -71,12 +67,10 @@ public class EnemyAttack : MonoBehaviour
             {
                 SetAnimator(true);
             }
-            else if (shooting)
-            {
+            else if (shooting){
                 SetAnimator(false);
             }
-            else if (!vision.Spotted(player))
-            {
+            else if (!vision.Spotted(player)){
                 SetAnimator(false);
                 fire = 0;
             }

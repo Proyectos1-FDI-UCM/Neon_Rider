@@ -12,7 +12,7 @@ public class PowerUpPurple : MonoBehaviour
     GameObject bullet;
     //[SerializeField] float speed = 0;
     //[SerializeField] GameObject purpleBulletback = null;
-    Transform purpleBulletTrans;
+    //Transform purpleBulletTrans;
     //[SerializeField]  Rigidbody2D purpleRb = null;
     Vector2 auxVel=new Vector2(2,0);
     GameObject chid;
@@ -25,7 +25,7 @@ public class PowerUpPurple : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         parry = GetComponent<Bloqueo>();
-        purpleBulletTrans = collision.gameObject.GetComponent<Transform>();
+        //purpleBulletTrans = collision.gameObject.GetComponent<Transform>();
         purpleBulletComponent = collision.gameObject.GetComponent<PrestBullet>();
         redBulletComponent = collision.gameObject.GetComponent<Bullet>();
         turretBulletComponent = collision.gameObject.GetComponent<TurretBullet>();

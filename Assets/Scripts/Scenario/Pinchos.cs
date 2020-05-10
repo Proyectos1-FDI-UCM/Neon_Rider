@@ -18,7 +18,7 @@ public class Pinchos : MonoBehaviour
             time = intermitentTime + Time.time;
             cont = false;
         }
-        if (Time.time>=time)
+        if (Time.time>=time) // TIME.TIME --------------------------------> TIME.DELTATIME
         {
             if  (collider.enabled)
             {

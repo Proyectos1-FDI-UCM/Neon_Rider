@@ -30,12 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direccionx;
         Vector2 direcciony;
-        if (GameManager.instance.mando)
+        if (GameManager.instance.mando) // MANDO
         {
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
         }
-        else
+        else // TECLADO Y RATÓN
         {
             if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
             else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);

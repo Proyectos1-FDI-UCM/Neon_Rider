@@ -2,7 +2,7 @@
 
 public class Enemy_Death : MonoBehaviour
 {
-    public int hitsToDeath; //golpes que aguanta el enemigo
+    public int hitsToDeath; // Golpes que aguanta el enemigo
     [SerializeField] int deadVal = 0;
     Transform child;
     EnemyVision enemy;
@@ -15,8 +15,7 @@ public class Enemy_Death : MonoBehaviour
     {
         // Si se reanuda desde un checkpoint posicionado después del enemigo,
         // éste es destruido
-        if (GameManager.instance.deadVal >= deadVal)
-        {
+        if (GameManager.instance.deadVal >= deadVal){
             Destroy(this.gameObject);
         }
 
@@ -24,17 +23,17 @@ public class Enemy_Death : MonoBehaviour
         enemy = GetComponent<EnemyVision>();
         drone = GetComponent<Drone>();
         turret = GetComponent<Turret>();
-        // Si no es el ralentizador cogemos al hijo
+
+        // Si no es el ralentizador, drone o torreta, cogemos al hijo
         if (enemy != null && drone == null && turret == null)
             child = transform.GetChild(0);
     }
     // Metodo llamado desde el componente Sword_Attack
     public void OnAttack()
     {
-        hitsToDeath--;
-        AudioManager.instance.Play(AudioManager.ESounds.Hit);
-        if (enemy != null && hitsToDeath == 0)
-        {
+        hitsToDeath--; // Recibe daño
+        AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
+        if (enemy != null && hitsToDeath == 0){
             // Separamos al hijo del padre
             // Llamamos a Animation de "EnemyDeathAnim"
             if (child.GetComponent<Animator>() != null)
@@ -46,13 +45,8 @@ public class Enemy_Death : MonoBehaviour
             }
             Destroy(this.gameObject);
         }
-        else
-        {
-            if (hitsToDeath == 0)
-            {
-                // Destruimos el objeto
-                Destroy(this.gameObject);
-            }
+        else if (hitsToDeath == 0){
+            Destroy(this.gameObject);
         }
     }
 }

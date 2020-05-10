@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+// *ENEMIGO*
+// Una vez entra el jugador en su rango de visión, le persigue hasta que logra acercarse lo suficiente
+// Acto seguido, y tras un breve periodo de tiempo, explota
 
 public class Drone : MonoBehaviour
 {
@@ -6,7 +9,6 @@ public class Drone : MonoBehaviour
     [SerializeField] GameObject explosion = null;
     [SerializeField] float speed = 10f;
     bool onRange = false;
-    PlayerController obj;
     [SerializeField] float time = 0.6f;
     Vector2 direction;
     Rigidbody2D rb;
@@ -20,7 +22,6 @@ public class Drone : MonoBehaviour
 
     void Update()
     {
-   
         if (onRange) // La variable onRange controla si el dron tiene que preparase para explotar o no
         {
             direction = Vector2.zero;
@@ -33,26 +34,21 @@ public class Drone : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if (!onRange && vision.Spotted(playerT))
+        else if (!onRange && vision.Spotted(playerT)) // En caso de no estar en rango, sigue persiguiendo al jugador
         {
             direction = new Vector2(playerT.position.x - transform.position.x, playerT.position.y - transform.position.y);
             direction.Normalize();
         }
-    
-   
     }
 
     private void FixedUpdate()
     {
-            rb.velocity = direction * speed;
+        rb.velocity = direction * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) // Al detectar colisión del jugador cambia onRange a true
     {
-        obj = collision.gameObject.GetComponent<PlayerController>();
-
-        if(obj != null)
-        {
+        if(collision.gameObject.GetComponent<PlayerController>() != null){
             onRange = true;
             rb.constraints = RigidbodyConstraints2D.FreezeAll; // Congela la posición para que no se pueda empujarlo antes de que explote
         }

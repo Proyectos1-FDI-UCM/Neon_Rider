@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// SCRIPT SIN REFERENCIAS
+
 public class PlayerPos : MonoBehaviour
 {
     void Start()

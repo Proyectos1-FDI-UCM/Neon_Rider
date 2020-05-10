@@ -18,7 +18,7 @@ public class TurretBullet : MonoBehaviour
             death.Dead();
     }
 
-    public void SetDir(Vector2 dir)
+    public void SetDir(Vector2 dir) // Método invocable que recibe la dirección que debe seguir la bala
     {
         transform.parent = null;
         rb = GetComponent<Rigidbody2D>();

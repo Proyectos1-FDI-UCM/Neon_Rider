@@ -1,7 +1,6 @@
 ﻿using System.Threading;
 using UnityEngine;
 
-// <summary>
 // Componente utilizado para activar power-up's del jugador
 
 
@@ -21,7 +20,6 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
         // escena si se destuyen por checkpoint
         delay += Time.time;
 
-       
         //Inicializa el PowerUpManager
         if (player != null)
             pum = player.GetComponent<PowerUpManager>();

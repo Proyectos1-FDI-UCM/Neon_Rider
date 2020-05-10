@@ -49,7 +49,7 @@ public class Bloqueo : MonoBehaviour
     {
         if (enabled)
         {
-            if (collision.GetComponent<Bullet>() != null)
+            if (collision.GetComponent<Bullet>() != null) // Caso powerup Rojo
             {
                 if (!purple.enabled)
                 {
@@ -58,18 +58,18 @@ public class Bloqueo : MonoBehaviour
                 activPow.AddToCont();
                 Debug.Log("Parryada");
             }
-            if (collision.GetComponent<PrestBullet>() != null && purple.enabled == false)
+            if (collision.GetComponent<PrestBullet>() != null && purple.enabled == false) 
             {
                 AudioManager.instance.Play(AudioManager.ESounds.Bloqueo3);
                 Destroy(collision.gameObject);
-                Debug.Log("BALA DESTRUIDA");
+                Debug.Log("BALA DESTRUIDA PREST");
 
             }
-            if (collision.GetComponent<TurretBullet>() != null && purple.enabled == false)
+            if (collision.GetComponent<TurretBullet>() != null && purple.enabled == false) 
             {
                 AudioManager.instance.Play(AudioManager.ESounds.Bloqueo3);
                 Destroy(collision.gameObject);
-                Debug.Log("BALA DESTRUIDA");
+                Debug.Log("BALA DESTRUIDA TURRET");
 
             }
         }

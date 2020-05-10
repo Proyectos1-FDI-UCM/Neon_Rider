@@ -9,11 +9,11 @@ public class PowerUpYellow : MonoBehaviour
     private void OnEnable()
     {
         if(image != null)
-        image.enabled = true;
+            image.enabled = true;
     }
     private void OnDisable()
     {
         if(image!= null)
-        image.enabled = false;
+            image.enabled = false;
     }
 }

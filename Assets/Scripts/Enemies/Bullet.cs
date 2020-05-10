@@ -11,18 +11,18 @@ public class Bullet : MonoBehaviour
     
     Enemy_Death death;
     Rigidbody2D rb;
-    void Start()
+    void Start() // Toma referencia del jugador para orientarse a él 
     {
         player = GetComponentInParent<EnemyAttack>().player;
-        AudioManager.instance.Play(AudioManager.ESounds.MatonShot);
-        if (player != null)
+        if (player != null) 
         {
+            AudioManager.instance.Play(AudioManager.ESounds.MatonShot); // Sonido de disparo
             transform.parent = null;
             rb = GetComponent<Rigidbody2D>();
             rb.velocity = (player.position - transform.position).normalized * speed;       
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) 
     {
         death = collision.gameObject.GetComponent<Enemy_Death>();
         
@@ -30,11 +30,12 @@ public class Bullet : MonoBehaviour
         {
             death.OnAttack();
         }
-        Destroy(this.gameObject);
 
         Death dead = collision.gameObject.GetComponent<Death>();
         if (dead != null)
             dead.Dead();
+
+        Destroy(this.gameObject);
     }
 
 

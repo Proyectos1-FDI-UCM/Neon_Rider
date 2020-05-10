@@ -50,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
                 else
                     clockwise = false;
 
-                firstMove = changeDir + Time.time;
+                firstMove = changeDir + Time.time; // TIME.TIME -----------------------------------> USAR TIME.DELTATIME
             }
 
             if (vision.Spotted(player))
