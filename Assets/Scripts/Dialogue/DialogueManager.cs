@@ -5,18 +5,34 @@ using UnityEngine.UI;
 // Se encarga de mostrar el cuadro de diálogo y sus mensajes, así como el control para pasar entre ellos
 
 public class DialogueManager : MonoBehaviour
-{ 
-    Queue<string> sentences;
+{
+    // Dialogue
+    [SerializeField]
+    string name;
+    [SerializeField]
+    string secondName;
+    [SerializeField]
+    int[] nameChanger;
+    int changerCont;
+
+    [SerializeField]
+    [TextArea(3, 10)]
+    string[] sentences;
+
+    // Manager
+    Queue<string> queuedSentences;
     bool currentlyInDialogue;
 
     public GameObject dialogueBox;
     public Text nameText;
     public Text dialogueText;
+    int cont = 0;
 
     void Start()
     {
         currentlyInDialogue = false;
-        sentences = new Queue<string>();
+        queuedSentences = new Queue<string>();
+        changerCont = 0;
     }
     void Update()
     {
@@ -27,18 +43,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
     // Mete en una Queue todos los mensajes que se van a mostrar
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue()
     {
         dialogueBox.SetActive(true);
-        //anim.SetBool("Opened", true);
-        nameText.text = dialogue.name;
+        nameText.text = name;
         // Vacía la Queue
-        sentences.Clear();
-        
+        queuedSentences.Clear();
+
         // Mete en la Queue cada texto
-        foreach (string sentence in dialogue.sentences)
+        foreach (string sentence in sentences)
         {
-            sentences.Enqueue(sentence);
+            queuedSentences.Enqueue(sentence);
         }
 
         currentlyInDialogue = true;
@@ -48,16 +63,33 @@ public class DialogueManager : MonoBehaviour
     // Muestra cada mensaje del cuadro, uno a uno
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        // Cambia el nombre del emisor en los mensajes marcados por nameChanger
+        if (changerCont < nameChanger.Length)
+        {
+            if (cont == nameChanger[changerCont] && nameText.text == name)
+            {
+                nameText.text = secondName;
+                changerCont++;
+            }
+            else if (cont == nameChanger[changerCont] && nameText.text == secondName)
+            {
+                nameText.text = name;
+                changerCont++;
+            }
+        }
+
+        // Termina el diálogo o lo continua
+        if (queuedSentences.Count == 0)
         {
             EndDialogue();
         }
         else
         {
             // Da a DialogueText el siguiente string de la Queue
-            string sentence = sentences.Dequeue();
+            string sentence = queuedSentences.Dequeue();
             dialogueText.text = sentence;
         }
+        cont++;
     }
     void EndDialogue()
     {
