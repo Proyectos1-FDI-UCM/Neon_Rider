@@ -1154,6 +1154,7 @@ MonoBehaviour:
   SFXVolSlider: {fileID: 0}
   musicVolSlider: {fileID: 0}
   fulscreenToggle: {fileID: 0}
+  controlToggle: {fileID: 0}
 --- !u!1001 &353605988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7225,6 +7226,7 @@ MonoBehaviour:
   - name: 
     clip: {fileID: 0}
     mixer: {fileID: 0}
+    volume: 0
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1969802127

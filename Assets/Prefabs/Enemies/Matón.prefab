@@ -199,7 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4209019407658046984, guid: 92d6c4aaa1a387a48920a309a4ee2d50, type: 3}
   cadencia: 1
-  firstFire: 0
   player: {fileID: 0}
 --- !u!114 &6747011512644733875
 MonoBehaviour:
@@ -378,7 +377,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1667785599210293322, guid: ed548cc63e873f5469eecd7657016468,
+  m_Sprite: {fileID: -5015425089077627006, guid: 896dc6a79b74e4343b00e25fcb6b619e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
