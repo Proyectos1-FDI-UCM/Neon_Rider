@@ -9,6 +9,7 @@ public class Enemy_Death : MonoBehaviour
     Drone drone;
     Turret turret;
     PrestEnemyAttack prest;
+    Ralentizador ralen;
 
 
     private void Start()
@@ -23,9 +24,10 @@ public class Enemy_Death : MonoBehaviour
         enemy = GetComponent<EnemyVision>();
         drone = GetComponent<Drone>();
         turret = GetComponent<Turret>();
+        ralen = GetComponent<Ralentizador>();
 
         // Si no es el ralentizador, drone o torreta, cogemos al hijo
-        if (enemy != null && drone == null && turret == null)
+        if ((enemy != null||ralen!=null) && drone == null && turret == null)
             child = transform.GetChild(0);
     }
     // Metodo llamado desde el componente Sword_Attack
@@ -33,14 +35,14 @@ public class Enemy_Death : MonoBehaviour
     {
         hitsToDeath--; // Recibe daño
         AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
-        if (enemy != null && hitsToDeath == 0){
+        if ((enemy != null||ralen!=null) && hitsToDeath == 0){
             // Separamos al hijo del padre
             // Llamamos a Animation de "EnemyDeathAnim"
             if (child.GetComponent<Animator>() != null)
             {
                 child.GetComponent<Animator>().SetBool("Death", true);
-                if (prest == null)
-                    child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;
+                if (prest == null && ralen == null)                
+                    child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;                   
                 child.SetParent(null);
             }
             Destroy(this.gameObject);

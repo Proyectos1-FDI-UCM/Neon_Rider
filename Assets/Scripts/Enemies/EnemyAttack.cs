@@ -39,6 +39,7 @@ public class EnemyAttack : MonoBehaviour
             shooting = animState.IsName("FlasherBodyShot");
         else if (movement!=null)
             shooting = animState.IsName("Maton_Shooting");
+        
 
         // Cuando "Time.time" alcanza el nuevo valor de "firstFire", Instancia un objeto 
         // "bullet" en la posición del enemigo y aumenta el valor de "firstFire" mediante
