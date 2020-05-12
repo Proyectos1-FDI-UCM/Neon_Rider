@@ -28,11 +28,19 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     int cont = 0;
 
+    // Escena Final
+    bool isEnd;
+    public GameObject endBG;
+
     void Start()
     {
         currentlyInDialogue = false;
         queuedSentences = new Queue<string>();
         changerCont = 0;
+        if (endBG != null)
+            isEnd = true;
+        else
+            isEnd = false;        
     }
     void Update()
     {
@@ -45,6 +53,10 @@ public class DialogueManager : MonoBehaviour
     // Mete en una Queue todos los mensajes que se van a mostrar
     public void StartDialogue()
     {
+        // Activa la escena final si es el momento correcto
+        if (isEnd)
+            endBG.SetActive(true);
+
         dialogueBox.SetActive(true);
         nameText.text = name;
         // Vacía la Queue
@@ -96,5 +108,7 @@ public class DialogueManager : MonoBehaviour
         // Desactiva el cuadro de diálogo
         currentlyInDialogue = false;
         dialogueBox.SetActive(false);
+        if(isEnd)
+            GameManager.instance.ChangeScene();
     }
 }
