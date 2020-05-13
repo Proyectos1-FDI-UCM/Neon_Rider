@@ -7812,6 +7812,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3972490657856089882, guid: 90b94bb73a4cad444b2ea816a55a8f85,
+        type: 3}
+      propertyPath: activateTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972490657856089882, guid: 90b94bb73a4cad444b2ea816a55a8f85,
+        type: 3}
+      propertyPath: deactivateTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 335530048573701620, guid: 90b94bb73a4cad444b2ea816a55a8f85,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 335530048573701620, guid: 90b94bb73a4cad444b2ea816a55a8f85,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4282042730093953651, guid: e99909a76dc11444bacddd21061fab62,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b94bb73a4cad444b2ea816a55a8f85, type: 3}
 --- !u!1001 &1882214181192196957
