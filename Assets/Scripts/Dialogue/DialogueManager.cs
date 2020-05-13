@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         if (endBG != null)
             isEnd = true;
         else
-            isEnd = false;        
+            isEnd = false;
     }
     void Update()
     {
