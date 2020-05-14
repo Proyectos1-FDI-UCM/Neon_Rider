@@ -162,19 +162,19 @@ public class AimController : MonoBehaviour
             {
                 case 1:  //Block Right
                     attackCollider.offset = new Vector2(0.18f, 0);
-                    attackCollider.radius = 0.35f;
+                    attackCollider.radius = 0.4f;
                     break;
                 case 2:   //Block Left
                     attackCollider.offset = new Vector2(-0.19f, 0);
-                    attackCollider.radius = 0.33f;
+                    attackCollider.radius = 0.38f;
                     break;
                 case 3:   //Block Up
                     attackCollider.offset = new Vector2(0, 0.15f);
-                    attackCollider.radius = 0.3f;
+                    attackCollider.radius = 0.36f;
                     break;
                 case 4:   //Block Down
                     attackCollider.offset = new Vector2(0.04f, -0.125f);
-                    attackCollider.radius = 0.3f;
+                    attackCollider.radius = 0.36f;
                     break;
             }
             parry.enabled = true;
