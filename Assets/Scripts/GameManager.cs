@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Vector2 checkpoint;
     public bool gameIsPaused;
-    public int deadVal = 0;
+    public int deadVal = -1;
     public int actualScene = 1;
     //Vector2 ori;
     public bool fullScreenToggle = true, mando = true;
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     public void ChangeScene()
     {
         checkpoint = new Vector2(0, 0);
-        deadVal = 0;
+        deadVal = -1;
         actualScene++;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
