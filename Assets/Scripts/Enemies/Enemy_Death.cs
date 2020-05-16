@@ -35,19 +35,20 @@ public class Enemy_Death : MonoBehaviour
     {
         hitsToDeath--; // Recibe daño
         AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
-        if ((enemy != null||ralen!=null) && hitsToDeath == 0){
-            // Separamos al hijo del padre
-            // Llamamos a Animation de "EnemyDeathAnim"
-            if (child.GetComponent<Animator>() != null)
+        if (hitsToDeath == 0)
+        {
+            if ((enemy != null || ralen != null) && turret == null)
             {
-                child.GetComponent<Animator>().SetBool("Death", true);
-                if (prest == null && ralen == null)                
-                    child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;                   
-                child.SetParent(null);
+                // Separamos al hijo del padre
+                // Llamamos a Animation de "EnemyDeathAnim"
+                if (child.GetComponent<Animator>() != null)
+                {
+                    child.GetComponent<Animator>().SetBool("Death", true);
+                    if (prest == null && ralen == null)
+                        child.GetChild(0).GetComponentInChildren<SpriteRenderer>().enabled = false;
+                    child.SetParent(null);
+                }
             }
-            Destroy(this.gameObject);
-        }
-        else if (hitsToDeath == 0){
             Destroy(this.gameObject);
         }
     }
