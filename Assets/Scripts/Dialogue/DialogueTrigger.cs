@@ -10,7 +10,9 @@ public class DialogueTrigger : MonoBehaviour
     void Start()
     {
         diaMan = GetComponent<DialogueManager>();
-        checkpointDeadVal = GetComponent<Checkpoint>().deadVal;
+        Checkpoint checkpoint = GetComponent<Checkpoint>();
+        if (checkpoint != null)
+            checkpointDeadVal = checkpoint.deadVal;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
