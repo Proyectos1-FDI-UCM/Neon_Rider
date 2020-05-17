@@ -43,7 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35bba2f5b0e09844af636e956836d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {x: 0, y: 0}
+  checkpoint: {x: 84, y: -107.2}
   gameIsPaused: 0
   deadVal: 0
-  player: {fileID: 1882214181353476974, guid: 75af44364c887f344844d0027ad2f244, type: 3}
+  actualScene: 1
+  fullScreenToggle: 1
+  mando: 1
+  mainVolSlider: 0.2
+  SFXVolSlider: 0.2
+  musicVolSlider: 0.2
