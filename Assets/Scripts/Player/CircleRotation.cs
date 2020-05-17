@@ -12,7 +12,7 @@ public class CircleRotation : MonoBehaviour
         {
             if (GameManager.instance.mando)
             {
-                Debug.Log("Mando");
+                //Debug.Log("Mando");
                 // Si se usa el joystick derecho para apuntar
                 if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
                 {
