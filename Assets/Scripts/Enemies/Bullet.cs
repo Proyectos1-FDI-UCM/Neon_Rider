@@ -13,7 +13,8 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb;
     void Start() // Toma referencia del jugador para orientarse a él 
     {
-        player = GetComponentInParent<EnemyAttack>().player;
+        if(transform.parent != null)    
+         player = GetComponentInParent<EnemyAttack>().player;
         if (player != null) 
         {
             AudioManager.instance.Play(AudioManager.ESounds.MatonShot); // Sonido de disparo
