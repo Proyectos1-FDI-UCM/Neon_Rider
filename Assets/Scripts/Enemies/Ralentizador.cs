@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 // *ENEMIGO*
 // Una vez entra en el rango de visión del jugador, se activa la cuenta atrás
 // Este script únicamente destruye el gameObject, los powerups se llaman desde sus respectivos scripts
@@ -6,14 +7,15 @@
 
 public class Ralentizador : MonoBehaviour
 {
-
-    public float time;
+    [SerializeField] GameObject ralentPRUEBA = null;
+    [SerializeField] float time = 3.5f;
     private bool visto;
     //private Animator animator = GetComponentInChildren<Animator>();
 
     private void Awake()
     {
         visto = false;
+        time = 3.5f;
     }
     void Update()
     {
@@ -27,8 +29,14 @@ public class Ralentizador : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0){ // Explosión
                 Debug.Log("Exploto");
+                if (SceneManager.GetSceneByName("Escena de Prueba 3") == SceneManager.GetActiveScene())
+                    Instantiate(ralentPRUEBA);
                 Destroy(this.gameObject);
             }
         }
+    }
+
+    public float GetTime() {
+        return time;
     }
 }

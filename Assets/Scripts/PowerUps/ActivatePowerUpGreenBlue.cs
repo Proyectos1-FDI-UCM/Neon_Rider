@@ -39,7 +39,7 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
         {
 
             //Si se destruye con la espada activa el azul
-            if (ralentizador.time > 0)
+            if (ralentizador.GetTime() > 0)
             {
                 pum.ActivatePowerUp("PowerUpBlue");
             }

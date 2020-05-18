@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a746e6482e4a50444900c3ff75aad9b2
   - enabled: 1
-    path: Assets/Scenes/Sergio A Tilemap.unity
-    guid: 327ac65d03327ea4ab9ef414d6d61c95
+    path: Assets/Scenes/Escenas de prueba/Escena de Prueba.unity
+    guid: 4e458de4fdb441948a49d5951c61b4c9
   - enabled: 1
-    path: Assets/Scenes/Tilemap Nivel 2.unity
-    guid: 04255a9c88267e84b8c550047243db8a
+    path: Assets/Scenes/Escenas de prueba/Escena de Prueba 1.unity
+    guid: f31841e274eb8b34b875c6a9976fdf1c
+  - enabled: 1
+    path: Assets/Scenes/Escenas de prueba/Escena de Prueba 2.unity
+    guid: 9ea4ba554d3f37f448161a47ded9febd
+  - enabled: 1
+    path: Assets/Scenes/Escenas de prueba/Escena de Prueba 3.unity
+    guid: 55ad9ae63e35c9e4f9547f7409501639
   m_configObjects: {}
