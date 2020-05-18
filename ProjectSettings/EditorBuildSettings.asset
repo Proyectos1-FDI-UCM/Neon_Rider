@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenas de prueba/Escena de Prueba 3.unity
     guid: 55ad9ae63e35c9e4f9547f7409501639
+  - enabled: 1
+    path: Assets/Scenes/Escenas de prueba/Nivel Test.unity
+    guid: 662323dc6722211438225bc4a56c2b34
   m_configObjects: {}

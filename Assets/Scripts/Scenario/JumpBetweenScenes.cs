@@ -5,9 +5,8 @@ using UnityEngine;
 public class JumpBetweenScenes : MonoBehaviour
 {
 
-	private void OnTriggerEnter2D(){
-		
-		GameManager.instance.ChangeScenePatras();
-		
+	private void OnTriggerEnter2D()
+	{		
+		GameManager.instance.ChangeScenePatras();		
 	}
 }
