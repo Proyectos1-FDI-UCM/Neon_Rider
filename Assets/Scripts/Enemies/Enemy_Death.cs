@@ -38,7 +38,7 @@ public class Enemy_Death : MonoBehaviour
    
         if (hitsToDeath == 0)
         {
-            if ((enemy != null || ralen != null) && turret == null)
+            if ((enemy != null || ralen != null) && turret == null && drone == null)
             {
                 // Separamos al hijo del padre
                 // Llamamos a Animation de "EnemyDeathAnim"
