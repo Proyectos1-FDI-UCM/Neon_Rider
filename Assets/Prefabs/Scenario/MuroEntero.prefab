@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2940524923157952641}
   - component: {fileID: 2940524923157952655}
   - component: {fileID: 2940524923157952640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RotoArriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2940524924421745767}
   - component: {fileID: 2940524924421745765}
   - component: {fileID: 2940524924421745766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RotoAbajo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 2940524924915136357}
   - component: {fileID: 2940524924915136358}
   - component: {fileID: 2940524924915136359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MuroEntero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
