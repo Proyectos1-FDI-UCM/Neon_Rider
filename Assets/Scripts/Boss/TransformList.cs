@@ -83,22 +83,29 @@ public class TransformList
     public int CheckNullNodes()
     {
         Node aux = pri;
-        while(aux != null){
+        int lenght = Lenght();
+        Debug.Log("CheckNull PRE: " + lenght);
+        while (aux != null){
             if (aux.dato == null)
                 DeleteElement(aux.dato);
             aux = aux.sig;
         }
-        int lenght = Lenght();
-        Debug.Log("CheckNull: " + lenght);
+        lenght = Lenght();
+        Debug.Log("CheckNull POST: " + lenght);
         return lenght;
     }
 
-    private void DeleteElement(Transform e)
+    private bool DeleteElement(Transform e)
     {
         bool found = SearchTransform(e);
         if (found)
         {
             Node aux = pri;
+            if (pri.dato == e)
+            {
+                pri = pri.sig;
+                return found;
+            }
             while (aux.sig != null && aux.sig.dato != e){
                 aux = aux.sig;
             }
@@ -112,5 +119,6 @@ public class TransformList
                     aux = null;
             }
         }
+        return found;
     }
 }
