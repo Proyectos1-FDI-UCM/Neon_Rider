@@ -1551,5 +1551,10 @@ PrefabInstance:
       propertyPath: checkpoint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5744135605192134282, guid: 4d378f75501643c418f701def9c82bd4,
+        type: 3}
+      propertyPath: checkpoint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d378f75501643c418f701def9c82bd4, type: 3}
