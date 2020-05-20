@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9c09b8dbdc56842b86200f848ac739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numBullets: 3
   bulletPrefab: {fileID: 0}
 --- !u!114 &-6969768168772667463
 MonoBehaviour:
@@ -188,8 +187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  move: 0
+  moveIni: 0
   changePos: 2.5
+  cadence: 0.5
   player: {fileID: 0}
   children: []
 --- !u!1 &1609255531819434237

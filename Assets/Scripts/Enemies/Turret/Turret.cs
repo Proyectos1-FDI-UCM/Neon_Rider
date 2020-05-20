@@ -12,7 +12,7 @@
 
 public class Turret : MonoBehaviour
 {
-    [SerializeField] float speed = 1f, moveIni = 0f, changePos = 2.5f, cadence = 0.5f;
+    [SerializeField] float speed = 1f, moveIni = 0f, changePos = 2.5f, cadence = 1f;
     [SerializeField] Transform player = null;
     [SerializeField] Transform[] children = null;
     int nextPos;

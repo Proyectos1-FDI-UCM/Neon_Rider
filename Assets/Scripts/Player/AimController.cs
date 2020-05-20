@@ -105,7 +105,7 @@ public class AimController : MonoBehaviour
             }
         }
 
-        if ((Input.GetKeyDown("joystick button 5") || Input.GetMouseButtonDown(0)) && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
+        if ((Input.GetKeyDown("joystick button 5") || Input.GetMouseButtonDown(0)) && !attackBool  && !GameManager.instance.gameIsPaused)
         {
             GetComponent<Sword_Attack>().enabled = true;
             Attack(attackIndicator, ref attackCollider, anim);

@@ -4,7 +4,7 @@
 
 public class TurretAttack : MonoBehaviour
 {
-    int numBullets = 5; // Número de balas esperadas, puede ser menor
+    int numBullets = 3; // Número de balas esperadas, puede ser menor
     [SerializeField] GameObject bulletPrefab = null;
     public void TurAttack(Transform player) // Método invocable de disparo
     {
@@ -15,19 +15,19 @@ public class TurretAttack : MonoBehaviour
                 switch (i)
                 {
                     case 0:
-                        dir.x--;
+                        dir.x-=16;
                         break;
                     case 1:
                         //dir.x++;
                         break;
                     case 2:
-                        dir.x+= 2;
+                        dir.x+= 16;
                         break;
                     case 3:
-                        dir.y--;
+                        dir.y-=16;
                         break;
                     case 4:
-                        dir.y+= 2;
+                        dir.y+= 16;
                         break;
                 }
 

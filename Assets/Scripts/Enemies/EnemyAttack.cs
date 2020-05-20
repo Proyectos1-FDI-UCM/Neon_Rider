@@ -64,7 +64,7 @@ public class EnemyAttack : MonoBehaviour
                 Instantiate(bullet, child.GetChild(0).GetChild(0).GetChild(0).position, Quaternion.identity, transform);
                 fire = 0;
             }
-            else if (fire >cadencia - 0.2 && vision.Spotted(player) && !shooting)
+            else if (fire >cadencia - 0.32 && vision.Spotted(player) && !shooting)
             {
                 SetAnimator(true);
             }
