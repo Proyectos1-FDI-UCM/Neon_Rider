@@ -108,7 +108,10 @@ public class DialogueManager : MonoBehaviour
         // Desactiva el cuadro de diálogo
         currentlyInDialogue = false;
         dialogueBox.SetActive(false);
-        if(isEnd)
+        if (isEnd)
+        {
             GameManager.instance.ChangeScene();
+            Time.timeScale = 0;
+        }
     }
 }
