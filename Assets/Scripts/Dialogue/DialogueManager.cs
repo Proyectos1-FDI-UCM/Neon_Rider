@@ -55,7 +55,11 @@ public class DialogueManager : MonoBehaviour
     {
         // Activa la escena final si es el momento correcto
         if (isEnd)
+        {
             endBG.SetActive(true);
+            Time.timeScale = 0;
+        }
+
 
         dialogueBox.SetActive(true);
         nameText.text = name;
@@ -111,7 +115,6 @@ public class DialogueManager : MonoBehaviour
         if (isEnd)
         {
             GameManager.instance.ChangeScene();
-            Time.timeScale = 0;
         }
     }
 }

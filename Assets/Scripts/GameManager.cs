@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
     public int deadVal = -1;
     public int actualScene = 1;
     //Vector2 ori;
-    public bool fullScreenToggle = true, mando = true;
+    public bool fullScreenToggle = true, 
+                mando = true;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
-                 musicVolSlider = 0.2f; 
-
+                 musicVolSlider = 0.2f;
 
 
     // En el método Awake comprueba si hay otro GameManger
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }       
+        }      
     }
 
     public void FullscreenToggleState(bool isFullscreen)
