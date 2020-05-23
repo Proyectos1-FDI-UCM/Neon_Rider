@@ -12,7 +12,7 @@ public class OptionsMenu : MonoBehaviour
     GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
 
     [SerializeField]
-    GameObject mainVolSlider, SFXVolSlider, musicVolSlider, fulscreenToggle, controlToggle;
+    GameObject mainVolSlider, SFXVolSlider, musicVolSlider, fulscreenToggle, controlToggle, aButton, spacebar;
 
     private void Start()
     {
@@ -21,6 +21,10 @@ public class OptionsMenu : MonoBehaviour
         musicVolSlider.GetComponent<Slider>().value = GameManager.instance.musicVolSlider;
         fulscreenToggle.GetComponent<Toggle>().isOn = Screen.fullScreen;
         controlToggle.GetComponent<Toggle>().isOn = GameManager.instance.mando;
+
+        // Activa la imagen del botón A o el espacio en los diálogos
+        aButton.SetActive(GameManager.instance.mando); 
+        spacebar.SetActive(!GameManager.instance.mando);
     }
 
     public void SetMasterVolume(float volume) // Slider del volumen general
@@ -61,6 +65,8 @@ public class OptionsMenu : MonoBehaviour
     }
     public void ControlToggle(bool mando)
     {
+        aButton.SetActive(mando);
+        spacebar.SetActive(!mando);
         GameManager.instance.ControlToggle(mando);
     }
 }
