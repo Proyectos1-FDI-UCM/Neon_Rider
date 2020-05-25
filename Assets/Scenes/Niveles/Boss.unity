@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &23969124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6461546999846903155, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1233641992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &50721106 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 145576826594164008, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
@@ -22279,6 +22285,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fatherBoss: {fileID: 1999304241}
+--- !u!1 &1177519049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8680872317365502528, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1233641992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1198772433
 GameObject:
   m_ObjectHideFlags: 0
@@ -22401,6 +22413,16 @@ PrefabInstance:
       propertyPath: controlToggle
       value: 
       objectReference: {fileID: 1233641993}
+    - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: aButton
+      value: 
+      objectReference: {fileID: 1177519049}
+    - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: spacebar
+      value: 
+      objectReference: {fileID: 23969124}
     - target: {fileID: 145576827339922359, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_LocalPosition.x
