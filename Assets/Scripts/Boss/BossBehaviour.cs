@@ -26,7 +26,6 @@ public class BossBehaviour : MonoBehaviour
     [System.Serializable]
     private struct Wave{
         public Enemy[] enemyRound; // Enemigos en una oleada
-        public bool breakpoint;
     }
 
     [System.Serializable]   
@@ -44,7 +43,6 @@ public class BossBehaviour : MonoBehaviour
     private void Start()
     {
         actualWave = 0;
-        actualCrystal = 0;
         Instance();
     }
 
@@ -62,20 +60,15 @@ public class BossBehaviour : MonoBehaviour
     public void UpdateEnemies() //LLamado por SpawnControl para hacer la nueva invocación si no quedan enemigos vivos
     {
         if (actualWave < waves.Length && enemiesOnScreen.CheckNullNodes() < 1){
-            actualWave++;
-            if (waves[actualWave].breakpoint)
-            {
-                if(actualCrystal < crystals.Length)
-                    crystals[actualCrystal].GetComponent<BossCrystal>().enabled = true;
-                actualCrystal++;
-
-                waves[actualWave].breakpoint = false;
-                
-                actualWave--;   
-            }
-            else
-                Instance();
+            crystals[actualWave].GetComponent<BossCrystal>().enabled = true;
         }
+
+    }
+
+    public void UpdateCrystal()
+    {
+        actualWave++;
+        Instance();
     }
 
     private Vector2 GetRelativePos(int i) //Método auxiliar para calcular la posición con respecto al Boss de los enemigos

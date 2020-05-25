@@ -6,25 +6,28 @@ using UnityEngine;
 public class BossCrystal : MonoBehaviour
 {
     [SerializeField] BossBehaviour boss = null;
-
+    bool active = false;
     private void OnEnable()
     {
-        GetComponent<BoxCollider2D>().enabled = true;
+        active = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-        CircleCollider2D sword = collision.gameObject.GetComponent<CircleCollider2D>();
-
-        if(player != null && sword != null)
+        if (active)
         {
-            if (boss != null)
-                boss.UpdateEnemies();
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            CircleCollider2D sword = collision.gameObject.GetComponent<CircleCollider2D>();
 
-            Debug.LogWarning("Crystal Destroy");
+            if (player != null && sword != null)
+            {
+                if (boss != null)
+                    boss.UpdateEnemies();
 
-            Destroy(this.gameObject);
+                Debug.LogWarning("Crystal Destroy");
+
+                Destroy(this.gameObject);
+            }
         }
     }
 
