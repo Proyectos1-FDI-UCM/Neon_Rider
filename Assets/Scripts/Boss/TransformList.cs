@@ -83,19 +83,16 @@ public class TransformList
     public int CheckNullNodes()
     {
         Node aux = pri;
-        int lenght = Lenght();
-        Debug.Log("CheckNull PRE: " + lenght);
         while (aux != null){
             if (aux.dato == null)
                 DeleteElement(aux.dato);
             aux = aux.sig;
         }
-        lenght = Lenght();
-        Debug.Log("CheckNull POST: " + lenght);
-        return lenght;
+         
+        return Lenght();
     }
 
-    private bool DeleteElement(Transform e)
+    public bool DeleteElement(Transform e)
     {
         bool found = SearchTransform(e);
         if (found)

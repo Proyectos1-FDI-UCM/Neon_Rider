@@ -7,29 +7,21 @@ public class BossCrystal : MonoBehaviour
 {
     [SerializeField] BossBehaviour boss = null;
     bool active = false;
-    private void OnEnable()
+    public void Break()
     {
-        active = true;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (active)
+        if (active && boss != null)
         {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            CircleCollider2D sword = collision.gameObject.GetComponent<CircleCollider2D>();
+            active = false;
 
-            if (player != null && sword != null)
-            {
-                if (boss != null)
-                    boss.UpdateEnemies();
+            boss.UpdateCrystal();
 
-                Debug.LogWarning("Crystal Destroy");
-
-                Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
         }
     }
 
+    public void SetActive()
+    {
+        active = true;
+    }
 
 }

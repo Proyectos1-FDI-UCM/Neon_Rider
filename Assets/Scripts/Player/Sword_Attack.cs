@@ -12,6 +12,8 @@ public class Sword_Attack : MonoBehaviour
         DestructibleWall wall;
         wall = other.gameObject.GetComponent<DestructibleWall>();
         //Debug.Log("ay me matieaste");
+        BossCrystal crystal;
+        crystal = other.gameObject.GetComponent<BossCrystal>();
 
         //Si el GameObject tiene el componente, llama al metodo de dicho componente
         if (enemy != null && enabled && enemy.enabled)
@@ -24,6 +26,12 @@ public class Sword_Attack : MonoBehaviour
         else if(wall != null && enabled)
         {
             wall.Break();
+        }
+
+        else if (crystal != null && enabled)
+        {
+            crystal.Break();
+            Debug.LogWarning("Crystal atacado");
         }
     }
 }

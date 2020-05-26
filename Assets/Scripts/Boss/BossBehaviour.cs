@@ -21,7 +21,7 @@ public class BossBehaviour : MonoBehaviour
 {
     TransformList enemiesOnScreen = new TransformList();
     
-    private int actualWave, actualCrystal;
+    private int actualWave;
    
     [System.Serializable]
     private struct Wave{
@@ -57,18 +57,30 @@ public class BossBehaviour : MonoBehaviour
 
 
 
-    public void UpdateEnemies() //LLamado por SpawnControl para hacer la nueva invocación si no quedan enemigos vivos
+    private void UpdateWave() //LLamado por SpawnControl para hacer la nueva invocación si no quedan enemigos vivos
     {
-        if (actualWave < waves.Length && enemiesOnScreen.CheckNullNodes() < 1){
-            crystals[actualWave].GetComponent<BossCrystal>().enabled = true;
+        if (actualWave < waves.Length && enemiesOnScreen.Lenght() == 0){
+            crystals[actualWave].GetComponent<BossCrystal>().SetActive();
         }
 
     }
 
+    public void UpdateEnemies(Transform e)
+    {
+        enemiesOnScreen.DeleteElement(e);
+        Debug.LogWarning(enemiesOnScreen.Lenght());
+        UpdateWave();
+    }
+
     public void UpdateCrystal()
     {
-        actualWave++;
-        Instance();
+        if (actualWave < waves.Length - 1)
+        {
+            actualWave++;
+            Instance();
+        }
+        else
+            Destroy(this.gameObject);
     }
 
     private Vector2 GetRelativePos(int i) //Método auxiliar para calcular la posición con respecto al Boss de los enemigos
