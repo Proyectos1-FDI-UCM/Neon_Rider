@@ -8,12 +8,16 @@ public class PrestDouble : MonoBehaviour
     PrestEnemyMovement enemyMov;
     GameObject firstBullet, secondBullet;
     [SerializeField] float secondFire = 10f, firstFire = 7f;
+    Transform sprite;
+    Animator anim;
 
     void Start()
     {
         enemyMov = GetComponentInParent<PrestEnemyMovement>();
         enemyMov.enabled = false;
         player = GetComponentInParent<PrestEnemyAttack>().player;
+        sprite = transform.parent;
+        anim = sprite.GetComponent<GetAnim>().GetAnimator();
 
         // Cogemos las balas por separado
         firstBullet = transform.GetChild(0).gameObject;
@@ -38,14 +42,17 @@ public class PrestDouble : MonoBehaviour
         // Activa el comportamiento de las balas tras un tiempo
         if (Time.time > firstFire && firstBullet != null)
         {
+            anim.SetTrigger("Attack 1");
             firstFire = 100;
             firstBullet.GetComponent<PrestBullet>().enabled = true;  
         }
 
         if (Time.time > secondFire && secondBullet != null)
         {
+            anim.SetTrigger("Attack 2");
             secondFire = 100;
             secondBullet.GetComponent<PrestBullet>().enabled = true;
+            anim.SetBool("Bullets", false);
             enemyMov.enabled = true;
             Destroy(this.gameObject);
         }
