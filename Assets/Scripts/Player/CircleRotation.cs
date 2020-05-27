@@ -17,14 +17,14 @@ public class CircleRotation : MonoBehaviour
                 if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
                 {
                     // Devuelve el ángulo cuya tangente es y/x y lo aplica a la rotación del objeto
-                    float rotationX = Mathf.Atan2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * Mathf.Rad2Deg;
-                    transform.rotation = Quaternion.Euler(rotationX, 90f, 90f);
+                    float rotationZ = Mathf.Atan2(-Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * Mathf.Rad2Deg;
+                    transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
                 }
                 else
                 {
                     // Devuelve el ángulo cuya tangente es y/x y lo aplica a la rotación del objeto
-                    float rotationX = Mathf.Atan2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Mathf.Rad2Deg;
-                    transform.rotation = Quaternion.Euler(rotationX, 90f, 90f);
+                    float rotationZ = Mathf.Atan2(-Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Mathf.Rad2Deg;
+                    transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
                 }
             }
             else
