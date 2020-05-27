@@ -946,16 +946,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: controlToggle
-      value: 
-      objectReference: {fileID: 1535222943}
     - target: {fileID: 145576827339922355, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: controlToggle
+      value: 
+      objectReference: {fileID: 1535222943}
     - target: {fileID: 145576827339922359, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96261,15 +96261,15 @@ PrefabInstance:
       propertyPath: range
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 1609255531819434237, guid: 239b2482241071a42b1bf480d64649c1,
-        type: 3}
-      propertyPath: m_Name
-      value: Pos 2
-      objectReference: {fileID: 0}
     - target: {fileID: 555437661961040052, guid: 239b2482241071a42b1bf480d64649c1,
         type: 3}
       propertyPath: deadVal
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609255531819434237, guid: 239b2482241071a42b1bf480d64649c1,
+        type: 3}
+      propertyPath: m_Name
+      value: Pos 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239b2482241071a42b1bf480d64649c1, type: 3}

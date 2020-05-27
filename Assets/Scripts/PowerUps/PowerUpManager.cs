@@ -82,6 +82,8 @@ public class PowerUpManager : MonoBehaviour
         if (width <= 0)
         {
             neonSword[1].color = Color.black;
+            //Indicator
+            neonSword[2].color = Color.white;
             activo = false;
             
             if (red.enabled)
@@ -198,6 +200,8 @@ public class PowerUpManager : MonoBehaviour
     void ActivateIndicator(Color color, Sprite indicator)
     {
         neonSword[1].color = color;
+        //Indicator
+        neonSword[2].color = color;
         width = originalWidth;
         image.sprite = indicator;
         image.enabled = true;
