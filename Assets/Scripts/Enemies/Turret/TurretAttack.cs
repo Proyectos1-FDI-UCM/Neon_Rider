@@ -27,7 +27,7 @@ public class TurretAttack : MonoBehaviour
                         dir.y-=16;
                         break;
                     case 4:
-                        dir.y+= 16;
+                        dir.y+= 16 ;
                         break;
                 }
 

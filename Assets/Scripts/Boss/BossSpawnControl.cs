@@ -15,7 +15,7 @@ public class BossSpawnControl : MonoBehaviour
     {
         if (fatherBoss != null)
         {
-            fatherBoss.UpdateEnemies();
+            fatherBoss.UpdateEnemies(transform);
         }
     }
 }

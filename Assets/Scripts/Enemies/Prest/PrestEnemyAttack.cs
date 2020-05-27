@@ -8,10 +8,12 @@ public class PrestEnemyAttack : MonoBehaviour
     [SerializeField] float cadencia = 2, firstFire = 0.5f;
     EnemyVision vision;
     public Transform player;
+    Animator anim;
 
     private void Start()
     {
         vision = GetComponent<EnemyVision>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class PrestEnemyAttack : MonoBehaviour
             {
                 Instantiate(bullet, transform.position, Quaternion.identity, transform);
                 firstFire = cadencia + Time.time;
+                anim.SetBool("Bullets", true);
             }
     }
 }

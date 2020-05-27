@@ -15,11 +15,13 @@ public class PrestEnemyMovement : MonoBehaviour
     EnemyVision vision;
     Vector2 direction;
     Rigidbody2D rb;
+    Animator anim;
 
     void Start()
     {
         vision = GetComponent<EnemyVision>();
         rb = GetComponent<Rigidbody2D>();
+        anim = transform.GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -37,7 +39,7 @@ public class PrestEnemyMovement : MonoBehaviour
             rb.velocity = direction * speed;
         else 
             rb.velocity = new Vector2(0, 0);
-
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x + rb.velocity.y));
     }
 
     // Al salir el jugador del campo de visión, se queda quieto 
