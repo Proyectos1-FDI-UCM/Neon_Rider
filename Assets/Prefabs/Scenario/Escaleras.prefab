@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 839f9fd981f34c34487f4b7d345148ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   name: 
   secondName: 
   nameChanger: 
+  jade: {fileID: 0}
   sentences: []
   dialogueBox: {fileID: 0}
   nameText: {fileID: 0}

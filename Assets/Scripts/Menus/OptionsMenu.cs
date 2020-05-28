@@ -69,8 +69,10 @@ public class OptionsMenu : MonoBehaviour
     }
     public void ControlToggle(bool mando)
     {
-        aButton.SetActive(mando);
-        spacebar.SetActive(!mando);
+        if(aButton!=null)
+            aButton.SetActive(mando);
+        if (spacebar != null)
+            spacebar.SetActive(!mando);
         GameManager.instance.ControlToggle(mando);
     }
 }

@@ -413,6 +413,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 145576826594164008, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145576826594164008, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb6d8a65c72e4e74e851c29c906917b2,
+        type: 3}
     - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: controlToggle
@@ -553,22 +564,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 145576826594164008, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 145576826594164008, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bb6d8a65c72e4e74e851c29c906917b2,
-        type: 3}
-    - target: {fileID: 145576827384203479, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7138668648706353274, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_Color.r
@@ -590,6 +585,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ff6fcbf1f153c7745bc33aa67b9c0366,
         type: 3}
+    - target: {fileID: 145576827384203479, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fe6f349e015cbe408f5219bcdbd1d65, type: 3}
 --- !u!114 &68538639 stripped
@@ -1653,12 +1653,12 @@ PrefabInstance:
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.3
+      value: 77.3
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -245.8
+      value: -245.1
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -1710,15 +1710,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.749291
       objectReference: {fileID: 0}
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: deadVal
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: name
-      value: Jade
+      value: Dyne
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -1728,9 +1738,7 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: 'No digas chorradas
-
-'
+      value: En cuanto acabe esta mierda nos vamos.
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -1747,12 +1755,17 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 68538640}
-    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
-      propertyPath: deadVal
-      value: 3
+      propertyPath: nameChanger.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "\xBFC\xF3mo? \xBFA d\xF3nde?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 3
@@ -2340,12 +2353,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.9705796
       objectReference: {fileID: 0}
-    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 4
@@ -2810,12 +2823,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.749291
       objectReference: {fileID: 0}
-    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 3
@@ -3169,6 +3182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
+      propertyPath: sentences.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 68538642}
@@ -3192,6 +3210,62 @@ PrefabInstance:
       propertyPath: endBG
       value: 
       objectReference: {fileID: 756011631}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: name
+      value: Jade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: "Entiendo que se preocupe por m\xED..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "\xBFPero por qu\xE9 est\xE1 tan obsesionado con que nos utilizan?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: Necesitamos a los nuestros para sobrevivir en esta ciudad.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: "\xBFPor qu\xE9 no entra en raz\xF3n? No es capaz de protegernos a ambos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[4]
+      value: "Aunque seamos conductores crom\xE1ticos poderosos, no somos inmortales.
+        No durar\xEDamos nada fuera de la banda. Y tampoco se est\xE1 tan mal..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[5]
+      value: "\xBFVerdad? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[6]
+      value: Bueno...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[7]
+      value: "...no s\xE9... "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[8]
+      value: '...en fin...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
+        type: 3}
+      propertyPath: sentences.Array.data[9]
+      value: "(...) S\xF3lo espero que no haga ninguna locura."
+      objectReference: {fileID: 0}
     - target: {fileID: 8747562397159993330, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: m_Enabled
@@ -33153,7 +33227,7 @@ PrefabInstance:
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -124.4
+      value: -128
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -33205,10 +33279,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.9705796
       objectReference: {fileID: 0}
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: deadVal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -33228,7 +33312,7 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: name
-      value: 'Jade '
+      value: Dyne
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -33238,12 +33322,28 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: "PU Morado explicaci\xF3n"
+      value: "Pues ten\xEDas raz\xF3n."
       objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
-      propertyPath: deadVal
+      propertyPath: nameChanger.Array.data[0]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "\xBFLos puedes usar?"
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: "Obviamente. De hecho, un solo proyectil es suficiente. La \xFAnica queja
+        es la pinta de pirados que tienen."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b389d84dd3da3df4187bff166c1846fe, type: 3}
@@ -33367,7 +33467,7 @@ PrefabInstance:
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -133.8
+      value: -134.8
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -33419,10 +33519,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.9705796
       objectReference: {fileID: 0}
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: deadVal
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -33442,24 +33552,49 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: name
-      value: '...'
+      value: Jade
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: secondName
-      value: '...'
+      value: Dyne
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: '"..."'
+      value: Dyne, no podemos dejar a los nuestros-
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "Deja de decir \u201Clos nuestros\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: "No somos nada para ellos, s\xF3lo herramientas\r.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: Deja de decir chorradas Dyne.
       objectReference: {fileID: 0}
     - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
-        type: 3}
-      propertyPath: deadVal
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 4
@@ -44866,7 +45001,7 @@ PrefabInstance:
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16
+      value: -13.8
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -44918,9 +45053,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.9705796
       objectReference: {fileID: 0}
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: deadVal
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
@@ -44941,7 +45086,7 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: name
-      value: Dyne
+      value: Jade
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -44951,17 +45096,22 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: Interferencias.
+      value: "\xBFQu\xE9 han sido esos niveles de energ\xEDa?"
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "Arma nueva. Y no puedo bloquearla, por alg\xFAn motivo."
       objectReference: {fileID: 0}
     - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
-        type: 3}
-      propertyPath: deadVal
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b389d84dd3da3df4187bff166c1846fe, type: 3}
@@ -45399,7 +45549,7 @@ Tilemap:
   - first: {x: 51, y: -69, z: 0}
     second:
       m_TileIndex: 193
-      m_TileSpriteIndex: 201
+      m_TileSpriteIndex: 217
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45435,7 +45585,7 @@ Tilemap:
   - first: {x: 61, y: -69, z: 0}
     second:
       m_TileIndex: 203
-      m_TileSpriteIndex: 116
+      m_TileSpriteIndex: 216
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45444,7 +45594,7 @@ Tilemap:
   - first: {x: 62, y: -69, z: 0}
     second:
       m_TileIndex: 191
-      m_TileSpriteIndex: 197
+      m_TileSpriteIndex: 201
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45498,7 +45648,7 @@ Tilemap:
   - first: {x: 7, y: -68, z: 0}
     second:
       m_TileIndex: 43
-      m_TileSpriteIndex: 194
+      m_TileSpriteIndex: 197
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45543,7 +45693,7 @@ Tilemap:
   - first: {x: 13, y: -68, z: 0}
     second:
       m_TileIndex: 160
-      m_TileSpriteIndex: 193
+      m_TileSpriteIndex: 194
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45552,7 +45702,7 @@ Tilemap:
   - first: {x: 14, y: -68, z: 0}
     second:
       m_TileIndex: 161
-      m_TileSpriteIndex: 192
+      m_TileSpriteIndex: 193
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45561,7 +45711,7 @@ Tilemap:
   - first: {x: 15, y: -68, z: 0}
     second:
       m_TileIndex: 129
-      m_TileSpriteIndex: 115
+      m_TileSpriteIndex: 192
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45732,7 +45882,7 @@ Tilemap:
   - first: {x: 55, y: -68, z: 0}
     second:
       m_TileIndex: 157
-      m_TileSpriteIndex: 40
+      m_TileSpriteIndex: 171
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45741,7 +45891,7 @@ Tilemap:
   - first: {x: 61, y: -68, z: 0}
     second:
       m_TileIndex: 162
-      m_TileSpriteIndex: 39
+      m_TileSpriteIndex: 116
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45786,7 +45936,7 @@ Tilemap:
   - first: {x: 3, y: -67, z: 0}
     second:
       m_TileIndex: 95
-      m_TileSpriteIndex: 38
+      m_TileSpriteIndex: 115
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -45876,7 +46026,7 @@ Tilemap:
   - first: {x: 15, y: -67, z: 0}
     second:
       m_TileIndex: 116
-      m_TileSpriteIndex: 34
+      m_TileSpriteIndex: 40
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -46011,7 +46161,7 @@ Tilemap:
   - first: {x: 55, y: -67, z: 0}
     second:
       m_TileIndex: 143
-      m_TileSpriteIndex: 37
+      m_TileSpriteIndex: 39
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -46047,7 +46197,7 @@ Tilemap:
   - first: {x: 3, y: -66, z: 0}
     second:
       m_TileIndex: 40
-      m_TileSpriteIndex: 33
+      m_TileSpriteIndex: 38
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -46137,7 +46287,7 @@ Tilemap:
   - first: {x: 3, y: -65, z: 0}
     second:
       m_TileIndex: 39
-      m_TileSpriteIndex: 32
+      m_TileSpriteIndex: 37
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -47127,7 +47277,7 @@ Tilemap:
   - first: {x: 8, y: -43, z: 0}
     second:
       m_TileIndex: 38
-      m_TileSpriteIndex: 31
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -49437,17 +49587,14 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 1789753877792765059, guid: e7c4f9afad9d4124daf62e367a192e3b,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1561172097272017075, guid: defbc256e85d03e4a9ede29e9a2352af,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -5268844021991773142, guid: defbc256e85d03e4a9ede29e9a2352af,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -8687486208394094572, guid: defbc256e85d03e4a9ede29e9a2352af,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -5209681479957595080, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -4061150890452880947, guid: defbc256e85d03e4a9ede29e9a2352af,
@@ -49456,15 +49603,16 @@ Tilemap:
     m_Data: {fileID: 1579964859155711218, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: -5268844021991773142, guid: defbc256e85d03e4a9ede29e9a2352af,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -8687486208394094572, guid: defbc256e85d03e4a9ede29e9a2352af,
+      type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -4789518458948864389, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 2640345427332928064, guid: defbc256e85d03e4a9ede29e9a2352af,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 430008555884527567, guid: defbc256e85d03e4a9ede29e9a2352af, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4430790202545689037, guid: defbc256e85d03e4a9ede29e9a2352af,
+    m_Data: {fileID: -5209681479957595080, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 9210478798419655196, guid: defbc256e85d03e4a9ede29e9a2352af,
@@ -49684,11 +49832,10 @@ Tilemap:
     m_Data: {fileID: 3166017311426856358, guid: e7c4f9afad9d4124daf62e367a192e3b,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -4757950921471876257, guid: defbc256e85d03e4a9ede29e9a2352af,
+    m_Data: {fileID: 2640345427332928064, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1497829508556488444, guid: defbc256e85d03e4a9ede29e9a2352af,
-      type: 3}
+    m_Data: {fileID: 430008555884527567, guid: defbc256e85d03e4a9ede29e9a2352af, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -7294480550440803616, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
@@ -49846,8 +49993,9 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 3765698127589017327, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -4430790202545689037, guid: defbc256e85d03e4a9ede29e9a2352af,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 3762692354370168102, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
@@ -49909,13 +50057,13 @@ Tilemap:
     m_Data: {fileID: 3737394285346211800, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: -4757950921471876257, guid: defbc256e85d03e4a9ede29e9a2352af,
+      type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -4487092693275184627, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 8506564401533928969, guid: defbc256e85d03e4a9ede29e9a2352af,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1626822987156238640, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -2027829400483625711, guid: defbc256e85d03e4a9ede29e9a2352af,
@@ -49924,7 +50072,7 @@ Tilemap:
     m_Data: {fileID: -270628892950102926, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -6474330437788326619, guid: defbc256e85d03e4a9ede29e9a2352af,
+    m_Data: {fileID: 1626822987156238640, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 8432472342017125360, guid: defbc256e85d03e4a9ede29e9a2352af,
@@ -49936,7 +50084,7 @@ Tilemap:
     m_Data: {fileID: -3206933751365917631, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 5855012953422589303, guid: defbc256e85d03e4a9ede29e9a2352af,
+    m_Data: {fileID: -6474330437788326619, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1713329730450427820, guid: e7c4f9afad9d4124daf62e367a192e3b,
@@ -49980,10 +50128,12 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -2915073999870186825, guid: defbc256e85d03e4a9ede29e9a2352af,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1497829508556488444, guid: defbc256e85d03e4a9ede29e9a2352af,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 5855012953422589303, guid: defbc256e85d03e4a9ede29e9a2352af,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 5680779599045586558, guid: e7c4f9afad9d4124daf62e367a192e3b,
       type: 3}
@@ -54063,7 +54213,7 @@ PrefabInstance:
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -245.6
+      value: -245.4
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -54115,9 +54265,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.583325
       objectReference: {fileID: 0}
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: deadVal
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
@@ -54143,19 +54303,24 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: secondName
-      value: Dyne
+      value: Jade
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: "En cuanto termine la visi\xF3n nos piramos de aqui."
+      value: "Genial. Ahora me disparan a trav\xE9s de las paredes."
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: Era de esperar que estuvieran preparados para cualquier cosa.
       objectReference: {fileID: 0}
     - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
-        type: 3}
-      propertyPath: deadVal
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 2
@@ -54407,12 +54572,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.583325
       objectReference: {fileID: 0}
-    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+    - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 2
@@ -54445,7 +54610,7 @@ PrefabInstance:
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.1
+      value: -28.2
       objectReference: {fileID: 0}
     - target: {fileID: 277200410623580714, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -54497,10 +54662,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6.859935
       objectReference: {fileID: 0}
+    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: deadVal
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -54520,7 +54695,7 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: name
-      value: Jade
+      value: Dyne
       objectReference: {fileID: 0}
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
@@ -54530,14 +54705,39 @@ PrefabInstance:
     - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: "Centrate y completa tu misi\xF3n."
+      value: Ya he llegado.
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: nameChanger.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "Bien. Me llegan lecturas extra\xF1as de la siguiente sala."
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: "\xBFAlgo nuevo?"
+      objectReference: {fileID: 0}
+    - target: {fileID: -372300435647244592, guid: b389d84dd3da3df4187bff166c1846fe,
+        type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: Probablemente. Sea lo que sea, no tomes riesgos innecesarios.
       objectReference: {fileID: 0}
     - target: {fileID: 3019310271657482115, guid: b389d84dd3da3df4187bff166c1846fe,
-        type: 3}
-      propertyPath: deadVal
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 277200410623580694, guid: b389d84dd3da3df4187bff166c1846fe,
         type: 3}
       propertyPath: deadVal
       value: 0
