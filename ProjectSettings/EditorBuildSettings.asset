@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a746e6482e4a50444900c3ff75aad9b2
   - enabled: 1
-    path: Assets/Scenes/Niveles/Nivel 4.unity
-    guid: 6bb3c1cd7b239a041936b8872a46af30
+    path: Assets/Scenes/Niveles/Intro.unity
+    guid: 377b75302690b124785b1a34148f3d42
   - enabled: 1
     path: Assets/Scenes/Niveles/Nivel 1.unity
     guid: ab84921f28333df4ab2e7560f5702670
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveles/Nivel 3.unity
     guid: 6f33a9dd157326b45a356c095c476223
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Nivel 4.unity
+    guid: 6bb3c1cd7b239a041936b8872a46af30
   - enabled: 1
     path: Assets/Scenes/Niveles/Boss.unity
     guid: 85af163d78dc24749a3843752d1f4882
