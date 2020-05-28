@@ -68,14 +68,8 @@ public class GameManager : MonoBehaviour
     {
         checkpoint = new Vector2(0, 0);
         deadVal = -1;
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void ChangeScenePatras()
-    {
-        checkpoint = new Vector2(0, 0);
-        deadVal = -1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     private void OnLevelWasLoaded(int level)
