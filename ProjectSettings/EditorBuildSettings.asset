@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveles/Nivel 3.unity
     guid: 6f33a9dd157326b45a356c095c476223
   - enabled: 1
+    path: Assets/Scenes/Niveles/Interludio3.unity
+    guid: 2009e2f4290b03f4da76bd0d41bc2ab8
+  - enabled: 1
     path: Assets/Scenes/Niveles/Nivel 4.unity
     guid: 6bb3c1cd7b239a041936b8872a46af30
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Interludio4.unity
+    guid: ff2a7d63304243c4ab29fcc84503ede3
   - enabled: 1
     path: Assets/Scenes/Niveles/Boss.unity
     guid: 85af163d78dc24749a3843752d1f4882
