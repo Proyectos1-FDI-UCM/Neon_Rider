@@ -16,7 +16,7 @@ public class Explosion : MonoBehaviour
             time -= Time.deltaTime;
             if(circle.radius < 2)
             {
-                circle.radius += 0.1f;
+                circle.radius += Time.deltaTime;
             }
         }
         else

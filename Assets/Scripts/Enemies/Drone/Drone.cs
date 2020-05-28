@@ -34,11 +34,19 @@ public class Drone : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if (!onRange && vision.Spotted(playerT)) // En caso de no estar en rango, sigue persiguiendo al jugador
+
+        else if (!onRange) // En caso de no estar en rango, sigue persiguiendo al jugador
         {
-            direction = new Vector2(playerT.position.x - transform.position.x, playerT.position.y - transform.position.y);
-            direction.Normalize();
+            if (vision.Spotted(playerT))
+            {
+                direction = new Vector2(playerT.position.x - transform.position.x, playerT.position.y - transform.position.y);
+                direction.Normalize();
+            }
+            else
+                direction = Vector2.zero;
         }
+
+
     }
 
     private void FixedUpdate()
