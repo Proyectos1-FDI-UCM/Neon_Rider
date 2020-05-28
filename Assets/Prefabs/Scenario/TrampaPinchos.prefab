@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 547947967012627683}
   - component: {fileID: 547947967012627680}
   - component: {fileID: 2017572119855032638}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: TrampaPinchos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1288392920362633748}
   - component: {fileID: 2844814206401859500}
   - component: {fileID: 4816822306100811202}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

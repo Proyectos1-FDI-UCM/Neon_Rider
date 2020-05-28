@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 335530048573701622}
   - component: {fileID: 335530048573701620}
   - component: {fileID: 335530048573701621}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SpriteTrampa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 6141216615351715108}
   - component: {fileID: 6141216615351715107}
   - component: {fileID: 3972490657856089882}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: TrampaActivada 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
