@@ -27,7 +27,7 @@ public class BossCrystal : MonoBehaviour
             // Llamamos a Animation de "EnemyDeathAnim"
             if (anim != null)
             {
-
+                AudioManager.instance.Play(AudioManager.ESounds.CrystalBreak);
                 anim.SetBool("Broken", true);
                 child.SetParent(null);
             }

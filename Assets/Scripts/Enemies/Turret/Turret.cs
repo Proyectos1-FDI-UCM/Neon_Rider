@@ -56,7 +56,6 @@ public class Turret : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, children[nextPos].position) < 0.2f) //Si está en posición
             {
-                AudioManager.instance.Stop(AudioManager.ESounds.TurretWalk);
                 if (moveIni <= 0) //Fase de cambio de posición
                 {
                     moveIni = changePos;
