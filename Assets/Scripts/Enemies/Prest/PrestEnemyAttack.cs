@@ -9,6 +9,7 @@ public class PrestEnemyAttack : MonoBehaviour
     EnemyVision vision;
     public Transform player;
     Animator anim;
+    float time;
 
     private void Start()
     {
@@ -18,14 +19,16 @@ public class PrestEnemyAttack : MonoBehaviour
 
     void Update()
     {
+        time += Time.deltaTime;
         // Cuando "Time.time" alcanza el nuevo valor de "firstFire", Instancia un objeto 
         // "bullet" en la posición del enemigo y aumenta el valor de "firstFire" mediante
         // la variable "cadencia"
         if (transform != null)
-            if (Time.time > firstFire && vision.Spotted(player)) //TIME.TIME ------------------------------> TIME.DELTATIME
+            if (time > firstFire && vision.Spotted(player)) //TIME.TIME ------------------------------> TIME.DELTATIME
             {
                 Instantiate(bullet, transform.position, Quaternion.identity, transform);
-                firstFire = cadencia + Time.time;
+                firstFire = cadencia;
+                time = 0;
                 anim.SetBool("Bullets", true);
             }
     }

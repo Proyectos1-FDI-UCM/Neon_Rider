@@ -9,6 +9,7 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
     [SerializeField] GameObject player = null;
     PowerUpManager pum;
     float delay = 0.1f;
+    float time = 0;
 
     // Variable de los PowerUps Verde y Azul
     Ralentizador ralentizador;
@@ -18,7 +19,6 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
         
         // Se crea un delay mínimo para que no se active al reiniciar 
         // escena si se destuyen por checkpoint
-        delay += Time.time;
 
         //Inicializa el PowerUpManager
         if (player != null)
@@ -30,12 +30,17 @@ public class ActivatePowerUpGreenBlue : MonoBehaviour
         }
 
         ralentizador = GetComponent<Ralentizador>();
+        time = 0;
+    }
 
+    private void Update()
+    {
+        time += Time.deltaTime;
     }
 
     void OnDestroy()
     {
-        if (pum != null && Time.time > delay)
+        if (pum != null && time > delay)
         {
 
             //Si se destruye con la espada activa el azul

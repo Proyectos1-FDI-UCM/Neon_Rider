@@ -14,6 +14,8 @@ public class ActivatePowerUpRed : MonoBehaviour
     int cont = 0;
     float timeReset;
     int antcont = -1;
+    float time = 0;
+
     private void Awake()
     {
         pum = GetComponent<PowerUpManager>();
@@ -31,6 +33,7 @@ public class ActivatePowerUpRed : MonoBehaviour
 
     void Update()
     {
+        time += Time.deltaTime;
         if (pum != null)
         { 
             // Si contador llega al número necesario de bloqueos, se activa el PowerUp
@@ -43,10 +46,10 @@ public class ActivatePowerUpRed : MonoBehaviour
             if (cont > 0 && antcont != cont && cont < numBlocks)
             {
                 antcont = cont;
-                timeReset = reset + Time.time;
+                time = 0;
             }
             // Si no das nuevos bloqueos antes de que se acabe el tiempo, se resetea la cuenta
-            if (timeReset <= Time.time && cont < numBlocks)
+            if (reset <= time && cont < numBlocks)
             {
                 cont = 0;
                 antcont = -1;

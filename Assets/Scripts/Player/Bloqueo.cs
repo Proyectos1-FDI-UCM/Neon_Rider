@@ -17,6 +17,7 @@ public class Bloqueo : MonoBehaviour
     ActivatePowerUpRed activPow;
     ActivatePowerUpPurple activPowPurple;
     PowerUpPurple purple;
+    float time;
 
 
     private void Awake()
@@ -29,14 +30,15 @@ public class Bloqueo : MonoBehaviour
 
     private void Update()
     {
-        if (blocking <= Time.time)
+        time += Time.deltaTime;
+        if (blockTime <= time)
             enabled = false;
     }
 
     private void OnEnable()
     {
         collisionArea.enabled = true;
-        blocking = Time.time + blockTime;
+        time = 0;
 
     }
 

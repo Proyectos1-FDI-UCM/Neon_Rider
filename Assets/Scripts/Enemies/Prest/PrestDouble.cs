@@ -10,6 +10,7 @@ public class PrestDouble : MonoBehaviour
     [SerializeField] float secondFire = 10f, firstFire = 7f;
     Transform sprite;
     Animator anim;
+    float time = 0;
 
     void Start()
     {
@@ -24,12 +25,14 @@ public class PrestDouble : MonoBehaviour
         secondBullet = transform.GetChild(1).gameObject;
 
         // Gestionamos tiempos de disparo
-        firstFire += Time.time;
+        //firstFire += Time.time;
         secondFire += firstFire;
+        time = 0;
     }
 
     void Update()
     {
+        time += Time.deltaTime;
         if (player != null)
         {
             // Diferencia entre los 2 vectores - player y DoubleBullet
@@ -40,14 +43,14 @@ public class PrestDouble : MonoBehaviour
         }
 
         // Activa el comportamiento de las balas tras un tiempo
-        if (Time.time > firstFire && firstBullet != null)
+        if (time > firstFire && firstBullet != null)
         {
             anim.SetTrigger("Attack 1");
             firstFire = 100;
             firstBullet.GetComponent<PrestBullet>().enabled = true;  
         }
 
-        if (Time.time > secondFire && secondBullet != null)
+        if (time > secondFire && secondBullet != null)
         {
             anim.SetTrigger("Attack 2");
             secondFire = 100;
