@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        if (level != 0)
+        if (level != 0 && level != 6)
             actualScene = level;
     }
 }
