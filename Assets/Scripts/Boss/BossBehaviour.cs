@@ -20,6 +20,7 @@ using UnityEngine;
 public class BossBehaviour : MonoBehaviour
 {
     TransformList enemiesOnScreen = new TransformList();
+    Animator[] bossAnimator;
     
     private int actualWave;
    
@@ -43,12 +44,16 @@ public class BossBehaviour : MonoBehaviour
     private void Start()
     {
         actualWave = 0;
+        bossAnimator = GetComponentsInChildren<Animator>();
         Instance();
+        //
+
     }
 
     private void Instance() //Invocación de los enemigos (tp de transform)
     {
-        if(waves != null) 
+
+        if (waves != null) 
             for (int i = 0; i < waves[actualWave].enemyRound.Length; i++){
                 waves[actualWave].enemyRound[i].enemyRef.transform.position = GetRelativePos(i);
                 enemiesOnScreen.InsertInEnd(waves[actualWave].enemyRound[i].enemyRef.transform);
@@ -67,20 +72,25 @@ public class BossBehaviour : MonoBehaviour
 
     public void UpdateEnemies(Transform e)
     {
+
         enemiesOnScreen.DeleteElement(e);
         Debug.LogWarning(enemiesOnScreen.Lenght());
         UpdateWave();
+
     }
 
     public void UpdateCrystal()
     {
         if (actualWave < waves.Length - 1)
         {
+            bossAnimator[1].SetTrigger("AttakBoss");
             actualWave++;
             Instance();
+
         }
         else
             Destroy(this.gameObject);
+
     }
 
     private Vector2 GetRelativePos(int i) //Método auxiliar para calcular la posición con respecto al Boss de los enemigos

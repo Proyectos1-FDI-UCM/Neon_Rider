@@ -11,8 +11,9 @@ public class Activada : MonoBehaviour
     Transform child;
     new Collider2D collider;
     AnimatorStateInfo animState;
-    bool shooting;
+    bool shooting = false;
     float clock = 0;
+    bool first = true;
 
     private void Start()
     {
@@ -24,27 +25,28 @@ public class Activada : MonoBehaviour
     {
         clock += Time.deltaTime;
         animState = animator.GetCurrentAnimatorStateInfo(0);
-        shooting = animState.IsName("TrampaAct");
         if (cont == 1)
         {
             time = activateTime;
             clock = 0;
             cont = 0;
+            first = false;
         }
-        if (clock >= time)
+        if (clock >= time && !first)
         {
-            if (!collider.enabled)
+            if (!shooting)
             {
-                collider.enabled = true;
+                //collider.enabled = true;
+                shooting = true;
                 time = deactivateTime;
                 clock = 0;
                 animator.SetBool("act", false);
             }
             
-            else if (collider.enabled)
+            else if (shooting)
             {
-                collider.isTrigger = true;
-                
+                //collider.isTrigger = true;
+                shooting = false;
             }
            
         }
@@ -54,21 +56,26 @@ public class Activada : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Death>()!=null)
         {
-            collider.enabled = false;
-            collider.isTrigger = false;
+            //collider.enabled = false;
+            //collider.isTrigger = false;
             cont = 1;
             animator.SetBool("act", true);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Enemy_Death dead = collision.gameObject.GetComponent<Enemy_Death>();
-        if (dead != null)
+        if (shooting)
         {
-            dead.OnAttack();
+            Enemy_Death dead = collision.gameObject.GetComponent<Enemy_Death>();
+            if (dead != null)
+            {
+                dead.OnAttack();
+            }
+
+            Death death = collision.gameObject.GetComponent<Death>();
+            if (death != null)
+                death.Dead();
         }
-        Death death = collision.gameObject.GetComponent<Death>();
-        if (death != null)
-            death.Dead();
     }
 }
