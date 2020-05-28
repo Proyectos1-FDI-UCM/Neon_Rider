@@ -12,6 +12,7 @@ public class Activada : MonoBehaviour
     new Collider2D collider;
     AnimatorStateInfo animState;
     bool shooting;
+    float clock = 0;
 
     private void Start()
     {
@@ -21,19 +22,22 @@ public class Activada : MonoBehaviour
     }
     void Update()
     {
+        clock += Time.deltaTime;
         animState = animator.GetCurrentAnimatorStateInfo(0);
         shooting = animState.IsName("TrampaAct");
         if (cont == 1)
         {
-            time = activateTime + Time.time;
+            time = activateTime;
+            clock = 0;
             cont = 0;
         }
-        if (Time.time >= time)
+        if (clock >= time)
         {
             if (!collider.enabled)
             {
                 collider.enabled = true;
-                time = Time.time + deactivateTime;
+                time = deactivateTime;
+                clock = 0;
                 animator.SetBool("act", false);
             }
             

@@ -4,7 +4,7 @@ public class Pinchos : MonoBehaviour
 {
     [SerializeField] float intermitentTime = 1.5f;
     bool cont = true;
-    double time;
+    double time = 0;
     new Collider2D collider;
     Animator animator;
     Transform child;
@@ -18,12 +18,13 @@ public class Pinchos : MonoBehaviour
 
     void Update()
     {
+        time += Time.deltaTime;
         if (cont)
         {
-            time = intermitentTime + Time.time;
+            time = 0;
             cont = false;
         }
-        if (Time.time>=time) // TIME.TIME --------------------------------> TIME.DELTATIME
+        if (time>= intermitentTime) // TIME.TIME --------------------------------> TIME.DELTATIME
         {
             if  (collider.enabled)
             {

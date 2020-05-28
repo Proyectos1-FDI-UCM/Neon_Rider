@@ -37,6 +37,7 @@ public class PowerUpManager : MonoBehaviour
 
     float width, originalWidth, time;
     bool activo = false;
+    float clock = 0;
 
     void Awake()
     {
@@ -55,6 +56,7 @@ public class PowerUpManager : MonoBehaviour
 
     void Update()
     {
+        clock += Time.deltaTime;
         if (!activo)
         {
             if (red.enabled)
@@ -120,10 +122,10 @@ public class PowerUpManager : MonoBehaviour
             {
                 if (blue.enabled)
                 {
-                    width = (originalWidth * ((time - Time.time) / (duration / 3)));
+                    width = (originalWidth * ((time - clock) / (duration / 3)));
                 }
                 else
-                    width = originalWidth * ((time - Time.time) / duration);
+                    width = originalWidth * ((time - clock) / duration);
             }
         }
         //estos 4 ifs dependiendo del power up ponen un sprite distinto  a la barra, activan la imagen y ponen su tamaño al máximo.
@@ -167,10 +169,15 @@ public class PowerUpManager : MonoBehaviour
             // Añade a timeDuratión la duración del Powerup
             if (powerUpName == "PowerUpBlue")
             {
-                time = duration / 3 + Time.time;
+                time = duration / 3;
+                clock = 0;
             }
             else
-                time = duration + Time.time;
+            {
+                time = duration;
+                clock = 0;
+            }
+                
         }
     }
 

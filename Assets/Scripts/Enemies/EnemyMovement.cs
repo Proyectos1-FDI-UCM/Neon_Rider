@@ -21,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
     Transform child;
     EnemyVision enemy;
     Drone drone;
+    float time;
 
     void Start()
     {
@@ -36,12 +37,13 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        time += Time.deltaTime;
         if (player != null)
         {
             // Cuando "Time.time" alcanza el nuevo valor de "firstMove" da un valor aleatorio a "selecDir" entre 0 y 1,
             // que determinarán si el enemigo girará en el sentido de las agujas del reloj o en sentido contrario mediante 
             // el booleano "clockwise". Aumenta el valor de "firstMove" mediante la variable "changeDir" 
-            if (Time.time > firstMove && vision.Spotted(player))
+            if (time > firstMove && vision.Spotted(player))
             {
                 int selecDir = Random.Range(0, 2);
 
@@ -50,7 +52,8 @@ public class EnemyMovement : MonoBehaviour
                 else
                     clockwise = false;
 
-                firstMove = changeDir + Time.time; // TIME.TIME -----------------------------------> USAR TIME.DELTATIME
+                firstMove = changeDir; // TIME.TIME -----------------------------------> USAR TIME.DELTATIME
+                time = 0;
             }
 
             if (vision.Spotted(player))
