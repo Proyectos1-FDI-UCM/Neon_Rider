@@ -39,8 +39,8 @@ public class AudioManager : MonoBehaviour
     {
         int i = (int)sound;
         Sound s = sounds[i];
-        //if(!s.source.isPlaying)
-        s.source.Play();
+        if(!s.source.isPlaying)
+            s.source.Play();
     }
 
     public void Stop (ESounds sound) // Para el sonido que corresponda
