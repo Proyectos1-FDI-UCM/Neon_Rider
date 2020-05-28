@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveles/Intro.unity
     guid: 377b75302690b124785b1a34148f3d42
   - enabled: 1
+    path: Assets/Scenes/Niveles/Interludio1.unity
+    guid: 2009e2f4290b03f4da76bd0d41bc2ab8
+  - enabled: 1
     path: Assets/Scenes/Niveles/Nivel 1.unity
     guid: ab84921f28333df4ab2e7560f5702670
   - enabled: 1
