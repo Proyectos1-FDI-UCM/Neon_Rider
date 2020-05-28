@@ -21,17 +21,29 @@ public class Turret : MonoBehaviour
     TurretAttack attack;
     EnemyVision vision;
     Enemy_Death death;
+    Animator animator;
+    Transform child;
+    int childcount;
+    AnimatorStateInfo animState;
 
     void Awake()
     {
         vision = GetComponent<EnemyVision>();
         attack = GetComponent<TurretAttack>();
         death = GetComponent<Enemy_Death>();
+        childcount = transform.childCount;
     }
 
     private void Start()
     {
-        transform.DetachChildren(); //Quitamos GO hijos innecesarios
+        int i = 0;
+        while(i<children.Length)
+        {
+            children[i].SetParent(null);
+            i++;
+        }
+        child = transform.GetChild(0);
+        animator = child.GetComponent<Animator>();
         nextPos = 1; //Primera posicion 
     }
 
@@ -54,6 +66,7 @@ public class Turret : MonoBehaviour
                 {
                     death.enabled = false;
                     moveIni -= Time.deltaTime;
+                    animator.SetBool("Moving", false);
 
                     if (vision.Spotted(player))
                     {
@@ -69,6 +82,7 @@ public class Turret : MonoBehaviour
             }
             else //Si se está moviendo
             {
+                animator.SetBool("Moving", true);
                 death.enabled = true;
                 attack.enabled = false;
             }
