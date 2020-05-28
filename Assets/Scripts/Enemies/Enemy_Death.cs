@@ -47,8 +47,12 @@ public class Enemy_Death : MonoBehaviour
     // Metodo llamado desde el componente Sword_Attack
     public void OnAttack()
     {
-        hitsToDeath--; // Recibe daño
-        AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
+        if (drone == null)
+        {
+            hitsToDeath--; // Recibe daño
+            AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
+        }
+        
    
         if (hitsToDeath == 0)
         {

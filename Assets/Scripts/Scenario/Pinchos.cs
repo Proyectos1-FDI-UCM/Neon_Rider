@@ -8,6 +8,7 @@ public class Pinchos : MonoBehaviour
     new Collider2D collider;
     Animator animator;
     Transform child;
+    bool shooting = false;
 
     void Awake()
     {
@@ -26,30 +27,33 @@ public class Pinchos : MonoBehaviour
         }
         if (time>= intermitentTime) // TIME.TIME --------------------------------> TIME.DELTATIME
         {
-            if  (collider.enabled)
+            if  (shooting)
             {
-                collider.enabled = false;
+                shooting = false;
                 animator.SetBool("Active", false);
             }
             else
             {
-                collider.enabled = true;
+                shooting = true;
                 animator.SetBool("Active", true);
             }
             cont = true;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Enemy_Death dead = collision.gameObject.GetComponent<Enemy_Death>();
-        if (dead != null)
+        if (shooting)
         {
-           dead.OnAttack();
-        }
+            Enemy_Death dead = collision.gameObject.GetComponent<Enemy_Death>();
+            if (dead != null)
+            {
+                dead.OnAttack();
+            }
 
-        Death death = collision.gameObject.GetComponent<Death>();
-        if (death != null)
-            death.Dead();
+            Death death = collision.gameObject.GetComponent<Death>();
+            if (death != null)
+                death.Dead();
+        }
     }
 
 }
