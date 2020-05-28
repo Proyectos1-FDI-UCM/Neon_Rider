@@ -26,6 +26,11 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene(6);
+    }
+
     public void Options() // Abre el menú de opciones
     {
         optionsUI.SetActive(true);        

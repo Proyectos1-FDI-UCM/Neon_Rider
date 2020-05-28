@@ -2,6 +2,7 @@
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -23,8 +24,11 @@ public class OptionsMenu : MonoBehaviour
         controlToggle.GetComponent<Toggle>().isOn = GameManager.instance.mando;
 
         // Activa la imagen del botón A o el espacio en los diálogos
-        aButton.SetActive(GameManager.instance.mando); 
-        spacebar.SetActive(!GameManager.instance.mando);
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            aButton.SetActive(GameManager.instance.mando);
+            spacebar.SetActive(!GameManager.instance.mando);
+        }
     }
 
     public void SetMasterVolume(float volume) // Slider del volumen general
