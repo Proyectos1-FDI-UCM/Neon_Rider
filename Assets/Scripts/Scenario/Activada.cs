@@ -47,6 +47,7 @@ public class Activada : MonoBehaviour
             {
                 //collider.isTrigger = true;
                 shooting = false;
+                first = true;
             }
            
         }
