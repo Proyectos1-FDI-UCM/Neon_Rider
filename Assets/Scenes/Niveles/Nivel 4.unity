@@ -1266,11 +1266,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 145576827339922355, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_Name
-      value: UI
-      objectReference: {fileID: 0}
     - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: controlToggle
@@ -1286,6 +1281,11 @@ PrefabInstance:
       propertyPath: spacebar
       value: 
       objectReference: {fileID: 340924886}
+    - target: {fileID: 145576827339922355, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
     - target: {fileID: 145576826724399411, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_IsActive
@@ -82296,12 +82296,12 @@ PrefabInstance:
     - target: {fileID: 7170413535948548072, guid: 239b2482241071a42b1bf480d64649c1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170413535948548072, guid: 239b2482241071a42b1bf480d64649c1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4483248116065367029, guid: 239b2482241071a42b1bf480d64649c1,
         type: 3}
