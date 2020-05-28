@@ -6,8 +6,13 @@ public class Pinchos : MonoBehaviour
     bool cont = true;
     double time;
     new Collider2D collider;
+    Animator animator;
+    Transform child;
+
     void Awake()
     {
+        child = transform.GetChild(0);
+        animator = child.GetComponent<Animator>();
         collider = GetComponent<Collider2D>();
     }
 
@@ -23,10 +28,12 @@ public class Pinchos : MonoBehaviour
             if  (collider.enabled)
             {
                 collider.enabled = false;
+                animator.SetBool("Active", false);
             }
             else
             {
                 collider.enabled = true;
+                animator.SetBool("Active", true);
             }
             cont = true;
         }
