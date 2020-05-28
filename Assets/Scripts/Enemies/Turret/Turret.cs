@@ -71,6 +71,7 @@ public class Turret : MonoBehaviour
                     if (vision.Spotted(player))
                     {
                         if (cadenceAux <= 0){
+                            AudioManager.instance.Play(AudioManager.ESounds.TurretShot);
                             attack.TurAttack(player);
                             cadenceAux = cadence;
                         }
@@ -82,6 +83,7 @@ public class Turret : MonoBehaviour
             }
             else //Si se está moviendo
             {
+                AudioManager.instance.Play(AudioManager.ESounds.TurretWalk);
                 animator.SetBool("Moving", true);
                 death.enabled = true;
                 attack.enabled = false;

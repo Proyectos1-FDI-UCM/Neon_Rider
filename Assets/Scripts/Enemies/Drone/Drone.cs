@@ -31,6 +31,7 @@ public class Drone : MonoBehaviour
             {
                 Debug.Log("Pum");
                 Instantiate(explosion, transform.position, Quaternion.identity, null); // Al explotar hace aparecer un gameObject que representa la explosión
+                AudioManager.instance.Play(AudioManager.ESounds.DronExp);
                 Destroy(this.gameObject);
             }
         }

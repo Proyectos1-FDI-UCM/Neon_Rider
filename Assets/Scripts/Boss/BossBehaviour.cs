@@ -52,7 +52,8 @@ public class BossBehaviour : MonoBehaviour
 
     private void Instance() //Invocación de los enemigos (tp de transform)
     {
-
+        bossAnimator[1].SetTrigger("AttakBoss");
+        AudioManager.instance.Play(AudioManager.ESounds.Bastonazo);
         if (waves != null) 
             for (int i = 0; i < waves[actualWave].enemyRound.Length; i++){
                 waves[actualWave].enemyRound[i].enemyRef.transform.position = GetRelativePos(i);
@@ -83,10 +84,8 @@ public class BossBehaviour : MonoBehaviour
     {
         if (actualWave < waves.Length - 1)
         {
-            bossAnimator[1].SetTrigger("AttakBoss");
             actualWave++;
             Instance();
-
         }
         else
             Destroy(this.gameObject);

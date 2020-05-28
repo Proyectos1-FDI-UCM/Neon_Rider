@@ -86,28 +86,28 @@ public class GameManager : MonoBehaviour
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
                 break;
-            case (2):
+            case (3):
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Level1);
                 break;
-            case (4):
+            case (5):
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Level2);
                 break;
-            case (5):
-            case (7):
+            case (6):
+            case (8):
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Level2Low);
                 break;
-            case (6):
+            case (7):
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Level2);
                 break;
-            case (8):
+            case (9):
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Boss);
                 break;
-            case (9):
+            case (10):
                 AudioManager.instance.StopAll();
                 AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
                 break;

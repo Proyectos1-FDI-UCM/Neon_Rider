@@ -23,6 +23,7 @@ public class Death : MonoBehaviour
     {
         if (active)
         {
+            AudioManager.instance.StopAllSFX();
             Instantiate(muerto, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

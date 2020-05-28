@@ -45,6 +45,7 @@ public class PrestDouble : MonoBehaviour
         // Activa el comportamiento de las balas tras un tiempo
         if (time > firstFire && firstBullet != null)
         {
+            AudioManager.instance.Play(AudioManager.ESounds.PrestShot);
             anim.SetTrigger("Attack 1");
             firstFire = 100;
             firstBullet.GetComponent<PrestBullet>().enabled = true;  
@@ -52,6 +53,7 @@ public class PrestDouble : MonoBehaviour
 
         if (time > secondFire && secondBullet != null)
         {
+            AudioManager.instance.Play(AudioManager.ESounds.PrestShot);
             anim.SetTrigger("Attack 2");
             secondFire = 100;
             secondBullet.GetComponent<PrestBullet>().enabled = true;
