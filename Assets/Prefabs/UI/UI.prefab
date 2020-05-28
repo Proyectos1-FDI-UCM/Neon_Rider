@@ -1588,6 +1588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndBG
       objectReference: {fileID: 0}
+    - target: {fileID: 429314500498363770, guid: 9041007eff294c84a915f8bf987462c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 429314500498363773, guid: 9041007eff294c84a915f8bf987462c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1692,6 +1697,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 429314500498363772, guid: 9041007eff294c84a915f8bf987462c9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e642d28f9b8cb8546867e967230a94f4,
+        type: 3}
+    - target: {fileID: 429314500498363772, guid: 9041007eff294c84a915f8bf987462c9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429314500498363772, guid: 9041007eff294c84a915f8bf987462c9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429314500498363772, guid: 9041007eff294c84a915f8bf987462c9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9041007eff294c84a915f8bf987462c9, type: 3}
