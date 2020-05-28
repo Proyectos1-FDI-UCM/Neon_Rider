@@ -50,7 +50,8 @@ public class Enemy_Death : MonoBehaviour
         if (drone == null)
         {
             hitsToDeath--; // Recibe daño
-            AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
+            if(turret == null && ralen == null)
+                AudioManager.instance.Play(AudioManager.ESounds.Hit); // Sonido de daño del matón
         }
         
    

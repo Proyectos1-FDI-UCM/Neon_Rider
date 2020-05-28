@@ -14,10 +14,16 @@ public class Sword_Attack : MonoBehaviour
         //Debug.Log("ay me matieaste");
         BossCrystal crystal;
         crystal = other.gameObject.GetComponent<BossCrystal>();
+        Ralentizador ralen;
+        ralen = other.gameObject.GetComponent<Ralentizador>();
+        Turret turret;
+        turret = other.gameObject.GetComponent<Turret>();
 
         //Si el GameObject tiene el componente, llama al metodo de dicho componente
         if (enemy != null && enabled && enemy.enabled)
         {
+            if (turret != null || ralen != null)
+                AudioManager.instance.Play(AudioManager.ESounds.RalenTurretDeath);
             enemy.OnAttack();
             Debug.Log("verga");
         }
@@ -25,6 +31,7 @@ public class Sword_Attack : MonoBehaviour
         //Si tiene el componente DestructibleWall, llama a su método
         else if(wall != null && enabled)
         {
+            AudioManager.instance.Play(AudioManager.ESounds.RompePared);
             wall.Break();
         }
 

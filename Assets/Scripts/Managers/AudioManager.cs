@@ -6,10 +6,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     Sound[] sounds = null; // Array que contiene todos los sonidos del juego
 
-    public static AudioManager instance; 
+    public static AudioManager instance;
+    [SerializeField]
+    AudioMixerGroup sfx;
 
     public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3, FlasherRay, Level1, Hit, 
-                        Level2, Boss, Level1Low, Level2Low}; // Enum usado para acceder al array sounds
+                        Level2, Boss, Level1Low, Level2Low, RalentTime, RalentExp, RompePared, TurretShot,
+                        Bastonazo, TurretWalk, RalenTurretDeath, DronExp}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
@@ -36,6 +39,7 @@ public class AudioManager : MonoBehaviour
     {
         int i = (int)sound;
         Sound s = sounds[i];
+        //if(!s.source.isPlaying)
         s.source.Play();
     }
 
@@ -43,7 +47,8 @@ public class AudioManager : MonoBehaviour
     {
         int i = (int)sound;
         Sound s = sounds[i];
-        s.source.Stop();
+        if(s.source.isPlaying)
+            s.source.Stop();
     }
 
     public void StopAll()
@@ -53,6 +58,17 @@ public class AudioManager : MonoBehaviour
         {
             s = sounds[i];
             if (s.source.isPlaying)
+                s.source.Stop();
+        }
+    }
+
+    public void StopAllSFX()
+    {
+        Sound s;
+        for(int i = 0; i < sounds.Length; i++)
+        {
+            s = sounds[i];
+            if (s.source.outputAudioMixerGroup = sfx) 
                 s.source.Stop();
         }
     }

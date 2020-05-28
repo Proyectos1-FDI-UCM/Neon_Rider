@@ -56,11 +56,14 @@ public class EnemyAttack : MonoBehaviour
                 transform.localScale = new Vector3(-1f, 1f, 1);
                 rotator.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
             }               
-            else{
+            else
+            {
                 transform.localScale = new Vector3(1f, 1f, 1);
                 rotator.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ - 180);
             }
             if (fire > cadencia ){
+                if(flasher != null)
+                    AudioManager.instance.Play(AudioManager.ESounds.FlasherRay);
                 Instantiate(bullet, child.GetChild(0).GetChild(0).GetChild(0).position, Quaternion.identity, transform);
                 fire = 0;
             }
