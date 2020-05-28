@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     string secondName;
     [SerializeField]
     int[] nameChanger;
+    [SerializeField]
+    GameObject jade;
     int changerCont;
 
     [SerializeField]
@@ -62,6 +64,8 @@ public class DialogueManager : MonoBehaviour
 
 
         dialogueBox.SetActive(true);
+        if (jade != null)
+            jade.SetActive(true);
         nameText.text = name;
         // Vacía la Queue
         queuedSentences.Clear();
@@ -111,6 +115,8 @@ public class DialogueManager : MonoBehaviour
     {
         // Desactiva el cuadro de diálogo
         currentlyInDialogue = false;
+        if (jade != null)
+            jade.SetActive(false);
         dialogueBox.SetActive(false);
         if (isEnd)
         {
