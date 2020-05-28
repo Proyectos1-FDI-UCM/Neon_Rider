@@ -8,7 +8,8 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance; 
 
-    public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3, FlasherRay, LevelMusic, Hit}; // Enum usado para acceder al array sounds
+    public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3, FlasherRay, Level1, Hit, 
+                        Level2, Boss, Level1Low, Level2Low}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
@@ -43,6 +44,17 @@ public class AudioManager : MonoBehaviour
         int i = (int)sound;
         Sound s = sounds[i];
         s.source.Stop();
+    }
+
+    public void StopAll()
+    {
+        Sound s;
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            s = sounds[i];
+            if (s.source.isPlaying)
+                s.source.Stop();
+        }
     }
 }
 

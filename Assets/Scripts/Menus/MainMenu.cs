@@ -15,8 +15,6 @@ public class MainMenu : MonoBehaviour
 
     public void Play() // Para la música del menú y carga la primera escena
     {
-        AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-        AudioManager.instance.Play(AudioManager.ESounds.LevelMusic);
         Cursor.visible = false;
         SceneManager.LoadScene(GameManager.instance.actualScene);
     }

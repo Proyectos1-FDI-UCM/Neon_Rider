@@ -82,5 +82,41 @@ public class GameManager : MonoBehaviour
     {
         if (level != 0 && level != SceneManager.sceneCountInBuildSettings - 1)
             actualScene = level;
+        switch (level)
+        {
+            case (0):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Menu);
+                break;
+            case (1):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
+                break;
+            case (2):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Level1);
+                break;
+            case (4):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Level2);
+                break;
+            case (5):
+            case (7):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Level2Low);
+                break;
+            case (6):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Level2);
+                break;
+            case (8):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Boss);
+                break;
+            case (9):
+                AudioManager.instance.StopAll();
+                AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
+                break;
+        }
     }
 }
