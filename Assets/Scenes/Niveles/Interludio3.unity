@@ -127,16 +127,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: controlToggle
-      value: 
-      objectReference: {fileID: 293159672}
     - target: {fileID: 145576827339922355, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 145576827339922361, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: controlToggle
+      value: 
+      objectReference: {fileID: 293159672}
     - target: {fileID: 145576827339922359, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,31 +242,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3097077541445797778, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138668648706353276, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138668647849383193, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 733
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138668647849383194, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138668648483611466, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7138668648706353274, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
       propertyPath: m_Color.r
@@ -292,6 +267,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Mensaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097077541445797778, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138668648706353276, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138668647849383193, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138668647849383194, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138668648483611466, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7138668647849383192, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
         type: 3}
@@ -506,12 +506,12 @@ PrefabInstance:
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: nameChanger.Array.size
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
@@ -536,12 +536,12 @@ PrefabInstance:
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: "\xBFQu\xE9 tal va?"
+      value: (...)
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: name
-      value: Jade
+      value: Bright Luster
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
@@ -581,12 +581,12 @@ PrefabInstance:
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: sentences.Array.data[1]
-      value: Definitivamente no son gatitos.
+      value: Lo vais a lamentar.
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
       propertyPath: sentences.Array.data[2]
-      value: "\xBFTe vas a echar atr\xE1s ahora?"
+      value: (...)
       objectReference: {fileID: 0}
     - target: {fileID: 2600085992503896354, guid: ddcd638540a01b6489a4262159998f53,
         type: 3}
