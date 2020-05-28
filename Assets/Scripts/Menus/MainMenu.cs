@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("Creditos");
     }
 
     public void Options() // Abre el menú de opciones
