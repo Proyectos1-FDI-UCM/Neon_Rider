@@ -61,8 +61,6 @@ public class DialogueManager : MonoBehaviour
             endBG.SetActive(true);
             Time.timeScale = 0;
         }
-
-
         dialogueBox.SetActive(true);
         if (jade != null)
             jade.SetActive(true);
