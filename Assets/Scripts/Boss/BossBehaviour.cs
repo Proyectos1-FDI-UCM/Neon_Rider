@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // ***FASE DE SPAWN***
 // *FUNCIONAMIENTO LITERAL*
@@ -42,6 +43,9 @@ public class BossBehaviour : MonoBehaviour
 
     [SerializeField]
     GameObject[] crystals = null;
+
+    [SerializeField]
+    GameObject[] walls = null;
 
     private void Start()
     {
@@ -87,13 +91,19 @@ public class BossBehaviour : MonoBehaviour
 
     public void UpdateCrystal()
     {
-        if (actualWave < waves.Length - 1)
+        if (actualWave < waves.Length - 1) //Si aún hay oleadas, saca la siguiente
         {
             actualWave++;
             Instance();
         }
-        else
-            Destroy(this.gameObject);
+        else // De lo contrario, el Boss está listo para ser derrotado
+        {
+            for(int i = 0; i < walls.Length; i++)
+            {
+                Destroy(walls[i].gameObject);
+            }
+
+        }
 
     }
 
@@ -105,4 +115,9 @@ public class BossBehaviour : MonoBehaviour
         return newRelativePos;
     }
     
+    public void OnAttack()
+    {
+        Time.timeScale = 0.3f;
+        bossAnimator[0].SetBool("DeathBoss", true);
+    }
 }

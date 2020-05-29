@@ -18,6 +18,8 @@ public class Sword_Attack : MonoBehaviour
         ralen = other.gameObject.GetComponent<Ralentizador>();
         Turret turret;
         turret = other.gameObject.GetComponent<Turret>();
+        BossBehaviour boss;
+        boss = other.gameObject.GetComponent<BossBehaviour>();
 
         //Si el GameObject tiene el componente, llama al metodo de dicho componente
         if (enemy != null && enabled && enemy.enabled)
@@ -38,7 +40,11 @@ public class Sword_Attack : MonoBehaviour
         else if (crystal != null && enabled)
         {
             crystal.Break();
-            Debug.LogWarning("Crystal atacado");
+        }
+
+        else if (boss != null && enabled)
+        {
+            boss.OnAttack();
         }
     }
 }
