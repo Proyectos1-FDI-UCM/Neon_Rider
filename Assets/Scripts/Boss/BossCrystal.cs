@@ -38,6 +38,9 @@ public class BossCrystal : MonoBehaviour
     public void SetActive()
     {
         active = true;
+        Color temp = GetComponentInChildren<SpriteRenderer>().color;
+        temp.a = 255f;
+        GetComponentInChildren<SpriteRenderer>().color = temp;    
     }
 
 }

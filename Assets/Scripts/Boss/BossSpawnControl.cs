@@ -10,10 +10,12 @@ public class BossSpawnControl : MonoBehaviour
 
     [SerializeField]
     BossBehaviour fatherBoss = null;
-
+    [SerializeField]
+    PlayerController player = null;
+    
     private void OnDisable()
     {
-        if (fatherBoss != null)
+        if (player != null && fatherBoss != null)
         {
             fatherBoss.UpdateEnemies(transform);
         }

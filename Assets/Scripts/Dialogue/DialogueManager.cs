@@ -16,7 +16,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     GameObject jade;
     int changerCont;
-
+    [SerializeField]
+    BossBehaviour boss;
     [SerializeField]
     [TextArea(3, 10)]
     string[] sentences;
@@ -120,5 +121,11 @@ public class DialogueManager : MonoBehaviour
         {
             GameManager.instance.ChangeScene();
         }
+
+        if(boss != null)
+        {
+            boss.FirstInstance();
+        }
+
     }
 }

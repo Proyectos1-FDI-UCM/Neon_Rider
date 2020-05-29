@@ -23,7 +23,9 @@ public class BossBehaviour : MonoBehaviour
     Animator[] bossAnimator;
     
     private int actualWave;
-   
+    private float delayHit = 0.41f;
+    private float delaySpawn = 0.5f;
+
     [System.Serializable]
     private struct Wave{
         public Enemy[] enemyRound; // Enemigos en una oleada
@@ -45,17 +47,21 @@ public class BossBehaviour : MonoBehaviour
     {
         actualWave = 0;
         bossAnimator = GetComponentsInChildren<Animator>();
-        Instance();
-        //
+    }
 
+    public void FirstInstance()
+    {
+        Instance();
     }
 
     private void Instance() //Invocación de los enemigos (tp de transform)
     {
-        bossAnimator[1].SetTrigger("AttakBoss");
+        bossAnimator[0].SetTrigger("AttakBoss");
+        for (float i = 0f; i < delayHit; i += Time.deltaTime) { }
         AudioManager.instance.Play(AudioManager.ESounds.Bastonazo);
         if (waves != null) 
             for (int i = 0; i < waves[actualWave].enemyRound.Length; i++){
+                for (float e = 0f; e < delaySpawn; e += Time.deltaTime) { }
                 waves[actualWave].enemyRound[i].enemyRef.transform.position = GetRelativePos(i);
                 enemiesOnScreen.InsertInEnd(waves[actualWave].enemyRound[i].enemyRef.transform);
             }
@@ -75,7 +81,6 @@ public class BossBehaviour : MonoBehaviour
     {
 
         enemiesOnScreen.DeleteElement(e);
-        Debug.LogWarning(enemiesOnScreen.Lenght());
         UpdateWave();
 
     }
@@ -99,5 +104,5 @@ public class BossBehaviour : MonoBehaviour
         newRelativePos.y = waves[actualWave].enemyRound[i].relativePos.y + this.transform.position.y;
         return newRelativePos;
     }
-
+    
 }
