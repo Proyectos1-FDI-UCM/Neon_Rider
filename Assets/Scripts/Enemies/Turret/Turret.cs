@@ -83,6 +83,7 @@ public class Turret : MonoBehaviour
             }
             else //Si se está moviendo
             {
+                if(vision.Spotted(transform))
                 AudioManager.instance.Play(AudioManager.ESounds.TurretWalk);
                 animator.SetBool("Moving", true);
                 death.enabled = true;

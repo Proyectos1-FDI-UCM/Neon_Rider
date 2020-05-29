@@ -175,7 +175,7 @@ MonoBehaviour:
     mixer: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3,
       type: 2}
     volume: 0.5
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: RalenTurretDeath
     clip: {fileID: 8300000, guid: 02598d2e98b17f14191871aa661a1091, type: 3}
