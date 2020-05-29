@@ -10,6 +10,9 @@ public class CreditsExit : MonoBehaviour
         if (time > 0)
             time -= Time.deltaTime;
         else
+        {
+            //GameManager.instance.OnSceneChange(0);
             SceneManager.LoadScene(0);
+        }
     }
 }

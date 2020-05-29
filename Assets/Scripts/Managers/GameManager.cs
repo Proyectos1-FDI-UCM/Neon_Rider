@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         checkpoint = new Vector2(0, 0);
         deadVal = -1;
         Time.timeScale = 1;
+        //OnSceneChange(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -87,30 +88,44 @@ public class GameManager : MonoBehaviour
                 AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
                 break;
             case (3):
-                AudioManager.instance.StopAll();
+                AudioManager.instance.Stop(AudioManager.ESounds.Level1Low);
+                AudioManager.instance.Stop(AudioManager.ESounds.Menu);
                 AudioManager.instance.Play(AudioManager.ESounds.Level1);
                 break;
             case (5):
-                AudioManager.instance.StopAll();
+                AudioManager.instance.Stop(AudioManager.ESounds.Level1);
+                AudioManager.instance.Stop(AudioManager.ESounds.Menu);
                 AudioManager.instance.Play(AudioManager.ESounds.Level2);
                 break;
             case (6):
             case (8):
-                AudioManager.instance.StopAll();
+                AudioManager.instance.Stop(AudioManager.ESounds.Level2);
+                AudioManager.instance.Stop(AudioManager.ESounds.Menu);
                 AudioManager.instance.Play(AudioManager.ESounds.Level2Low);
                 break;
             case (7):
-                AudioManager.instance.StopAll();
+                AudioManager.instance.Stop(AudioManager.ESounds.Level2Low);
+                AudioManager.instance.Stop(AudioManager.ESounds.Menu);
                 AudioManager.instance.Play(AudioManager.ESounds.Level2);
                 break;
             case (9):
-                AudioManager.instance.StopAll();
+                AudioManager.instance.Stop(AudioManager.ESounds.Level2Low);
+                AudioManager.instance.Stop(AudioManager.ESounds.Menu);
                 AudioManager.instance.Play(AudioManager.ESounds.Boss);
                 break;
             case (10):
-                AudioManager.instance.StopAll();
+                AudioManager.instance.Stop(AudioManager.ESounds.Boss);
+                AudioManager.instance.Stop(AudioManager.ESounds.Menu);
                 AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
                 break;
         }
     }
+
+    /*public void OnSceneChange(int scene)
+    {
+        switch (scene)
+        {
+            
+        }
+    }*/
 }
