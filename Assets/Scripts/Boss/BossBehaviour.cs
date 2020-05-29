@@ -26,6 +26,10 @@ public class BossBehaviour : MonoBehaviour
     private int actualWave;
     private float delayHit = 0.41f;
     private float delaySpawn = 0.5f;
+    bool dead = false;
+    float time = 2f;
+
+    BoxCollider2D col;
 
     [System.Serializable]
     private struct Wave{
@@ -51,6 +55,18 @@ public class BossBehaviour : MonoBehaviour
     {
         actualWave = 0;
         bossAnimator = GetComponentsInChildren<Animator>();
+        col = GetComponent<BoxCollider2D>();
+    }
+
+    private void Update()
+    {
+        if (dead)
+        {
+            if (time > 0)
+                time -= Time.deltaTime;
+            else
+                OnDeath();
+        }
     }
 
     public void FirstInstance()
@@ -119,5 +135,13 @@ public class BossBehaviour : MonoBehaviour
     {
         Time.timeScale = 0.3f;
         bossAnimator[0].SetBool("DeathBoss", true);
+        col.enabled = false;
+        dead = true;
+    }
+
+    public void OnDeath()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Creditos");
     }
 }
