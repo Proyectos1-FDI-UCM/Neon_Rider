@@ -68,7 +68,7 @@ public class AudioManager : MonoBehaviour
         for(int i = 0; i < sounds.Length; i++)
         {
             s = sounds[i];
-            if (s.source.outputAudioMixerGroup = sfx) 
+            if (s.source.outputAudioMixerGroup == sfx) 
                 s.source.Stop();
         }
     }
