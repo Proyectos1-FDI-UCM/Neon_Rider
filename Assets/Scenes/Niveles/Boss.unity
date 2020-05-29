@@ -1379,6 +1379,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &435739844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 145576827384203479, guid: 4fe6f349e015cbe408f5219bcdbd1d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1233641992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &443855180 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 175977613206059068, guid: 962328745058cf8488ba7ab153050ac0,
@@ -20658,6 +20670,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1882214181353476888, guid: 75af44364c887f344844d0027ad2f244,
+        type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 435739844}
     - target: {fileID: 1882214181353476891, guid: 75af44364c887f344844d0027ad2f244,
         type: 3}
       propertyPath: purpleRb
