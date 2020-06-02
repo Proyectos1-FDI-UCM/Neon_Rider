@@ -34,13 +34,13 @@ public class CircleRotation : MonoBehaviour
                 else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
                 else direcciony = new Vector2(0, 0);
 
-                if (Input.GetKey("d")) direccionx = new Vector2(1, 0);
-                else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
+                if (Input.GetKey("d")) direccionx = new Vector2(-1, 0);
+                else if (Input.GetKey("a")) direccionx = new Vector2(1, 0);
                 else direccionx = new Vector2(0, 0);
 
                 direccion = direccionx + direcciony;
-                float rotationX = Mathf.Atan2(direccion.x,direccion.y) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(rotationX, 90f, 90f);
+                float rotationZ = Mathf.Atan2(direccion.x,direccion.y) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
             }
         }
     }
