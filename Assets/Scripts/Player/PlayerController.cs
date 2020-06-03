@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
             else direccionx = new Vector2(0, 0);
 
             direccion = direccionx + direcciony;
+            direccion.Normalize();
         }
         anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
