@@ -14,6 +14,7 @@ public class Death : MonoBehaviour
     private void OnEnable()
     {
         active = true;
+        
     }
     private void OnDisable()
     {
@@ -24,9 +25,12 @@ public class Death : MonoBehaviour
         if (active)
         {
             AudioManager.instance.StopAllSFX();
+            Debug.Log("tusmuersibdnauodbouawdubawdhvakhdboad");
             Instantiate(muerto, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            
         }
     }
+
 }
