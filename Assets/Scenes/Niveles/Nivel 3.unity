@@ -25496,6 +25496,11 @@ PrefabInstance:
       propertyPath: playerT
       value: 
       objectReference: {fileID: 468660276}
+    - target: {fileID: 7299986875846786804, guid: dda25da572c4aeb4aa174c4eae8bb42f,
+        type: 3}
+      propertyPath: time
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7960207174067063292, guid: dda25da572c4aeb4aa174c4eae8bb42f,
         type: 3}
       propertyPath: range

@@ -153,7 +153,7 @@ MonoBehaviour:
   explosion: {fileID: 3304653938115755152, guid: 31b5e804bdca818429d3c8c7257229e1,
     type: 3}
   speed: 10
-  time: 0.6
+  time: 0.4
 --- !u!114 &7960207174067063292
 MonoBehaviour:
   m_ObjectHideFlags: 0
