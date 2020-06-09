@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8241926322715454091}
   - component: {fileID: -313372181458145178}
   - component: {fileID: 1175190921417316150}
-  m_Layer: 12
+  m_Layer: 20
   m_Name: FlasherRay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
