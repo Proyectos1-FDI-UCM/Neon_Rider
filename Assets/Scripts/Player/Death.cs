@@ -13,8 +13,7 @@ public class Death : MonoBehaviour
 
     private void OnEnable()
     {
-        active = true;
-        
+        active = true;    
     }
     private void OnDisable()
     {
@@ -22,15 +21,12 @@ public class Death : MonoBehaviour
     }
     public void Dead()
     {
-        if (active)
+        if (active && GameManager.instance.toggleDeath)
         {
             AudioManager.instance.StopAllSFX();
             Debug.Log("tusmuersibdnauodbouawdubawdhvakhdboad");
             Instantiate(muerto, transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
-
-            
+            Destroy(this.gameObject);  
         }
     }
-
 }
