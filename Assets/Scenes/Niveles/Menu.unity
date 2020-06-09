@@ -1141,6 +1141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1607093242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5092008526110016856, guid: 854222c240da9464c8561095a19c99ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877107967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1616362361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1549,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2052146429}
+    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 630378071}
+    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 1890623989}
+    - target: {fileID: 2532947197722920291, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2052146429}
+    - target: {fileID: 2532947197722920291, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532947197722920291, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 577186819}
     - target: {fileID: 2532947196413011339, guid: 854222c240da9464c8561095a19c99ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1648,51 +1689,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2052146429}
-    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMasterVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnUp
-      value: 
-      objectReference: {fileID: 630378071}
-    - target: {fileID: 2532947197637691148, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 1890623989}
-    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2052146429}
-    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMusicVolume
-      objectReference: {fileID: 0}
-    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnUp
-      value: 
-      objectReference: {fileID: 577186819}
-    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 1177958367}
-    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_Value
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2532947196168466694, guid: 854222c240da9464c8561095a19c99ad,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1728,6 +1724,31 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
       objectReference: {fileID: 1177958367}
+    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2052146429}
+    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 577186819}
+    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 1177958367}
+    - target: {fileID: 2532947198180807590, guid: 854222c240da9464c8561095a19c99ad,
+        type: 3}
+      propertyPath: m_Value
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2532947197728984198, guid: 854222c240da9464c8561095a19c99ad,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1738,21 +1759,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2532947197722920291, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2052146429}
-    - target: {fileID: 2532947197722920291, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 2532947197722920291, guid: 854222c240da9464c8561095a19c99ad,
-        type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 577186819}
     - target: {fileID: 2532947196377697651, guid: 854222c240da9464c8561095a19c99ad,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -2136,7 +2142,7 @@ MonoBehaviour:
   SFXVolSlider: {fileID: 1877107970}
   musicVolSlider: {fileID: 1877107969}
   fulscreenToggle: {fileID: 1877107968}
-  deathToggle: {fileID: 0}
+  deathToggle: {fileID: 1607093242}
   controlToggle: {fileID: 741866786}
   aButton: {fileID: 0}
   spacebar: {fileID: 0}
