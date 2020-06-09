@@ -8,6 +8,7 @@ public class AimController : MonoBehaviour
     int attackIndicator;
     AnimatorStateInfo animState;
     CircleCollider2D attackCollider;
+    CapsuleCollider2D blockCollider;
     Sprite playerSpr;
     bool attackBool, blockBool;
     Bloqueo parry;
@@ -19,6 +20,7 @@ public class AimController : MonoBehaviour
         neon = GetComponentsInChildren<SpriteRenderer>();
         //neon[1].color = Color.red;
         attackCollider = GetComponent<CircleCollider2D>();
+        blockCollider = GetComponent<CapsuleCollider2D>();
         parry = GetComponent<Bloqueo>();
     }
 
@@ -31,13 +33,10 @@ public class AimController : MonoBehaviour
         blockBool = animState.IsName("Player_Block");
         playerSpr = GetComponent<SpriteRenderer>().sprite;
         //63 left, 15 down, 34 up, 70 right
-        if (playerSpr.name == "Player_70" || playerSpr.name == "Player_63" || playerSpr.name == "Player_15" || playerSpr.name == "Player_34" || blockBool)
-        {
+        if ((playerSpr.name == "Player_70" || playerSpr.name == "Player_63" || playerSpr.name == "Player_15" || playerSpr.name == "Player_34") && !blockBool){
             attackCollider.enabled = true;
-
         }
-        else
-        {
+        else{
             attackCollider.enabled = false;
         }
 
@@ -105,13 +104,14 @@ public class AimController : MonoBehaviour
             }
         }
 
-        if ((Input.GetKeyDown("joystick button 5") || Input.GetMouseButtonDown(0)) && !attackBool  && !GameManager.instance.gameIsPaused)
+        if ((Input.GetKeyDown("joystick button 5") || Input.GetMouseButtonDown(0)) && !attackBool && !GameManager.instance.gameIsPaused)
         {
+            parry.enabled = false;
             GetComponent<Sword_Attack>().enabled = true;
             Attack(attackIndicator, ref attackCollider, anim);
         }
 
-        else if ((Input.GetKeyDown("joystick button 4") || Input.GetMouseButtonDown(1)) && !attackBool && !blockBool && !GameManager.instance.gameIsPaused)
+        else if ((Input.GetKeyDown("joystick button 4") || Input.GetMouseButtonDown(1)) && !attackBool && !blockBool && !GameManager.instance.gameIsPaused) //BLOQUEO
         {
 
             mov = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
@@ -161,20 +161,24 @@ public class AimController : MonoBehaviour
             switch (attackIndicator)
             {
                 case 1:  //Block Right
-                    attackCollider.offset = new Vector2(0.18f, 0);
-                    attackCollider.radius = 0.4f;
+                    blockCollider.direction = (CapsuleDirection2D)0;
+                    blockCollider.offset = new Vector2(0.18f, 0.03f);
+                    blockCollider.size = new Vector2(0.48f, 0.84f);
                     break;
                 case 2:   //Block Left
-                    attackCollider.offset = new Vector2(-0.19f, 0);
-                    attackCollider.radius = 0.38f;
+                    blockCollider.direction = (CapsuleDirection2D)0;
+                    blockCollider.offset = new Vector2(-0.18f, 0.03f);
+                    blockCollider.size = new Vector2(0.48f, 0.84f);
                     break;
                 case 3:   //Block Up
-                    attackCollider.offset = new Vector2(0, 0.15f);
-                    attackCollider.radius = 0.36f;
+                    blockCollider.direction = (CapsuleDirection2D)1;
+                    blockCollider.offset = new Vector2(-0.05f, 0.18f);
+                    blockCollider.size = new Vector2(0.99f, 0.48f);
                     break;
                 case 4:   //Block Down
-                    attackCollider.offset = new Vector2(0.04f, -0.125f);
-                    attackCollider.radius = 0.36f;
+                    blockCollider.direction = (CapsuleDirection2D)1;
+                    blockCollider.offset = new Vector2(0.07f, -0.18f);
+                    blockCollider.size = new Vector2(0.99f, 0.48f);
                     break;
             }
             parry.enabled = true;
