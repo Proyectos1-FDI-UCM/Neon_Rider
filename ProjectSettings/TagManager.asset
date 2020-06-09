@@ -17,7 +17,7 @@ TagManager:
   - Pared
   - Balas
   - Enemigos
-  - Rayitos
+  - RayitosPlayer
   - BalasMoradas
   - NeonWall
   - Checkpoint
@@ -25,7 +25,7 @@ TagManager:
   - escaleras
   - Trampas
   - Dron
-  - 
+  - RayitosAmarillo
   - 
   - 
   - 
