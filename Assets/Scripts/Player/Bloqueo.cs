@@ -11,7 +11,7 @@ public class Bloqueo : MonoBehaviour
 {
 
 
-    CircleCollider2D collisionArea;
+    CapsuleCollider2D collisionArea;
     [SerializeField] float blockTime = 0.1f;
     float blocking;
     ActivatePowerUpRed activPow;
@@ -19,10 +19,9 @@ public class Bloqueo : MonoBehaviour
     PowerUpPurple purple;
     float time;
 
-
     private void Awake()
     {
-        collisionArea = this.GetComponent<CircleCollider2D>();
+        collisionArea = this.GetComponent<CapsuleCollider2D>();
         activPow = GetComponent<ActivatePowerUpRed>();
         activPowPurple = GetComponent<ActivatePowerUpPurple>();
         purple = GetComponent<PowerUpPurple>();

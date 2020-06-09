@@ -23,7 +23,7 @@ public class BossBehaviour : MonoBehaviour
     TransformList enemiesOnScreen = new TransformList();
     Animator[] bossAnimator;
     
-    private int actualWave;
+    [SerializeField] private int actualWave = 0;
     private float delayHit = 0.41f;
     private float delaySpawn = 0.5f;
     bool dead = false;
@@ -92,17 +92,16 @@ public class BossBehaviour : MonoBehaviour
     private void UpdateWave() //LLamado por SpawnControl para hacer la nueva invocación si no quedan enemigos vivos
     {
         if (actualWave < waves.Length && enemiesOnScreen.Lenght() == 0){
-            crystals[actualWave].GetComponent<BossCrystal>().SetActive();
+            if(crystals[actualWave].GetComponent<BossCrystal>() != null)
+                crystals[actualWave].GetComponent<BossCrystal>().SetActive();
         }
 
     }
 
     public void UpdateEnemies(Transform e)
     {
-
         enemiesOnScreen.DeleteElement(e);
         UpdateWave();
-
     }
 
     public void UpdateCrystal()

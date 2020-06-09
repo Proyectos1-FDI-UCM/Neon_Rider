@@ -9,5 +9,4 @@ public class ResetScene : MonoBehaviour
         if (GetComponent<SpriteRenderer>().sprite.name == "EndDeath")
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
 }

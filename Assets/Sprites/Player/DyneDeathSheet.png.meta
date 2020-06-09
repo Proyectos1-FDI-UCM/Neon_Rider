@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: d03671c5e63670b4696c357a87b6f303
+guid: 6012bd282c0b75046a7cc289786af7e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4543125336933392318
-    second: DyneDeathSheet_0
+      213: -4714643509503188556
+    second: DyneDeathSheetv2_0
   - first:
-      213: 7819433122461435992
-    second: DyneDeathSheet_1
+      213: 496063466436840347
+    second: DyneDeathSheetv2_1
   - first:
-      213: -5220689694981250461
-    second: DyneDeathSheet_2
+      213: -3763523592803320845
+    second: DyneDeathSheetv2_2
   - first:
-      213: 6719461594054163519
-    second: DyneDeathSheet_3
+      213: -4939916170462828890
+    second: DyneDeathSheetv2_3
   - first:
-      213: -2908019928764777268
-    second: DyneDeathSheet_4
+      213: -491554085893381198
+    second: DyneDeathSheetv2_4
   - first:
-      213: 2400796498664926054
-    second: DyneDeathSheet_5
+      213: 3161074872493507821
+    second: DyneDeathSheetv2_5
   - first:
-      213: -7852794656483905880
-    second: DyneDeathSheet_6
+      213: 7011944802729081624
+    second: DyneDeathSheetv2_6
   - first:
-      213: -8687271108744730393
-    second: DyneDeathSheet_7
+      213: 1871710803663803933
+    second: DyneDeathSheetv2_7
   - first:
-      213: -2474492213927123451
-    second: DyneDeathSheet_8
+      213: 6655870465481508623
+    second: DyneDeathSheetv2_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DyneDeathSheet_0
+      name: DyneDeathSheetv2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b73dd849d02a9d8498b15ca982b6b450
-      internalID: -4543125336933392318
+      spriteID: 47fb2b0dafcdb334789e9acf2c115253
+      internalID: -4714643509503188556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_1
+      name: DyneDeathSheetv2_1
       rect:
         serializedVersion: 2
         x: 256
@@ -148,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed5cb7bfbdb5cb944bcee95097acb8d3
-      internalID: 7819433122461435992
+      spriteID: 6638a2b8031dbf7448d44bfbf8faf630
+      internalID: 496063466436840347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_2
+      name: DyneDeathSheetv2_2
       rect:
         serializedVersion: 2
         x: 512
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20e87895a1b71e045b445562a4208c71
-      internalID: -5220689694981250461
+      spriteID: aad2108a3e382f5418eef77bd8502be1
+      internalID: -3763523592803320845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_3
+      name: DyneDeathSheetv2_3
       rect:
         serializedVersion: 2
         x: 0
@@ -190,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e02efda007a168428ef59b5f43e417d
-      internalID: 6719461594054163519
+      spriteID: 33f7bdbba5b710f4080af60a212a6378
+      internalID: -4939916170462828890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_4
+      name: DyneDeathSheetv2_4
       rect:
         serializedVersion: 2
         x: 256
@@ -211,14 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22220b99ab6fa4e4683cff310c1bc349
-      internalID: -2908019928764777268
+      spriteID: 9453f4470a060bd4aa2e9b42d7c1e017
+      internalID: -491554085893381198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_5
+      name: DyneDeathSheetv2_5
       rect:
         serializedVersion: 2
         x: 512
@@ -232,14 +232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17f5bd16e59d5db4bb8f21d1cbec143e
-      internalID: 2400796498664926054
+      spriteID: 47db429a9f39f084188384dff8452264
+      internalID: 3161074872493507821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_6
+      name: DyneDeathSheetv2_6
       rect:
         serializedVersion: 2
         x: 0
@@ -253,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a65cb4d116c631640b744042c4cdf10f
-      internalID: -7852794656483905880
+      spriteID: 5a11d2180ae8294438d7c4b3a0a8873d
+      internalID: 7011944802729081624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_7
+      name: DyneDeathSheetv2_7
       rect:
         serializedVersion: 2
         x: 256
@@ -274,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e75643b2c1b9c8442a0e6718657486e0
-      internalID: -8687271108744730393
+      spriteID: e77ca1ffab3f3fa499b4df6b4db7ee8e
+      internalID: 1871710803663803933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DyneDeathSheet_8
+      name: DyneDeathSheetv2_8
       rect:
         serializedVersion: 2
         x: 512
@@ -295,8 +295,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35bafe9b19dd791439af48a049842609
-      internalID: -2474492213927123451
+      spriteID: 2dca35e35d17d3b45b5f77b840ef4726
+      internalID: 6655870465481508623
       vertices: []
       indices: 
       edges: []
