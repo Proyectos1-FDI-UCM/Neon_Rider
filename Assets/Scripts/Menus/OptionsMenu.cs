@@ -75,4 +75,8 @@ public class OptionsMenu : MonoBehaviour
             spacebar.SetActive(!mando);
         GameManager.instance.ControlToggle(mando);
     }
+    public void DeathToggle(bool death) // God mode only
+    {
+        GameManager.instance.DeathToggle(death);
+    }
 }

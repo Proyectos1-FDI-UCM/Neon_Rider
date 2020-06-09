@@ -6,13 +6,13 @@ public class GameManager : MonoBehaviour
     //Creas un object GameManager vacio (prefab para que sobreviva escenas) con este script.
 
     public static GameManager instance;
-    public Vector2 checkpoint;
-    public bool gameIsPaused;
+    public Vector2 checkpoint; 
     public int deadVal = -1;
     public int actualScene = 1;
-    //Vector2 ori;
     public bool fullScreenToggle = true, 
-                mando = true;
+                mando = true,
+                gameIsPaused, 
+                toggleDeath = true;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f;
@@ -43,22 +43,20 @@ public class GameManager : MonoBehaviour
     }
     public void ControlToggle(bool isMando)
     {
-        if (isMando)
-            mando = true;
-        else
-            mando = false;
+        mando = isMando;
     }
-
+    public void DeathToggle(bool isDeath)
+    {
+        toggleDeath = isDeath;
+    }
     public void MainSliderState (float volume)
     {
         mainVolSlider = volume;
     }
-
     public void MusicSliderState(float volume)
     {
         musicVolSlider = volume;
     }
-
     public void SFXSliderState(float volume)
     {
         SFXVolSlider = volume;
@@ -120,12 +118,4 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-
-    /*public void OnSceneChange(int scene)
-    {
-        switch (scene)
-        {
-            
-        }
-    }*/
 }

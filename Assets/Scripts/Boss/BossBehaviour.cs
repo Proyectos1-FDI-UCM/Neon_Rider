@@ -23,7 +23,7 @@ public class BossBehaviour : MonoBehaviour
     TransformList enemiesOnScreen = new TransformList();
     Animator[] bossAnimator;
     
-    private int actualWave;
+    [SerializeField] private int actualWave = 0;
     private float delayHit = 0.41f;
     private float delaySpawn = 0.5f;
     bool dead = false;
@@ -53,7 +53,7 @@ public class BossBehaviour : MonoBehaviour
 
     private void Start()
     {
-        actualWave = 0;
+        //actualWave = 0;
         bossAnimator = GetComponentsInChildren<Animator>();
         col = GetComponent<BoxCollider2D>();
     }
