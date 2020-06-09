@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
     public void DeathToggle(bool isDeath)
     {
-        toggleDeath = isDeath;
+        toggleDeath = !isDeath;
     }
     public void MainSliderState (float volume)
     {
