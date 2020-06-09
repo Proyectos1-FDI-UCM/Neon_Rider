@@ -53,7 +53,7 @@ public class BossBehaviour : MonoBehaviour
 
     private void Start()
     {
-        //actualWave = 0;
+        actualWave = 0;
         bossAnimator = GetComponentsInChildren<Animator>();
         col = GetComponent<BoxCollider2D>();
     }
@@ -92,17 +92,16 @@ public class BossBehaviour : MonoBehaviour
     private void UpdateWave() //LLamado por SpawnControl para hacer la nueva invocación si no quedan enemigos vivos
     {
         if (actualWave < waves.Length && enemiesOnScreen.Lenght() == 0){
-            crystals[actualWave].GetComponent<BossCrystal>().SetActive();
+            if(crystals[actualWave].GetComponent<BossCrystal>() != null)
+                crystals[actualWave].GetComponent<BossCrystal>().SetActive();
         }
 
     }
 
     public void UpdateEnemies(Transform e)
     {
-
         enemiesOnScreen.DeleteElement(e);
         UpdateWave();
-
     }
 
     public void UpdateCrystal()
