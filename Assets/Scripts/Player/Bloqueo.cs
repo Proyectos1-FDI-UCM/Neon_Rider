@@ -12,13 +12,12 @@ public class Bloqueo : MonoBehaviour
 
 
     CapsuleCollider2D collisionArea;
-    [SerializeField] float blockTime = 0.3f;
+    [SerializeField] float blockTime = 0.1f;
     float blocking;
     ActivatePowerUpRed activPow;
     ActivatePowerUpPurple activPowPurple;
     PowerUpPurple purple;
     float time;
-
 
     private void Awake()
     {
