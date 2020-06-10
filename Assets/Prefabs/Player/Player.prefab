@@ -362,7 +362,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882214181353476974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08debeb91c099bf45bc7ea12cbbf0c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockTime: 0.5
+  blockTime: 0.3
 --- !u!114 &1882214181353476968
 MonoBehaviour:
   m_ObjectHideFlags: 0
