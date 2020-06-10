@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CreditsExit : MonoBehaviour
 {
-    float time = 90f;
+    float time = 150f;
 
     void Update()
     {
