@@ -60,7 +60,6 @@ public class DialogueManager : MonoBehaviour
         if (isEnd)
         {
             endBG.SetActive(true);
-            Time.timeScale = 0;
         }
         dialogueBox.SetActive(true);
         if (jade != null)
