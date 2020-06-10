@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1882214181353476970, guid: 75af44364c887f344844d0027ad2f244, type: 3}
   secondFire: 0.5
-  firstFire: 1.75
+  firstFire: 1.15
 --- !u!1001 &3642364579911954678
 PrefabInstance:
   m_ObjectHideFlags: 0

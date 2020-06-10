@@ -24,6 +24,7 @@ public class Drone : MonoBehaviour
     {
         if (onRange) // La variable onRange controla si el dron tiene que preparase para explotar o no
         {
+
             direction = Vector2.zero;
             if (time > 0)
                 time -= Time.deltaTime;
