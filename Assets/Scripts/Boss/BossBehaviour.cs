@@ -79,6 +79,8 @@ public class BossBehaviour : MonoBehaviour
         bossAnimator[0].SetTrigger("AttakBoss");
         for (float i = 0f; i < delayHit; i += Time.deltaTime) { }
         AudioManager.instance.Play(AudioManager.ESounds.Bastonazo);
+        if (actualWave == 0)
+            AudioManager.instance.Play(AudioManager.ESounds.Boss);
         if (waves != null) 
             for (int i = 0; i < waves[actualWave].enemyRound.Length; i++){
                 for (float e = 0f; e < delaySpawn; e += Time.deltaTime) { }
@@ -133,6 +135,7 @@ public class BossBehaviour : MonoBehaviour
     public void OnAttack()
     {
         Time.timeScale = 0.3f;
+        AudioManager.instance.Stop(AudioManager.ESounds.Boss);
         bossAnimator[0].SetBool("DeathBoss", true);
         col.enabled = false;
         dead = true;

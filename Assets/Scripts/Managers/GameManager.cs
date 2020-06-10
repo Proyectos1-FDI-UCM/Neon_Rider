@@ -109,12 +109,11 @@ public class GameManager : MonoBehaviour
             case (9):
                 AudioManager.instance.Stop(AudioManager.ESounds.Level2Low);
                 AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-                AudioManager.instance.Play(AudioManager.ESounds.Boss);
                 break;
             case (10):
                 AudioManager.instance.Stop(AudioManager.ESounds.Boss);
                 AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-                AudioManager.instance.Play(AudioManager.ESounds.Menu);
+                AudioManager.instance.Play(AudioManager.ESounds.Credits);
                 break;
         }
     }

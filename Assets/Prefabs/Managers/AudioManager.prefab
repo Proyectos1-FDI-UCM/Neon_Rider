@@ -52,7 +52,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: MenuMusic
-    clip: {fileID: 8300000, guid: 7330d6b122004944895b2bf3d23895a0, type: 3}
+    clip: {fileID: 8300000, guid: ca4507d7ba9f14d458d44eb3bf88ed54, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
       type: 2}
     volume: 0.5
@@ -94,7 +94,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Nivel 1
-    clip: {fileID: 8300000, guid: 8c75d4269f0fd52449a77de47d07f9b8, type: 3}
+    clip: {fileID: 8300000, guid: d99a3dd13afa8e743baf684d5c1a9389, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
       type: 2}
     volume: 0.5
@@ -108,14 +108,14 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Nivel 2 - Cyber Metal
-    clip: {fileID: 8300000, guid: a36d0fc3ff483a34ba20f0ea4e8bc83d, type: 3}
+    clip: {fileID: 8300000, guid: fced16f36d052c242beafe9e2d7c8b25, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
       type: 2}
     volume: 0.5
     loop: 1
     source: {fileID: 0}
   - name: Nivel - Boss
-    clip: {fileID: 8300000, guid: d39111ce483fcce48b204f05544a35a3, type: 3}
+    clip: {fileID: 8300000, guid: e6a1cdd4320f08e4a977f94b6d52c071, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
       type: 2}
     volume: 0.5
@@ -129,7 +129,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Nivel 2 - Cyber Metal (Low)
-    clip: {fileID: 8300000, guid: 2bfbb1d6b90db454a90deef140653fa6, type: 3}
+    clip: {fileID: 8300000, guid: fced16f36d052c242beafe9e2d7c8b25, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
       type: 2}
     volume: 0.5
@@ -204,5 +204,12 @@ MonoBehaviour:
       type: 2}
     volume: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Credits
+    clip: {fileID: 8300000, guid: 4bcc08b4ea96bc64982e7af8f6044f45, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 6d2c1f75eed66954090917f07b1dd4f3,
+      type: 2}
+    volume: 0.5
+    loop: 1
     source: {fileID: 0}
   sfx: {fileID: -9092036313721312173, guid: 6d2c1f75eed66954090917f07b1dd4f3, type: 2}

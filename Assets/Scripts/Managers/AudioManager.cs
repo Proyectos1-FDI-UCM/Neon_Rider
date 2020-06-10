@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
     public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3, FlasherRay, Level1, Hit, 
                         Level2, Boss, Level1Low, Level2Low, RalentTime, RalentExp, RompePared, TurretShot,
-                        Bastonazo, TurretWalk, RalenTurretDeath, DronExp, PrestShot, CrystalBreak}; // Enum usado para acceder al array sounds
+                        Bastonazo, TurretWalk, RalenTurretDeath, DronExp, PrestShot, CrystalBreak, Credits}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
