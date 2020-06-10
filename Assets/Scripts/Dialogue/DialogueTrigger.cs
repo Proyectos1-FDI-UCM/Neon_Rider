@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     DialogueManager diaMan;
     int checkpointDeadVal;
+    [SerializeField] bool escalera = false;
 
     void Start()
     {
@@ -23,6 +24,11 @@ public class DialogueTrigger : MonoBehaviour
             Debug.Log("entró");
             diaMan.StartDialogue();
             this.enabled = false;
+            if (escalera)
+            {
+                Vector3 pos = new Vector3(50000, 1, 0);
+                collision.transform.position = pos;
+            }
         }
     }
 }
