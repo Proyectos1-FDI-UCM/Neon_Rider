@@ -24,7 +24,7 @@ public class PrestEnemyMovement : MonoBehaviour
         anim = transform.GetComponentInChildren<Animator>();
     }
 
-    void Update()
+    void Update() // Toma la dirección de movimiento respecto al player
     {
         if (player != null)
         {

@@ -116,11 +116,13 @@ public class DialogueManager : MonoBehaviour
         if (jade != null)
             jade.SetActive(false);
         dialogueBox.SetActive(false);
+
+        // Cambia escena si se trata del final
         if (isEnd)
         {
             GameManager.instance.ChangeScene();
         }
-
+        // Si se trata del diálogo del jefe final llama a FirstInstance
         if(boss != null)
         {
             boss.FirstInstance();

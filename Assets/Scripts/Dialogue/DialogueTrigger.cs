@@ -24,7 +24,7 @@ public class DialogueTrigger : MonoBehaviour
             Debug.Log("entró");
             diaMan.StartDialogue();
             this.enabled = false;
-            if (escalera)
+            if (escalera) // Si es una escalera, envía lejos al player para que no interfiera con la escena final de cada nivel
             {
                 Vector3 pos = new Vector3(50000, 1, 0);
                 collision.transform.position = pos;

@@ -51,6 +51,7 @@ public class PrestDouble : MonoBehaviour
             firstBullet.GetComponent<PrestBullet>().enabled = true;  
         }
 
+        // SEgunda bala y activación del movimiento del prestidigitador
         if (time > secondFire && secondBullet != null)
         {
             AudioManager.instance.Play(AudioManager.ESounds.PrestShot);

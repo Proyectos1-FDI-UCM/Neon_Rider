@@ -8,11 +8,10 @@ public class CircleRotation : MonoBehaviour
 {
     void Update()
     {
-        if (!GameManager.instance.gameIsPaused)
+        if (!GameManager.instance.gameIsPaused) // Si el juego no está pausado
         {
             if (GameManager.instance.mando)
             {
-                //Debug.Log("Mando");
                 // Si se usa el joystick derecho para apuntar
                 if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
                 {
@@ -27,7 +26,7 @@ public class CircleRotation : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
                 }
             }
-            else
+            else // Gira el círculo de la misma manera pero según las teclas asignadas al teclado
             {
                 Vector2 direccion, direccionx, direcciony;
                 if (Input.GetKey("w")) direcciony = new Vector2(0, 1);

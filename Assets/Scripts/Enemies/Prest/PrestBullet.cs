@@ -11,7 +11,7 @@ public class PrestBullet : MonoBehaviour
     Enemy_Death death;
     Rigidbody2D rb;
 
-    void OnEnable()
+    void OnEnable() // Toma referencia del jugador para orientarse hacia él 
     {
         player = GetComponentInParent<PrestDouble>().player;
 
