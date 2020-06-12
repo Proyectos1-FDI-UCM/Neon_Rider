@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public Vector2 checkpoint; 
     public int deadVal = -1;
     public int actualScene = 1;
-    public bool fullScreenToggle = true, 
+    public bool fullScreenToggle = true,
                 mando = true,
-                gameIsPaused, 
-                toggleDeath = true;
+                gameIsPaused; 
+                //toggleDeath = true;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f;
@@ -45,10 +45,10 @@ public class GameManager : MonoBehaviour
     {
         mando = isMando;
     }
-    public void DeathToggle(bool isDeath)
+    /*public void DeathToggle(bool isDeath)
     {
         toggleDeath = !isDeath;
-    }
+    }*/
     public void MainSliderState (float volume)
     {
         mainVolSlider = volume;

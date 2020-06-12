@@ -21,7 +21,7 @@ public class Death : MonoBehaviour
     }
     public void Dead()
     {
-        if (active && GameManager.instance.toggleDeath)
+        if (active)
         {
             AudioManager.instance.StopAllSFX();
             Instantiate(muerto, transform.position, Quaternion.identity);

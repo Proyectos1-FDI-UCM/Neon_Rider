@@ -22,7 +22,7 @@ public class OptionsMenu : MonoBehaviour
         musicVolSlider.GetComponent<Slider>().value = GameManager.instance.musicVolSlider;
         fulscreenToggle.GetComponent<Toggle>().isOn = Screen.fullScreen;
         controlToggle.GetComponent<Toggle>().isOn = GameManager.instance.mando;
-        deathToggle.GetComponent<Toggle>().isOn = !GameManager.instance.toggleDeath;
+        //deathToggle.GetComponent<Toggle>().isOn = !GameManager.instance.toggleDeath;
 
         // Activa la imagen del botón A o el espacio en los diálogos
         if (SceneManager.GetActiveScene().buildIndex != 0)
@@ -76,8 +76,8 @@ public class OptionsMenu : MonoBehaviour
             spacebar.SetActive(!mando);
         GameManager.instance.ControlToggle(mando);
     }
-    public void DeathToggle(bool death) // God mode only
+    /*public void DeathToggle(bool death) // God mode only
     {
         GameManager.instance.DeathToggle(death);
-    }
+    }*/
 }
