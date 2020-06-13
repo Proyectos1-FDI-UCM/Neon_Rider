@@ -16,7 +16,7 @@ public class Pinchos : MonoBehaviour
         animator = child.GetComponent<Animator>();
         collider = GetComponent<Collider2D>();
     }
-
+    //Se activa y se desactiva intermitentemente
     void Update()
     {
         time += Time.deltaTime;
@@ -25,8 +25,10 @@ public class Pinchos : MonoBehaviour
             time = 0;
             cont = false;
         }
-        if (time>= intermitentTime) // TIME.TIME --------------------------------> TIME.DELTATIME
+        if (time>= intermitentTime) 
         {
+            //la activa si esta ddesactivada y la desactiva si esta activada
+            //y reinicia el temporizador para activarla o desactivarla de nuevo
             if  (shooting)
             {
                 shooting = false;
@@ -40,6 +42,7 @@ public class Pinchos : MonoBehaviour
             cont = true;
         }
     }
+    //mata al jugador o al enemigo cuando están activadas
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (shooting)
