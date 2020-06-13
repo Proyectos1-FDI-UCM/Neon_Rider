@@ -2,8 +2,6 @@
 using UnityEngine.SceneManagement;
 
 // Script de muerte del jugador
-// Al ser invocado el método Dead() se considera al jugador muerto,
-// es eliminado y se invoca un "cadáver"
 
 public class Death : MonoBehaviour
     // Meter al jugador para que muera
@@ -11,7 +9,8 @@ public class Death : MonoBehaviour
     [SerializeField] GameObject muerto = null;
     bool active = true;
 
-    private void OnEnable()
+    //habilita o desabilita la capacidad de morir.
+    private void OnEnable() 
     {
         active = true;    
     }
@@ -19,6 +18,9 @@ public class Death : MonoBehaviour
     {
         active = false;
     }
+
+    // Al ser invocado el método Dead() se considera al jugador muerto,
+    // es eliminado y se invoca un "cadáver"
     public void Dead()
     {
         if (active)

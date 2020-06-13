@@ -23,6 +23,8 @@ public class Bullet : MonoBehaviour
             rb.velocity = (player.position - transform.position).normalized * speed;       
         }
     }
+    //Permite matar al jugador o al enemigo cuando colisionan con la bala
+    //La bala es destruida al colisionar con cualquier cosa.
     private void OnCollisionEnter2D(Collision2D collision) 
     {
         death = collision.gameObject.GetComponent<Enemy_Death>();
