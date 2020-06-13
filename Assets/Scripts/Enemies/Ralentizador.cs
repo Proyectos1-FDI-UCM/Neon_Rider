@@ -29,7 +29,8 @@ public class Ralentizador : MonoBehaviour
             time -= Time.deltaTime;
             if(time > 0 && !AudioManager.instance.IsPlaying(AudioManager.ESounds.RalentTime))
                 AudioManager.instance.Play(AudioManager.ESounds.RalentTime);
-            if (time <= 0){ // Explosión
+            if (time <= 0)
+            { // Explosión
                 AudioManager.instance.Play(AudioManager.ESounds.RalentExp);
                 Debug.Log("Exploto");
                 if (SceneManager.GetSceneByName("Escena de Prueba 3") == SceneManager.GetActiveScene())

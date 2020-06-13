@@ -25,7 +25,6 @@ public class PowerUpPurple : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         parry = GetComponent<Bloqueo>();
-        //purpleBulletTrans = collision.gameObject.GetComponent<Transform>();
         purpleBulletComponent = collision.gameObject.GetComponent<PrestBullet>();
         redBulletComponent = collision.gameObject.GetComponent<Bullet>();
         turretBulletComponent = collision.gameObject.GetComponent<TurretBullet>();
@@ -42,12 +41,7 @@ public class PowerUpPurple : MonoBehaviour
             if ((purpleBulletComponent != null|| redBulletComponent != null || turretBulletComponent != null) && parry.enabled )
             {
                 rbBullet.velocity = -rbBullet.velocity;
-                bullet.layer = 13;
-
-                //Destroy(collision.gameObject);
-                //Instantiate(purpleBulletback, purpleBulletTrans.position, Quaternion.identity, transform);
-                //purpleRb.velocity = -auxVel.normalized * 10;
-               
+                bullet.layer = 13;               
             }
         }                   
     }

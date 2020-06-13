@@ -56,8 +56,10 @@ public class PowerUpManager : MonoBehaviour
 
     void Update()
     {
-        clock += Time.deltaTime;
-        if (!activo)
+        //Actualizamos la variable de control de la duración
+        clock += Time.deltaTime;    
+        //Si no hay ningún PU activo activa el indicador correspondiente
+        if (!activo)                    
         {
             if (red.enabled)
             {
@@ -80,7 +82,7 @@ public class PowerUpManager : MonoBehaviour
                 ActivateIndicator(new Color(177, 0, 255, 255), purpleIndicator);
             }
         }
-        //si el tamaño de la barra es 0 desactiva la imagen de la barra y pone cont a 0 
+        //si el tamaño de la barra es 0 desactiva la imagen de la barra 
         if (width <= 0)
         {
             neonSword[1].color = Color.black;
@@ -127,9 +129,7 @@ public class PowerUpManager : MonoBehaviour
                 else
                     width = originalWidth * ((time - clock) / duration);
             }
-        }
-        //estos 4 ifs dependiendo del power up ponen un sprite distinto  a la barra, activan la imagen y ponen su tamaño al máximo.
-        //el contador evita que entre más de una vez seguidas al mismo if, porque entondes la barra estaria todo el rato a tope.        
+        }            
     }
 
     public void ActivatePowerUp(string powerUpName)
@@ -193,7 +193,7 @@ public class PowerUpManager : MonoBehaviour
         }
         else
         {
-            if (currentPowerUp != null)     // Desactiva el power-up activo
+            if (currentPowerUp != null)     // Desactiva el power-up activo y resetea las variables de control
             {
                 currentPowerUp.enabled = false;
             }

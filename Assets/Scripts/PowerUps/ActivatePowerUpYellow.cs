@@ -15,10 +15,10 @@ public class ActivatePowerUpYellow : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {       
+        //El jugador detecta que es un rayo amarillo y activa el powerup amarillo
         if(pum != null && other.GetComponent<FlasherRay>() != null)
         {
             pum.ActivatePowerUp("PowerUpYellow");
-            Debug.Log("Amarillito entró");
         }
     }
 }

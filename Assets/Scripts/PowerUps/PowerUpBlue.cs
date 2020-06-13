@@ -15,7 +15,7 @@ public class PowerUpBlue : MonoBehaviour
     }
     void OnEnable()
     {
-        //Al activarse duplicamos la velocidad del player y reducimos el timeScale a la mitad
+        //Al activarse triplicamos la velocidad del player y reducimos el timeScale a un tercio
         movi = gameObject.GetComponent<PlayerController>();
         movi.speed *= 3;
         anim[0].speed=3;
