@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
             s.source.Stop();
     }
 
-    public void StopAll()
+    public void StopAll() // Para todos los sonidos
     {
         Sound s;
         for (int i = 0; i < sounds.Length; i++)
@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void StopAllSFX()
+    public void StopAllSFX() // Para todos los efectos de sonido
     {
         Sound s;
         for(int i = 0; i < sounds.Length; i++)
@@ -73,7 +73,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public bool IsPlaying(ESounds sound)
+    public bool IsPlaying(ESounds sound) // Comprueba si un clip está sonando o no
     {
         int i = (int)sound;
         Sound s = sounds[i];

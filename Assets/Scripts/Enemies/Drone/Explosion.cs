@@ -11,7 +11,7 @@ public class Explosion : MonoBehaviour
     }
     void Update()
     {
-        if (time >= 0)
+        if (time >= 0) // Mientras time sea mayor que 0 aumenta el radio del collider para que coincida con la animación de explosión
         {
             time -= Time.deltaTime;
             if(circle.radius < 2)
@@ -19,7 +19,7 @@ public class Explosion : MonoBehaviour
                 circle.radius += Time.deltaTime;
             }
         }
-        else
+        else // Cuando time llega a 0 destruye la explosión
             Destroy(this.gameObject);
     }
 

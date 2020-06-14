@@ -68,13 +68,13 @@ public class OptionsMenu : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(mainFirstButton);
        optionsMenuUI.SetActive(false);
     }
-    public void ControlToggle(bool mando)
+    public void ControlToggle(bool mando) // Botón para cambiar entre control con mando o con teclado
     {
         if(aButton!=null)
-            aButton.SetActive(mando);
+            aButton.SetActive(mando); // Activa la aparición del botón A en los cuadros de diálogo
         if (spacebar != null)
-            spacebar.SetActive(!mando);
-        GameManager.instance.ControlToggle(mando);
+            spacebar.SetActive(!mando); // Activa la aparición de la barra espaciadora en los cuadros de diálogo
+        GameManager.instance.ControlToggle(mando); 
     }
     /*public void DeathToggle(bool death) // God mode only
     {

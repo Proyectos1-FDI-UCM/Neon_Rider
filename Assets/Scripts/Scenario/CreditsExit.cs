@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class CreditsExit : MonoBehaviour
 {
-    float time = 150f;
+    float time = 150f; // Tiempo que duran los créditos
 
-    void Update()
+    void Update() // Cambia a la escena del menú cuando se acaban los créditos
     {
         if (time > 0)
             time -= Time.deltaTime;
