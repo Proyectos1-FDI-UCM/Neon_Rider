@@ -11,7 +11,6 @@ public class Sword_Attack : MonoBehaviour
         enemy = other.gameObject.GetComponent<Enemy_Death>();
         DestructibleWall wall;
         wall = other.gameObject.GetComponent<DestructibleWall>();
-        //Debug.Log("ay me matieaste");
         BossCrystal crystal;
         crystal = other.gameObject.GetComponent<BossCrystal>();
         Ralentizador ralen;

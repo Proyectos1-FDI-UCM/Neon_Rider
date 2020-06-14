@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+//Activa el potenciador morado
 public class ActivatePowerUpPurple : MonoBehaviour
 {
     PowerUpManager pum;
     Bloqueo parry;
+    //Cogemos la referencia al PUmanager
     void Start()
     {
         pum = GetComponent<PowerUpManager>();
@@ -14,6 +13,9 @@ public class ActivatePowerUpPurple : MonoBehaviour
             Debug.Log("Jugador sin gestor de power-ups." + " Se ignora el power-up conseguido.");
         }
     }
+
+    //Cuando una bala morada (prestbullet) entra al trigger de la espada y el bloqueo esta activo , se activa el morado
+    //Se desactiva automaticamente para que se pueda volver a activar el morado al bloquear otra bala morada
     void OnTriggerEnter2D(Collider2D collision)
     {
         parry = GetComponent<Bloqueo>();

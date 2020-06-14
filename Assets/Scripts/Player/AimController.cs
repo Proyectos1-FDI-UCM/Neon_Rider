@@ -104,6 +104,7 @@ public class AimController : MonoBehaviour
             }
         }
 
+        //ATAQUE 
         if ((Input.GetKeyDown("joystick button 5") || Input.GetMouseButtonDown(0)) && !attackBool && !GameManager.instance.gameIsPaused)
         {
             parry.enabled = false;
@@ -111,6 +112,7 @@ public class AimController : MonoBehaviour
             Attack(attackIndicator, ref attackCollider, anim);
         }
 
+        //BLOQUEO
         else if ((Input.GetKeyDown("joystick button 4") || Input.GetMouseButtonDown(1)) && !attackBool && !blockBool && !GameManager.instance.gameIsPaused) //BLOQUEO
         {
 

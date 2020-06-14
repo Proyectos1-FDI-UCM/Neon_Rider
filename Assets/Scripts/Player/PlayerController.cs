@@ -1,28 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Maneja el movimiento en las 4 direcciones
+//Tambien acciona las animaciones correspondiente a cada direccion
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 15;
+    [SerializeField]
+    float speed = 15;
     Vector2 direccion;
     Animator[] anim;
     Rigidbody2D rb;
-    /*
-    int attackIndicator;
-    AnimatorStateInfo animState;
-    CircleCollider2D attackCollider;
-    Sprite playerSpr;
-    bool attackBool, blockBool;
-    Bloqueo parry;
-    AudioSource swing;
-    */
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         //anim[0] player //anim[1] sword
         anim = GetComponentsInChildren<Animator>();
-
         Cursor.visible = false;
     }
 
@@ -56,4 +49,15 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = direccion * speed;
     }
+
+    //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
+    public void MulSpeed(int x)
+    {
+        speed *= x;
+    }
+    public void DivSpeedReset(int x)
+    {
+        speed /= x;
+    }
+   
 }

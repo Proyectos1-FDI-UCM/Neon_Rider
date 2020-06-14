@@ -9,12 +9,12 @@ public class PowerUpGreen : MonoBehaviour
     {
         //Al activarse reduce la velocidad del jugador
         movi=gameObject.GetComponent<PlayerController>();
-        movi.speed /= 2;
+        movi.DivSpeedReset(2);
     }
     private void OnDisable()
     {
         //Al desactivarse se devuelve la velocidad a su valor inicial
         movi = gameObject.GetComponent<PlayerController>();
-        movi.speed *= 2;
+        movi.MulSpeed(2);
     }
 }

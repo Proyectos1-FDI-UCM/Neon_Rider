@@ -17,7 +17,7 @@ public class PowerUpBlue : MonoBehaviour
     {
         //Al activarse triplicamos la velocidad del player y reducimos el timeScale a un tercio
         movi = gameObject.GetComponent<PlayerController>();
-        movi.speed *= 3;
+        movi.MulSpeed(3);
         anim[0].speed=3;
         anim[1].speed = 3;
         Time.timeScale = 0.3f;
@@ -31,6 +31,6 @@ public class PowerUpBlue : MonoBehaviour
         anim[0].speed = 1;
         anim[1].speed = 1;
         movi = gameObject.GetComponent<PlayerController>();
-        movi.speed /= 3;
+        movi.DivSpeedReset(3);
     }
 }
